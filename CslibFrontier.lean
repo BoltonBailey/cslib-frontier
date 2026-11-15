@@ -4787,6 +4787,7 @@ public import CslibFrontier.Crypto.Computational.Signature.Bridge
 public import CslibFrontier.Crypto.Computational.Signature.RandomOracle
 public import CslibFrontier.Crypto.Computational.Signature.Scheme
 public import CslibFrontier.Crypto.Computational.Signature.WordRandomOracle
+public import CslibFrontier.Crypto.Computational.StatisticalIndistinguishability
 public import CslibFrontier.Crypto.Computational.Stretch
 public import CslibFrontier.Crypto.Computational.Stretch.Prefix
 public import CslibFrontier.Crypto.Computational.Stretch.Quantitative
@@ -4829,6 +4830,7 @@ public import CslibFrontier.Crypto.Game.Quantum
 public import CslibFrontier.Crypto.Game.Retry
 public import CslibFrontier.Crypto.Game.SecondPreimage
 public import CslibFrontier.Crypto.Game.Statistical
+public import CslibFrontier.Crypto.Game.StatisticalIndistinguishability
 public import CslibFrontier.Crypto.Game.UntilBad
 public import CslibFrontier.Crypto.Negligible
 public import CslibFrontier.Crypto.Negligible.Basic
