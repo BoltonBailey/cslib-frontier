@@ -4700,6 +4700,7 @@ public import CslibFrontier.Crypto.Computational.RSACRT
 public import CslibFrontier.Crypto.Computational.RSACommonRoot
 public import CslibFrontier.Crypto.Computational.RSALeastSignificantBit
 public import CslibFrontier.Crypto.Computational.RSATrapdoor
+public import CslibFrontier.Crypto.Computational.RSAUnitInversion
 public import CslibFrontier.Crypto.Computational.RabinFactoring
 public import CslibFrontier.Crypto.Computational.Rompel
 public import CslibFrontier.Crypto.Computational.SIS.Ajtai
