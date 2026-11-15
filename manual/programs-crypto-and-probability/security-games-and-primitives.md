@@ -2149,6 +2149,20 @@ native certificate charges the framing test and both callbacks. This repairs the
 boundary needed by CCA composition, without changing `hybridEncrypt` or its CPA security
 theorems.
 
+[`Encryption/MessageRecovery.lean`](../../CslibFrontier/Crypto/Computational/Encryption/MessageRecovery.lean)
+proves that semantic security gives security against message recovery ([bs23][bs23], Attack
+Game 2.2, p. 18; Theorem 2.7, p. 19). For `E : Cipher K M C` with `M` finite and nonempty,
+`messageRecoveryAdvantage E sampleKey A` is `|Pr[W] - 1 / |M||`, and
+`messageRecoveryAdvantage_eq_advantage_messageRecoveryReduction` equates it with the one-time
+advantage of `messageRecoveryReduction` when `valid` admits every pair. For a
+`DEMOneTimeKeyWordINDCPA` cipher with messages in `{0, 1}^{msgLen n}`,
+`DEMOneTimeKeyWordINDCPA.negligible_messageRecoveryWordAdvantage` shows that
+`messageRecoveryWordAdvantage` is negligible for every PPT `A` whose outputs have length
+`msgLen n`, when `msgLen` is polynomial-time computable in unary;
+`isPPT_messageRecoveryWordToDEMAdversary` certifies the reduction. The
+[tests](../../CslibFrontierTests/Crypto/MessageRecovery.lean) show that the conditions on
+`valid` and on the output length are needed.
+
 [`Hybrid/DEMCCA.lean`](../../CslibFrontier/Crypto/Computational/Encryption/Hybrid/DEMCCA.lean)
 proves the exact DEM leg of Boneh–Shoup Exercise 12.5(a), p. 513 [bs23][bs23]. Its middle game
 retains the original KEM key/encapsulation correlation and independently samples the actual
