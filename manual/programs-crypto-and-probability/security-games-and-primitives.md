@@ -2418,7 +2418,7 @@ with `PRF`, so the bound has no `Adv^prf` term. And the public key carries the s
 place of the seed `ρ` from which Kyber's encryption re-derives it with `XOF`, while the adversary
 has no `XOF` or `G` oracle: Theorem 1 assumes that both are random oracles, and the step that
 answers the adversary's `XOF` queries at `ρ` with the Module-LWE matrix is not formalized. The
-`PRF` hop and this random-oracle lift are open under
+`PRF` hop is `indCPA_kpkePRF_of_decisionModuleLWEWith` below; the random-oracle lift is open under
 [#5293](https://github.com/cslib-community/cslib-frontier/issues/5293#issuecomment-6893099765).
 The theorem shows that `kpke P` is IND-CPA secure under `DecisionModuleLWEWith` with the
 centered-binomial laws `cbdLaw`: width `η₁` for both laws at the `k × k` key shape, and `η₁`
@@ -2427,6 +2427,28 @@ hops as families `keyReduction` and `ciphertextReduction` through `isPPT_keyRedu
 `isPPT_ciphertextReduction`, proved from the adversary's certificate, and bounds the rest with
 `cpaAdvantage_le` and the matrix sampler's distance. Its other deviation is the uncompressed
 ciphertext hop of `cpaAdvantage_le` above, and it is not a statement about ML-KEM.
+[`MLKEM/PRFExpansion.lean`](../../CslibFrontier/Crypto/Computational/SIS/MLKEM/PRFExpansion.lean)
+gives the full-matrix K-PKE family with its own seed expansion, `kpkePRF P F`: key generation and
+encryption decode `CBD_η` from the first `n · 2η` bits of a keyed function `F` at a `κ`-bit seed
+and the word of each counter, as Algorithms 4 and 5 of Kyber v3.02 do with `PRF`, while the public
+key still carries the matrix.
+[`MLKEM/PRFSecurity.lean`](../../CslibFrontier/Crypto/Computational/SIS/MLKEM/PRFSecurity.lean)
+proves `indCPA_kpkePRF_of_decisionModuleLWEWith`, IND-CPA of K-PKE with seed expansion and the
+matrix in the public key: `kpkePRF P F` is IND-CPA secure under the same two
+`DecisionModuleLWEWith` instances and `PseudorandomFunctionOver` for `F`, with counter words as
+inputs and `n · 2 · max(η₁, η₂)`-bit outputs. It has Theorem 1's `Adv^prf` hop, but it is still a
+step towards Theorem 1, not that theorem: its public key carries the sampled matrix in place of
+`ρ`, its seed `σ` is sampled directly rather than taken from `G`, and its adversaries have no `XOF`
+or `G` oracle, so the step of Theorem 1's random-oracle model that answers `XOF` queries at `ρ`
+with the Module-LWE matrix is not formalized. That random-oracle lift, with a lazily sampled,
+programmable simulator and its efficiency witness, is open under
+[#5293](https://github.com/cslib-community/cslib-frontier/issues/5293#issuecomment-6893099765).
+Its two `PRF` hops, `keyPRFReduction` (key generation) and `encPRFReduction` (encryption), are PRF
+distinguishers certified by `isOraclePPT_keyPRFReduction` and `isOraclePPT_encPRFReduction` from
+the adversary's certificate; against a random function they play the games of `kpke P`, to which
+the ideal-coin theorem applies. Its other deviations from Theorem 1 are listed in the module: the
+asymptotic setting with `κ`-bit seeds, counters of `(2k).size` bits, one PRF output length read by
+prefixes, the uncompressed Module-LWE terms of eq. (6), and four PRF advantages in place of one.
 `MLKEMTransform.decapsWith` is the FIPS 203 implicit-rejection wrapper over any
 `ExplicitCoinPKE`, defined through `FujisakiOkamoto.decT` and proved equal to the standard's
 decapsulation algorithm (`decapsWith_eq`). [`CslibFrontierTests/Crypto/MLKEM.lean`](../../CslibFrontierTests/Crypto/MLKEM.lean)
