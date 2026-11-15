@@ -4779,6 +4779,7 @@ public import CslibFrontier.Crypto.Computational.SchnorrEavesdrop
 public import CslibFrontier.Crypto.Computational.SchnorrIdentification
 public import CslibFrontier.Crypto.Computational.SchnorrProofOfKnowledge
 public import CslibFrontier.Crypto.Computational.SchnorrProtocol
+public import CslibFrontier.Crypto.Computational.SchnorrRelatedNonce
 public import CslibFrontier.Crypto.Computational.SchnorrSignature
 public import CslibFrontier.Crypto.Computational.SchnorrSignature.EncodedROM
 public import CslibFrontier.Crypto.Computational.SchnorrSignature.ForkPass
@@ -5067,6 +5068,7 @@ public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Lyubashevsky.Signatur
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Lyubashevsky.Signature.Simulation
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Lyubashevsky.Signature.View
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.ProofOfKnowledge
+public import CslibFrontier.Crypto.Protocols.SigmaProtocol.RelatedNonce
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.SchnorrIdentification
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.SchnorrSignature
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.UniqueResponses
