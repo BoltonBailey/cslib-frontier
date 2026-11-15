@@ -2918,6 +2918,7 @@ public import CslibFrontier.Computability.Interactive.Security
 public import CslibFrontier.Computability.Interactive.Security.Oracle
 public import CslibFrontier.Computability.Interactive.Security.Repeat
 public import CslibFrontier.Computability.Interactive.Sequential
+public import CslibFrontier.Computability.Interactive.StatementMap
 public import CslibFrontier.Computability.Interactive.StrategyEffect
 public import CslibFrontier.Computability.Interactive.Sumcheck
 public import CslibFrontier.Computability.Interactive.ThreeMove
@@ -5049,11 +5050,15 @@ public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Basic
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Composition
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Computational
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Efficient
+public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Efficient.Verifier
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.FiatShamir
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.FiatShamirNIZK
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.ForkingReduction
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Identification
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Interactive
+public import CslibFrontier.Crypto.Protocols.SigmaProtocol.LanguageReduction
+public import CslibFrontier.Crypto.Protocols.SigmaProtocol.LanguageReduction.Efficient
+public import CslibFrontier.Crypto.Protocols.SigmaProtocol.LanguageReduction.Sound
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Linear
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Lyubashevsky
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Lyubashevsky.Commitment
