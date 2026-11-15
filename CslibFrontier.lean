@@ -4366,7 +4366,9 @@ public import CslibFrontier.Crypto.Computational.CramerShoup.Scheme
 public import CslibFrontier.Crypto.Computational.DiffieHellman
 public import CslibFrontier.Crypto.Computational.DiffieHellman.Blinded
 public import CslibFrontier.Crypto.Computational.DiffieHellman.BlindedFamily
+public import CslibFrontier.Crypto.Computational.DiffieHellman.CyclicGroupFamily
 public import CslibFrontier.Crypto.Computational.DiffieHellman.EncodingBounds
+public import CslibFrontier.Crypto.Computational.DiffieHellman.EvenOrder
 public import CslibFrontier.Crypto.Computational.DiffieHellman.Finite
 public import CslibFrontier.Crypto.Computational.DiffieHellman.GapCDH
 public import CslibFrontier.Crypto.Computational.DiffieHellman.MultiDDH
@@ -4376,6 +4378,7 @@ public import CslibFrontier.Crypto.Computational.DiffieHellman.SelfReduction
 public import CslibFrontier.Crypto.Computational.DiffieHellman.SelfReduction.Family
 public import CslibFrontier.Crypto.Computational.DiffieHellman.WithKey
 public import CslibFrontier.Crypto.Computational.DiscreteLog
+public import CslibFrontier.Crypto.Computational.DiscreteLog.CyclicGroupFamily
 public import CslibFrontier.Crypto.Computational.DiscreteLog.Extract
 public import CslibFrontier.Crypto.Computational.DiscreteLog.GroupHash
 public import CslibFrontier.Crypto.Computational.DiscreteLog.Interpolation
