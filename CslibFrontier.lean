@@ -2835,6 +2835,7 @@ public import CslibFrontier.Computability.DecisionTree.Basic
 public import CslibFrontier.Computability.DecisionTree.CanonicalTree
 public import CslibFrontier.Computability.DecisionTree.Certificate
 public import CslibFrontier.Computability.DecisionTree.Composition
+public import CslibFrontier.Computability.DecisionTree.CoordinateCap
 public import CslibFrontier.Computability.DecisionTree.Cost
 public import CslibFrontier.Computability.DecisionTree.Dual
 public import CslibFrontier.Computability.DecisionTree.Evasive
@@ -4083,6 +4084,7 @@ public import CslibFrontier.Computability.QueryComplexity.CertificateComposition
 public import CslibFrontier.Computability.QueryComplexity.Connectivity
 public import CslibFrontier.Computability.QueryComplexity.Degree
 public import CslibFrontier.Computability.QueryComplexity.DeutschJozsa
+public import CslibFrontier.Computability.QueryComplexity.DirectProduct
 public import CslibFrontier.Computability.QueryComplexity.Huang
 public import CslibFrontier.Computability.QueryComplexity.MajorityThree
 public import CslibFrontier.Computability.QueryComplexity.Midrijanis
