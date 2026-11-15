@@ -4017,6 +4017,7 @@ public import CslibFrontier.Computability.Probabilistic.PPT.PairCapture
 public import CslibFrontier.Computability.Probabilistic.Parameter
 public import CslibFrontier.Computability.Probabilistic.Presample
 public import CslibFrontier.Computability.Probabilistic.QueryBounds
+public import CslibFrontier.Computability.Probabilistic.RandomOracle.Programming
 public import CslibFrontier.Computability.Probabilistic.Realization.OpenOracleSimulation
 public import CslibFrontier.Computability.Probabilistic.Realization.OracleSimulation
 public import CslibFrontier.Computability.Probabilistic.RejectionSampling
