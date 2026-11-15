@@ -4778,6 +4778,7 @@ public import CslibFrontier.Crypto.Computational.SchnorrSignature.NativeROM
 public import CslibFrontier.Crypto.Computational.SchnorrSignature.Security
 public import CslibFrontier.Crypto.Computational.SchnorrSignature.StatisticalROM
 public import CslibFrontier.Crypto.Computational.SchnorrSignature.WordROM
+public import CslibFrontier.Crypto.Computational.SecondPreimageResistant
 public import CslibFrontier.Crypto.Computational.Signature
 public import CslibFrontier.Crypto.Computational.Signature.Bridge
 public import CslibFrontier.Crypto.Computational.Signature.RandomOracle
@@ -4823,6 +4824,7 @@ public import CslibFrontier.Crypto.Game.Inversion
 public import CslibFrontier.Crypto.Game.Order
 public import CslibFrontier.Crypto.Game.Quantum
 public import CslibFrontier.Crypto.Game.Retry
+public import CslibFrontier.Crypto.Game.SecondPreimage
 public import CslibFrontier.Crypto.Game.Statistical
 public import CslibFrontier.Crypto.Game.UntilBad
 public import CslibFrontier.Crypto.Negligible
