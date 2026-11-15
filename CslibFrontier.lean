@@ -4429,6 +4429,7 @@ public import CslibFrontier.Crypto.Computational.DiscreteLog.SchnorrGroup
 public import CslibFrontier.Crypto.Computational.ElGamal
 public import CslibFrontier.Crypto.Computational.ElGamal.GeneralCipher
 public import CslibFrontier.Crypto.Computational.ElGamal.KDF
+public import CslibFrontier.Crypto.Computational.ElGamal.KeyDerivation
 public import CslibFrontier.Crypto.Computational.ElGamal.Malleability
 public import CslibFrontier.Crypto.Computational.ElGamal.ProbComp
 public import CslibFrontier.Crypto.Computational.Encryption.Authenticated
@@ -4605,6 +4606,7 @@ public import CslibFrontier.Crypto.Computational.IndexedSignature
 public import CslibFrontier.Crypto.Computational.IndexedSignature.Counter
 public import CslibFrontier.Crypto.Computational.IndexedSignature.Double
 public import CslibFrontier.Crypto.Computational.IndexedSignature.Seeded
+public import CslibFrontier.Crypto.Computational.KeyDerivation
 public import CslibFrontier.Crypto.Computational.KeyExchange
 public import CslibFrontier.Crypto.Computational.Kilian
 public import CslibFrontier.Crypto.Computational.Kilian.Micali
