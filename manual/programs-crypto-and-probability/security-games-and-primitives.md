@@ -787,8 +787,10 @@ Discrete-logarithm and factoring cryptanalysis lives in two algebra-level module
 for the Pohlig–Hellman subgroup reduction and CRT uniqueness (`pohligHellman_subgroup_modEq`,
 `pohligHellman_crt_modEq`), the prime-power digit step (`pohligHellman_step`), the smooth/rough
 trial-division split (`smoothDivisorSeq`, `coprime_smoothDivisorSeq_div`) and composite-order CRT
-extraction from two Schnorr transcripts (`extractModRough`, `crtCombine`,
-`crtCombine_extractModRough_eq`). These are correctness identities under explicit positivity,
+extraction from two Schnorr transcripts (`extractModRough`, `crtCombine_extractModRough_eq`; the
+recombination `crtCombine` itself is in
+[`Foundations/Data/Nat/ChineseRemainder.lean`](../../CslibFrontier/Foundations/Data/Nat/ChineseRemainder.lean),
+which that module imports publicly). These are correctness identities under explicit positivity,
 divisor, inverse and range hypotheses; there is no executable Pohlig–Hellman solver, subgroup
 discrete-log solver or running-time bound. Import
 [`Factoring/PollardRho.lean`](../../CslibFrontier/Crypto/Computational/Factoring/PollardRho.lean) for
@@ -1000,6 +1002,8 @@ So moduli with close factors are factored in polynomial time; the theorems say n
 other moduli. The [checked examples](../../CslibFrontierTests/Crypto/WeakModuli.lean) factor
 `10403 = 101 * 103` and two moduli sharing `101`, and show that `fermatFactor` does not factor
 `3 * 101` or `3 * 2`.
+
+For RSA-CRT inversion and the gcd identity behind its fault attack ([bs23][bs23], §16.4.3, pp. 701–702), import [`RSACRT.lean`](../../CslibFrontier/Crypto/Computational/RSACRT.lean) (checked instances are in [`CslibFrontierTests/Crypto/RSACRT.lean`](../../CslibFrontierTests/Crypto/RSACRT.lean)). `RSACRTKey` is the key `(p, q, d_p, d_q, q_inv)`, `RSADesc.crtKeyWith desc qInv` derives it from an `RSADesc` with `d_p = d % (p - 1)` and `d_q = d % (q - 1)`, and `RSADesc.crtKey` takes `q_inv` from `ZMod p`. Recombination `RSACRTKey.combine` is `crtCombine` from [`Foundations/Data/Nat/ChineseRemainder.lean`](../../CslibFrontier/Foundations/Data/Nat/ChineseRemainder.lean). For odd `p` and `q` and any `q_inv` with `q_inv * q ≡ 1 [MOD p]`, `RSADesc.invert_crtKeyWith` proves that RSA-CRT inversion equals `rsaInvert n d` on every input; the tests show that it fails for `p = 2`. `RSADesc.gcd_val_pow_sub_combine_eq_q` states the gcd identity behind the fault attack: for any such `q_inv`, that is, any `q_inv` with `q_inv * q ≡ 1 [MOD p]` (oddness is not needed), recombining an `x_q` that is correct modulo `q` with an `x_p` that is wrong modulo `p` gives an output `σ` with `gcd(σ ^ e − h, n) = q`, where `σ ^ e − h` is computed in `ZMod n` and read in `[0, n)`, for any natural number `h` in place of the hash value. The polynomial-time certificates take component functions `α → ℕ`, each computable in polynomial time to `encNat`, as `computableInPolyTime_rsaInvert` does: `computableInPolyTime_crtInvert` certifies RSA-CRT inversion from the key components and the input when `p` and `q` are positive, `computableInPolyTime_crtKeyWith_invert` does the same for `RSADesc.crtKeyWith desc qInv` from `p`, `q`, `d`, `q_inv` and the input, and `computableInPolyTime_gcd_val_pow_sub` certifies the attack's gcd step `gcd(σ ^ e − h, n)` when `n` is positive. `q_inv` is an input to these certificates, as in the book's precomputed key; computing it from `p` and `q` in polynomial time needs a modular inverse and is not covered. Nothing is proved about an attacker as an adversary in a game, or about signing. The four-times speed-up and FDH-RSA signing are not formalized.
 
 ### Elliptic curves over finite fields and Hasse's bound
 
