@@ -2154,6 +2154,20 @@ additionally checks support of the postprocessed real key. Tests expose the fail
 KEM premise, and show that a perfect zero-width KEM with the insecure echo DEM remains insecure.
 Arbitrary message-space extension and stronger KEM query schedules remain separate.
 
+For strongly unpredictable ciphertexts ([bs23][bs23], Section 21.4.1, p. 872), import
+[`Encryption/StronglyUnpredictable.lean`](../../CslibFrontier/Crypto/Computational/Encryption/StronglyUnpredictable.lean).
+`StronglyUnpredictable encrypt` asks for one negligible `ε` with `Pr[encrypt n pk m = some c] ≤ ε n`
+for every public key (adversarially chosen ones included), message and non-error ciphertext; `none`
+is the book's `error`. `stronglyUnpredictable_iff_forall` shows this is the book's pointwise
+sentence when the key, message and ciphertext types are nonempty at every `n`, and
+`StronglyUnpredictable.negligible_collision` is the two-invocation collision bound of Section 21.9.6
+(p. 897).
+[`ElGamal/StronglyUnpredictable.lean`](../../CslibFrontier/Crypto/Computational/ElGamal/StronglyUnpredictable.lean)
+proves the property for `elGamalEncryptProb` and hybrid Hashed ElGamal when `(F.order (d n))⁻¹` is
+negligible, as DDH implies (`DDH.negligible_expected_inv_order`); the
+[tests](../../CslibFrontierTests/Crypto/StronglyUnpredictable.lean) show that a group of constant
+order fails.
+
 For the Diffie–Hellman random-oracle KEM of [katzlindell20][katzlindell20] (Construction 12.19,
 Theorem 12.22), import
 [`DiffieHellman/GapCDH.lean`](../../CslibFrontier/Crypto/Computational/DiffieHellman/GapCDH.lean).
