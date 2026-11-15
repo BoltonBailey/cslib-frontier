@@ -5181,6 +5181,11 @@ public import CslibFrontier.DataStructure.Dictionary.SubconstantRedundancy.TreeQ
 public import CslibFrontier.DataStructure.Dictionary.SubconstantRedundancy.TreeRehash
 public import CslibFrontier.DataStructure.Dictionary.SubconstantRedundancy.TreeRouting
 public import CslibFrontier.DataStructure.Dictionary.SuccinctBucket
+public import CslibFrontier.DataStructure.Dictionary.SuccinctWhpBufferTrie
+public import CslibFrontier.DataStructure.Dictionary.SuccinctWhpParams
+public import CslibFrontier.DataStructure.Dictionary.SuccinctWhpSwarBTree
+public import CslibFrontier.DataStructure.Dictionary.SuccinctWhpSwarBTreeInsert
+public import CslibFrontier.DataStructure.Dictionary.SuccinctWhpSwarBTreeSpec
 public import CslibFrontier.DataStructure.Dictionary.UniformProbing
 public import CslibFrontier.DataStructure.Dictionary.WordRAM.BitPackedArray
 public import CslibFrontier.DataStructure.Dictionary.WordRAM.BitPackedArrayProg
@@ -5300,6 +5305,7 @@ public import CslibFrontier.DataStructure.Online.SkiRental.Randomized
 public import CslibFrontier.DataStructure.OrderedSet.Basic
 public import CslibFrontier.DataStructure.OrderedSet.ExtractMin
 public import CslibFrontier.DataStructure.OrderedSet.Spec
+public import CslibFrontier.DataStructure.PackedLane
 public import CslibFrontier.DataStructure.Paging.Basic
 public import CslibFrontier.DataStructure.Paging.LRU
 public import CslibFrontier.DataStructure.Paging.LowerBound
@@ -6147,6 +6153,7 @@ public import CslibFrontier.Foundations.Data.Nat.Choose.PrimePowerDvd
 public import CslibFrontier.Foundations.Data.Nat.Choose.Real
 public import CslibFrontier.Foundations.Data.Nat.Choose.Sum
 public import CslibFrontier.Foundations.Data.Nat.Choose.Vandermonde
+public import CslibFrontier.Foundations.Data.Nat.ChooseLog
 public import CslibFrontier.Foundations.Data.Nat.Clog
 public import CslibFrontier.Foundations.Data.Nat.ClogPow
 public import CslibFrontier.Foundations.Data.Nat.ConstantDivision
