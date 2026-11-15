@@ -1901,6 +1901,44 @@ Check it with:
 scripts/build.sh --wfail --iofail CslibFrontierTests.Crypto.ListCDH
 ```
 
+### Static Diffie–Hellman and ElGamal key recovery
+
+In the static Diffie–Hellman (SDH) attack game ([bs23][bs23], Section 16.1.4, Attack Game 16.1,
+p. 688), the challenger samples a uniform secret `α : ZMod q`, answers each query `v : G` with
+`α • v`, and accepts when the adversary outputs `α`. As §16.1.4 observes, any SDH adversary yields a
+key-recovery attack against multiplicative ElGamal ([bs23][bs23], Exercise 11.5, p. 459) with a
+decryption oracle: decrypting `(-v, 0)` (the additive form of `(1 / v, 1)`) returns
+`0 - α • (-v) = α • v`, answering the SDH query.
+[`DiffieHellman/Static.lean`](../../CslibFrontier/Crypto/Computational/DiffieHellman/Static.lean)
+formalizes both games and the reductions between them in one fixed additive `ZMod q`-module `G`
+with `[AddCommGroup G] [NeZero q] [Module (ZMod q) G]` (neither primality of `q` nor that `g`
+generates `G` is assumed). `sdhExperiment q A` runs `A : SDHAdversary G q` against
+`sdhOracle q α` (`v ↦ pure (α • v)`, the oracle of §11.6.3's CDH solve query; the one-more
+Diffie–Hellman game is not formalized), with success probability `sdhAdvantage q A`.
+`elGamalKeyRecoveryExperiment q g B` is a stand-alone key-recovery oracle game (not `cca2GameOn`):
+it draws `α`, passes `α • g` to `B : ElGamalKeyRecoveryAdversary G q` with oracle
+`elGamalDecryptOracle q α` (`(v, e) ↦ pure (e - α • v)`), and defines advantage
+`elGamalKeyRecoveryAdvantage q g B`. By `elGamalDecryptOracle_neg_zero`,
+`sdhToElGamalKeyRecovery A` answers each SDH query `v` via `(-v, 0)`, preserving the experiment
+and advantage (`elGamalKeyRecoveryAdvantage_sdhToElGamalKeyRecovery`), preserving any query budget
+`Q` (`isQueryBounded_sdhToElGamalKeyRecovery`), and submitting only queries with second component
+`0` (`queriesSatisfy_sdhToElGamalKeyRecovery`). Adding to p. 688, `dlToSDH g A` embeds a
+discrete-logarithm adversary with budget `1` (`sdhAdvantage_dlToSDH`, `isQueryBounded_dlToSDH`,
+`queriesSatisfy_dlToSDH`), and the converse `elGamalKeyRecoveryToSDH g B` queries `g` once for
+`α • g` and answers each decryption query via one SDH query with budget `Q + 1`
+(`sdhAdvantage_elGamalKeyRecoveryToSDH`, `isQueryBounded_elGamalKeyRecoveryToSDH`). No family-level
+PPT efficiency certificate (`IsOraclePPT` / `IsOraclePPTOn`), asymptotic SDH assumption,
+one-more Diffie–Hellman reduction, or Brown–Gallant–Cheon attack (Exercise 16.3) is proved here.
+The [static DH client](../../CslibFrontierTests/Crypto/StaticDH.lean) checks 1-query adversaries in
+`ZMod 5`, proves that every 0-query SDH adversary in a `ZMod q`-module wins with probability
+`1 / q` (so `elGamalKeyRecoveryToSDH` needs the `+ 1` public-key query), and verifies that
+omitting the negation in `(-v, 0)` drops `queryOneSDH 5`'s advantage from `1` to `1 / 5`. Check
+it with:
+
+```bash
+scripts/build.sh --wfail --iofail CslibFrontierTests.Crypto.StaticDH
+```
+
 ## Encryption and chosen-message attacks
 
 [AdversaryOf](https://github.com/cslib-community/cslib-frontier/blob/13e6a31951bf1c89a1a6258c44f9444aecbbefd8/Complexity/Crypto/Computational/Encryption/Basic.lean#L73) has a first stage choosing two messages and a saved word from the public key, and a second stage guessing from that saved state and the challenge ciphertext. Each stage has a native certificate. `INDCPAOn` explicitly constrains admissible message pairs. `WordINDCPA` requires equal lengths; the general `INDCPAOf` with all pairs is stronger for variable-length word messages. Invalid challenges are made independent of the hidden experiment bit. `Encryption.advantage (gameOn valid keyGen encrypt adversary) n` names the advantage between the two sides of the experiment at parameter `n`, and `INDCPAOn` asks that it be negligible for every admissible adversary; bounds on other two-sided encryption experiments, such as the DEM and CCA games, are stated with the same name.
