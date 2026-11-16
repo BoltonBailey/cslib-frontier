@@ -4842,6 +4842,7 @@ public import CslibFrontier.Crypto.Game.Hybrid
 public import CslibFrontier.Crypto.Game.Inversion
 public import CslibFrontier.Crypto.Game.Order
 public import CslibFrontier.Crypto.Game.Quantum
+public import CslibFrontier.Crypto.Game.RepeatedInversion
 public import CslibFrontier.Crypto.Game.Retry
 public import CslibFrontier.Crypto.Game.SecondPreimage
 public import CslibFrontier.Crypto.Game.Statistical
@@ -6653,6 +6654,7 @@ public import CslibFrontier.Languages.Probabilistic.Oracle.Norm.Init
 public import CslibFrontier.Languages.Probabilistic.Oracle.QueryBoundedSimulation
 public import CslibFrontier.Languages.Probabilistic.Oracle.QueryCount
 public import CslibFrontier.Languages.Probabilistic.Oracle.Run
+public import CslibFrontier.Languages.Probabilistic.Oracle.RunLogAgree
 public import CslibFrontier.Languages.Probabilistic.Oracle.RunState
 public import CslibFrontier.Languages.Probabilistic.Oracle.Simulation
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution
