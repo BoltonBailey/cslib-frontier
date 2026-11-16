@@ -4441,6 +4441,7 @@ public import CslibFrontier.Crypto.Computational.DiffieHellman.BlindedFamily
 public import CslibFrontier.Crypto.Computational.DiffieHellman.CyclicGroupFamily
 public import CslibFrontier.Crypto.Computational.DiffieHellman.Decodable
 public import CslibFrontier.Crypto.Computational.DiffieHellman.EncodingBounds
+public import CslibFrontier.Crypto.Computational.DiffieHellman.Equivalents
 public import CslibFrontier.Crypto.Computational.DiffieHellman.EvenOrder
 public import CslibFrontier.Crypto.Computational.DiffieHellman.Finite
 public import CslibFrontier.Crypto.Computational.DiffieHellman.GapCDH
