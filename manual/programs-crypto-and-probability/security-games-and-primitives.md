@@ -1398,15 +1398,22 @@ proof and the root are computable in polynomial time, with `γ` on `encIntBin` a
 numbers on `encNat` (`computableInPolyTime_guoVerifySubset`,
 `computableInPolyTime_guoVerifyNonMem`, `computableInPolyTime_neg_guoNonMemCoeff`,
 `computableInPolyTime_guoNonMemWitness`, `computableInPolyTime_guoForgeryRoot`);
-`computableInPolyTime_guoNonMemCoeff` certifies the natural number `-γ` on `encNat`. The
-statements differ from the book's in two further places: the book's
+`computableInPolyTime_guoNonMemCoeff` certifies the natural number `-γ` on `encNat`. Alice
+computes `E` from a list `l` of elements as `(l.map H).prod`; when `l` has no duplicates, this is
+`guoExponent H l.toFinset` (Mathlib's `List.prod_toFinset`). For `N` and `g` computable in
+polynomial time on `encNat`, a list computable in polynomial time on `encList`, and `H` computable
+in polynomial time with binary values, `computableInPolyTime_guoExponent_toFinset` and
+`computableInPolyTime_guoCommit_toFinset` certify `E` and the commitment for any list: the
+machine erases duplicates before multiplying. The statements differ from the book's in two
+further places: the book's
 `π_T = g ^ (E / ∏ x ∈ T, H x)` equals `guoSubsetWitness` when `T ⊆ S` and no hash is `0`, and for
 `0 < H x` Alice's `γ` satisfies `|γ| < H x` where the book has `|γ| ≤ H(x)` (`guoNonMemCoeff_lt`).
-Security under strong RSA is in the next paragraph. A certificate for computing `E` from a list of
-elements, aggregated non-membership proofs and class groups are not formalized. The
+Security under strong RSA is in the next paragraph. Certificates for membership proofs from a
+list, aggregated non-membership proofs and class groups are not formalized. The
 [checked examples](../../CslibFrontierTests/Crypto/GUOAccumulator.lean) work modulo `35` with
-`g = 2` and the hashes `3`, `5` and `7`, and include instances showing that the unit commitment,
-the unit base, `0 < h`, prime hashes and the unit check on `c` are needed.
+`g = 2` and the hashes `3`, `5` and `7`, compute the commitment from a list, show that the product
+along a list with a repeated element is not the commitment, and include instances showing that
+the unit commitment, the unit base, `0 < h`, prime hashes and the unit check on `c` are needed.
 
 For the accumulator's security under strong RSA ([bs23][bs23], §10.9, p. 422), import
 [`GUOAccumulator/Security.lean`](../../CslibFrontier/Crypto/Computational/GUOAccumulator/Security.lean).
