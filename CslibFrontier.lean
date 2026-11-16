@@ -4943,6 +4943,7 @@ public import CslibFrontier.Crypto.Primitives.Garbling.Switch.Garble
 public import CslibFrontier.Crypto.Primitives.Garbling.Switch.Oblivious
 public import CslibFrontier.Crypto.Primitives.HQC.Correctness
 public import CslibFrontier.Crypto.Primitives.HQC.PKE
+public import CslibFrontier.Crypto.Primitives.HQC.SeedExpansion
 public import CslibFrontier.Crypto.Primitives.HQC.SupportCircuit
 public import CslibFrontier.Crypto.Primitives.HQC.SupportCircuit.Collision
 public import CslibFrontier.Crypto.Primitives.HQC.SupportCircuit.Collision.PolyTime
@@ -4959,6 +4960,8 @@ public import CslibFrontier.Crypto.Primitives.HQC.SupportSampling
 public import CslibFrontier.Crypto.Primitives.HQC.Syndrome
 public import CslibFrontier.Crypto.Primitives.Hash.BlockCipherCompression
 public import CslibFrontier.Crypto.Primitives.Hash.Keccak
+public import CslibFrontier.Crypto.Primitives.Hash.Keccak.Circuit
+public import CslibFrontier.Crypto.Primitives.Hash.Keccak.Efficient
 public import CslibFrontier.Crypto.Primitives.Hash.Keccak.SHAKE128
 public import CslibFrontier.Crypto.Primitives.Hash.SHA2
 public import CslibFrontier.Crypto.Primitives.Hash.Sponge
