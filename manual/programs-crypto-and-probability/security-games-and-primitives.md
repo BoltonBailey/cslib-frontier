@@ -2723,9 +2723,9 @@ counters), and `BitString.toOuterMeasure_addRight_mem_finset_eq` and
 `advantage_xorEvalPoints_eq_zero`, the uniform-block XOR and support-length helpers
 (`uniformBlocks_eq`, `length_snd_of_mem_support_uniformDraws`, `map_zipWith_uniformBlocks`,
 `map_iv_uniformBlocks_zipWith`), and the chain collision bound `toOuterMeasure_badChain_le`
-(`bs.length * (ks.length + bs.length) / 2^n`, over `uniformBlocks`, the `PMF.iid` uniform blocks read
-as a list) used when analyzing random-IV chaining. The indexed OFB and CTR masks decrypt the
-list-mode ciphertexts (`maskBlockDecrypt_ofbBlockMask_ofbEncryptBlocks`,
+(`(bs.length * ks.length + bs.length.choose 2) / 2^n`, over `uniformBlocks`, the `PMF.iid` uniform
+blocks read as a list) used when analyzing random-IV chaining. The indexed OFB and CTR masks decrypt
+the list-mode ciphertexts (`maskBlockDecrypt_ofbBlockMask_ofbEncryptBlocks`,
 `maskBlockDecrypt_ctrBlockMask_ctrEncryptBlocks`); indexed block `j ≥ 1` of `ctrBlockMask` uses
 counter value `j - 1`, matching list block `j - 1` of `ctrMaskBlocks`. The module
 also proves mode separations and counterexamples for same-IV reuse (`advantage_streamIVReuseGame_eq`,
@@ -2761,7 +2761,7 @@ hypotheses of the attack, an instance of (4.3) with both sides nonzero, and that
 without distinct blocks.
 
 For the shared lazy-versus-fresh random-function hybrid and left-or-right block-mode CPA scaffolding
-used by both CTR and OFB mode, import
+used by CTR, OFB and CBC mode, import
 [`Encryption/RandomFunctionHybrid.lean`](../../CslibFrontier/Crypto/Computational/Encryption/RandomFunctionHybrid.lean):
 it packages `FlagState`, the caching/fresh step handlers `lazyStep` and `freshStep`, the game
 equivalence `idealExperiment_eq_runWith_lazyStep`, the bad-flag reduction bounds
@@ -2777,6 +2777,16 @@ block-mode query, cost, oracle, reduction, and ideal-experiment interface (`Bloc
 experiments are `ProbComp Bool` runs of the adversary (`adversary.run`), and the reduction is
 `ProbOracleComp.simulate (blockModeQueryProgram keystream ℓ b) adversary`, so its query bound is
 `isCostBounded_simulate` and the CPA experiment equals `PRF.realExperiment` before evaluation.
+For a per-query program that is not a keystream followed by a mask, such as CBC encryption,
+`blockModeCpaExperiment_eq_realExperiment_simulate` gives the real experiment when the program
+computes the encryption oracle. Under fresh sampling,
+`freshGame_simulate_eq_blockModeIdealExperiment` gives exactly `blockModeIdealExperiment` when
+each answer has the law of the ideal oracle (`eval_blockModeIdealOracle`).
+`advantage_idealExperiment_simulate_le` takes two further per-query facts under fresh sampling:
+the program adds at most `k = blockModeBlocks ℓ q` table entries, and raises the flag with
+probability at most `(k * t + k.choose 2) / 2^n` from a table of `t` entries. It concludes that
+the program run under `PRF.idealExperiment` is within `K.choose 2 / 2^n` of
+`blockModeIdealExperiment` when the queries ask at most `K` blocks in total.
 
 For the chosen-plaintext security of random-IV counter (CTR) mode, import
 [`Encryption/CTRMode.lean`](../../CslibFrontier/Crypto/Computational/Encryption/CTRMode.lean)
@@ -2872,6 +2882,25 @@ it matches `ofbReduction`, so `advantage_ofbWordCPAGame_le` reuses the chain bou
 `PseudorandomFunction.indcpa_ofbWordEncrypt` proves `SymmetricINDCPAOn blockPairValid` from
 `PseudorandomFunction family` alone. Examples are in
 [`CslibFrontierTests/Crypto/OFBModeUniform.lean`](../../CslibFrontierTests/Crypto/OFBModeUniform.lean).
+
+For random-IV CBC mode with a uniform random function or a uniform random permutation in place
+of the block cipher, import
+[`Encryption/CBCMode.lean`](../../CslibFrontier/Crypto/Computational/Encryption/CBCMode.lean).
+These are steps of the proof of Theorem 5.4 (Boneh–Shoup v0.6, §5.4.3 [bs23][bs23]), not the
+theorem: the keyed bound (5.22) with `BCadv` and a certified word-level reduction are not yet
+formalized. `cbcCpaGame` is the left-or-right experiment
+for a keyed block function with the query convention of the OFB paragraph. `cbcReduction` computes
+each ciphertext with one oracle call per block (`cbcCpaGame_eq_realExperiment`,
+`isQueryBounded_cbcReduction`). If the queries ask at most `K` blocks in total,
+`advantage_idealExperiment_cbcReduction_le` bounds the distance from `blockModeIdealExperiment` by
+`K.choose 2 / 2^n` through `advantage_idealExperiment_simulate_le`;
+`advantage_cbcCpaGame_randomFunction_le` gives `2 * K.choose 2 / 2^n` for a uniform random
+function, and `advantage_cbcCpaGame_randomPermutation_le` gives `4 * K.choose 2 / 2^n` for a
+uniform random permutation, adding `PRP.advantage_idealExperiment_prfIdealExperiment_le`
+(Theorem 4.6) for each challenge bit. With `Q` queries of at most `ℓ` blocks, `K ≤ Q * ℓ`, so
+the last bound is at most `2 * Q^2 * ℓ^2 / N`, the first term of (5.22). The module docstring
+records how these statements compare with the book's. Checks are in
+[`CslibFrontierTests/Crypto/CBCMode.lean`](../../CslibFrontierTests/Crypto/CBCMode.lean).
 
 For hash functions built from a fixed permutation or block cipher, import
 [`Hash/Sponge.lean`](../../CslibFrontier/Crypto/Primitives/Hash/Sponge.lean) and
