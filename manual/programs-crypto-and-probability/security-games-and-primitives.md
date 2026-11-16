@@ -2527,6 +2527,25 @@ negligible against every PPT `A`; `isPPT_parityWordToDEMAdversary` certifies
 [tests](../../CslibFrontierTests/Crypto/ParityPrediction.lean) check concrete and word-level clients
 and show that `1 ≤ L`, `hvalid`, and `1 ≤ msgLen n` are all needed.
 
+[`Encryption/Roulette.lean`](../../CslibFrontier/Crypto/Computational/Encryption/Roulette.lean)
+derives single-zero Internet roulette security over `Fin 37` from semantic security
+([bs23][bs23], Section 2.2.4, pp. 22–25; Theorem 2.9, p. 23). Its `RouletteBet` type comprises
+the four even-money bets from the text alongside `red` and `black`, each winning a uniform spin
+with probability `18 / 37` (`succProbability_uniform_rouletteWin`). The concrete advantage
+`rouletteAdvantage E sampleKey A` (`|Pr[W(r, bet) = 1] - 18 / 37|`) equals the one-time
+advantage of `rouletteReduction (ProbComp.uniform (Fin 37)) A` whenever `valid` admits every pair
+`(r, 0)` (`rouletteAdvantage_eq_advantage_rouletteReduction`). At security parameter `n`,
+`rouletteDEMAdvantage_le_demKeyGame_add` bounds `rouletteDEMAdvantage keyLen encryptSym A n` above
+by the one-time advantage of `rouletteToDEMAdversary width A` (which replaces uniform spin
+sampling with `ProbComp.sampleModNat (width n) 37`) plus `74 / 2 ^ width n`, where the textbook
+has equality; `isPPT_rouletteToDEMAdversary` certifies that adversary when `width` is
+polynomial-time computable in unary and `Probability.IsPPT encBet A` holds. Asymptotically,
+`DEMOneTimeKeyINDCPAOf.negligible_rouletteDEMAdvantage` yields `Negligible`
+`(rouletteDEMAdvantage keyLen encryptSym A)` from `DEMOneTimeKeyINDCPAOf encIndex keyLen encryptSym`
+and `Probability.IsPPT encBet A`. The
+[tests](../../CslibFrontierTests/Crypto/Roulette.lean) exercise PPT ciphertext-dependent clients
+and give a counterexample showing that admitting `(r, 0)` pairs cannot be omitted.
+
 [`Hybrid/DEMCCA.lean`](../../CslibFrontier/Crypto/Computational/Encryption/Hybrid/DEMCCA.lean)
 proves the exact DEM leg of Boneh–Shoup Exercise 12.5(a), p. 513 [bs23][bs23]. Its middle game
 retains the original KEM key/encapsulation correlation and independently samples the actual
