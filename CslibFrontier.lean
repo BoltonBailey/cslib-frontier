@@ -5104,6 +5104,7 @@ public import CslibFrontier.Crypto.Protocols.MPC.PolyTime.InputProgEquiv
 public import CslibFrontier.Crypto.Protocols.MPC.PolyTime.RunEncoded
 public import CslibFrontier.Crypto.Protocols.MPC.PolyTime.Runner
 public import CslibFrontier.Crypto.Protocols.MPC.ProductRelation
+public import CslibFrontier.Crypto.Protocols.MPC.ProductRelation.Privacy
 public import CslibFrontier.Crypto.Protocols.MPC.SPDZ
 public import CslibFrontier.Crypto.Protocols.MPC.SharedMul
 public import CslibFrontier.Crypto.Protocols.MPC.Yao
