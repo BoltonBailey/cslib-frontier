@@ -2696,6 +2696,24 @@ nonconstant counter schedule, are in
 and direct checks of the sampling lemmas are in
 [`CslibFrontierTests/BitStringCollision.lean`](../../CslibFrontierTests/BitStringCollision.lean).
 
+Electronic codebook (ECB) mode is in
+[`BlockCipher/ECB.lean`](../../CslibFrontier/Crypto/Primitives/BlockCipher/ECB.lean) (Boneh–Shoup
+§4.1.4 and Theorem 4.1, pp. 102–106 [bs23][bs23]). `Cipher.ecb E` encrypts a list of blocks block
+by block under a keyed permutation `E : Key → Equiv.Perm D`, and decrypts every encryption
+(`Cipher.ecb_correct`). The book's message space `X^{≤ℓ}`
+enters through the admissible challenge pairs of `Cipher.oneTimeExperiment`: `ECB.admissible ℓ`
+asks for two messages of the same length at most `ℓ`, and `ECB.distinctAdmissible ℓ` also asks that
+each message consist of distinct blocks. On `X^{≤ℓ}` with `2 ≤ ℓ`, the two-block attack (two equal
+blocks against two distinct ones) has advantage `1` against every block cipher
+(`ECB.advantage_twoBlockAdversary`). On distinct blocks, equation (4.3) holds exactly for uniform
+keys over finite types: every one-time adversary `A` has advantage twice
+`PRP.advantage E (ECB.reduction ℓ A)` (`ECB.advantage_eq_two_mul_prpAdvantage`), and the reduction
+makes at most `ℓ` queries (`ECB.isQueryBounded_reduction`). The asymptotic form and an efficiency
+certificate for the reduction are not yet formalized.
+[`CslibFrontierTests/Crypto/ECB.lean`](../../CslibFrontierTests/Crypto/ECB.lean) checks both
+hypotheses of the attack, an instance of (4.3) with both sides nonzero, and that Theorem 4.1 fails
+without distinct blocks.
+
 For the shared lazy-versus-fresh random-function hybrid and left-or-right block-mode CPA scaffolding
 used by both CTR and OFB mode, import
 [`Encryption/RandomFunctionHybrid.lean`](../../CslibFrontier/Crypto/Computational/Encryption/RandomFunctionHybrid.lean):
