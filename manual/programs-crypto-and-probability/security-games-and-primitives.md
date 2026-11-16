@@ -1574,6 +1574,20 @@ by `decide` and build the instance as `⟨isUnit_iff_ne_zero.2 h⟩`.
   `#E(F) = #F + 1 - t`. (`WeierstrassCurve.Manin.twistPoly` in `ManinTwist.lean` is the instance
   `(ofCubic (C α) (C β) (C γ)).quadraticTwist (cubicPoly α β γ)` over `Polynomial k`, with
   `Manin.twist` its base change to `RatFunc k`, used internally in Manin's proof.)
+- **Variable change on affine points.** Import [`EllipticCurve/VariableChange.lean`](../../CslibFrontier/Foundations/AlgebraicGeometry/EllipticCurve/VariableChange.lean)
+  (`CslibFrontier.Foundations.AlgebraicGeometry.EllipticCurve.VariableChange`). Over a field `F`,
+  for Mathlib's admissible change of variables `C : WeierstrassCurve.VariableChange F` (a unit
+  `C.u` and `C.r`, `C.s`, `C.t` in `F`) and any `W : WeierstrassCurve F`, singular or not,
+  `WeierstrassCurve.variableChange_equation_iff` states that `(x, y)` satisfies the equation of
+  `C • W` if and only if `(C.u ^ 2 * x + C.r, C.u ^ 3 * y + C.u ^ 2 * C.s * x + C.t)` satisfies
+  the equation of `W`, and `WeierstrassCurve.variableChange_nonsingular_iff` states the same for
+  nonsingular points. When `F` has decidable equality (`[DecidableEq F]`, which Mathlib's
+  addition of points needs), `WeierstrassCurve.variableChangePointEquiv C W` is the group
+  isomorphism `(C • W).toAffine.Point ≃+ W.toAffine.Point` that sends `0` to `0` and an affine
+  point to the point with those coordinates (`WeierstrassCurve.variableChangePointEquiv_some`),
+  so `C • W` and `W` have the same number of points (`Nat.card_congr` applied to its `toEquiv`).
+  The [variable-change client](../../CslibFrontierTests/Foundations/AlgebraicGeometry/VariableChange.lean)
+  moves an addition on a curve over `ZMod 7` through it.
 
 The [checked client](../../CslibFrontierTests/Foundations/AlgebraicGeometry/EllipticCurveHasse.lean)
 (using [`EllipticCurve/Decidable.lean`](../../CslibFrontier/Foundations/AlgebraicGeometry/EllipticCurve/Decidable.lean)
