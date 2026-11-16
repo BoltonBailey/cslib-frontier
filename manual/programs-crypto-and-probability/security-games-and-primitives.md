@@ -430,6 +430,26 @@ efficient identity test, and shows that constant composite, Blum, and RSA moduli
 scripts/build.sh --wfail --iofail CslibFrontierTests.Crypto.DiffieHellman CslibFrontierTests.Crypto.MultiDDH CslibFrontierTests.Crypto.AssumptionNonvacuity
 ```
 
+For the linear congruential generator ([bs23][bs23], Section 3.7.1, pp. 70–71), import
+[`Crypto/Primitives/PRG/LinearCongruential.lean`](../../CslibFrontier/Crypto/Primitives/PRG/LinearCongruential.lean).
+`LinearCongruential.generator` is the book's `G_lcg : S_q → R × S_q`, where `R` has
+`|R| = ⌊(q - 1) / w⌋ + 1` elements. When `a` is coprime to `q`, `LinearCongruential.test` is
+`Generator.rangeTest` (`LinearCongruential.rangeTest_generator`), and for `q ≠ 0` (the instance
+`NeZero P.q`) `LinearCongruential.advantage_generator_test` gives it advantage exactly
+`1 - 1 / |R|`: at least `1 / 2` when `0 < w < q`, and `0` when `w = 0` or `q ≤ w`, which includes
+the case `w = q` that the book allows. `LinearCongruential.computableInPolyTime_test` certifies
+`test` in polynomial time, with the parameters (`encLinearCongruential`) and the challenge in
+binary. `LinearCongruential.seedSearch` is the book's exhaustive search from three outputs.
+`LinearCongruential.seedSearch_eq` proves that it returns the seed `s < q` when `0 < w` and no
+nonzero `d` with `|d| < w` has `a * d` within less than `w` of a multiple of `q`; under these two
+conditions two outputs already determine the state
+(`LinearCongruential.eq_of_div_eq_of_next_div_eq`). `LinearCongruential.seedSearch_java8` proves
+the condition for the Java 8 parameters `LinearCongruential.java8`, so the search returns every
+seed `s < 2 ^ 48`. `LinearCongruential.computableInPolyTime_seedSearch` certifies the search in
+time polynomial in `w` itself, which the caller supplies in unary (`encUnary`), and in the binary
+length of the other inputs. The iterated generator `G_lcg^(n)` and Lemma 3.7 are not formalized;
+see the [LCG tests](../../CslibFrontierTests/Crypto/LinearCongruential.lean).
+
 In a group of even order, the parity test of [bs23][bs23], Section 16.1.3, distinguishes
 Diffie–Hellman triples from random ones. Import
 [`DiffieHellman/EvenOrder.lean`](../../CslibFrontier/Crypto/Computational/DiffieHellman/EvenOrder.lean).

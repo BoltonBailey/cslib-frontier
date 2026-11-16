@@ -4951,6 +4951,7 @@ public import CslibFrontier.Crypto.Primitives.PRF.ToPRG
 public import CslibFrontier.Crypto.Primitives.PRG.Circuit
 public import CslibFrontier.Crypto.Primitives.PRG.Game
 public import CslibFrontier.Crypto.Primitives.PRG.LFSR
+public import CslibFrontier.Crypto.Primitives.PRG.LinearCongruential
 public import CslibFrontier.Crypto.Primitives.PRG.ModReduction
 public import CslibFrontier.Crypto.Primitives.PRG.NextBit
 public import CslibFrontier.Crypto.Primitives.PRG.Nisan
