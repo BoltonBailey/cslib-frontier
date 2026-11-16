@@ -4449,6 +4449,7 @@ public import CslibFrontier.Crypto.Computational.DiffieHellman.Order
 public import CslibFrontier.Crypto.Computational.DiffieHellman.SampleExp
 public import CslibFrontier.Crypto.Computational.DiffieHellman.SelfReduction
 public import CslibFrontier.Crypto.Computational.DiffieHellman.SelfReduction.Family
+public import CslibFrontier.Crypto.Computational.DiffieHellman.SmallFactor
 public import CslibFrontier.Crypto.Computational.DiffieHellman.Static
 public import CslibFrontier.Crypto.Computational.DiffieHellman.WithKey
 public import CslibFrontier.Crypto.Computational.DiscreteLog
