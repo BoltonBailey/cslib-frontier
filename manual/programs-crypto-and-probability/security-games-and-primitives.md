@@ -3542,12 +3542,46 @@ concatenate to it (`flatten_mdLengthBlocks`); for larger `s` the count does not 
 bits are dropped. `mdLengthBlocks_suffix_iff`: if `mdLengthBlockCount n m₂ < 2 ^ (n / 2)`, then
 `mdLengthBlocks n m₁` is a suffix of `mdLengthBlocks n m₂` only when `m₁ = m₂`.
 `computableInPolyTime_mdLengthBlocks` is the polynomial-time certificate, with `n` in unary. The
-hash built from this padding and Theorem 8.3 (p. 297) for it are not yet library declarations. The
 [checked examples](../../CslibFrontierTests/Crypto/MerkleDamgardLengthPadding.lean) compute both
-cases of p. 297 at `n = 4`, show that suffix-freeness fails at the first count that does not fit,
-and derive collision resistance of the chain on the messages whose count fits from
-`CompressionFamily.collisionResistantOn_merkleDamgardChain`; run
+cases of p. 297 at `n = 4`, show that suffix-freeness and the block-alignment laws
+(`length_mdLengthPad` and `flatten_mdLengthBlocks`) fail at the first count that does not fit
+(`s = 2 ^ (n / 2)`), and derive collision resistance of the chain on the messages whose count fits
+from `CompressionFamily.collisionResistantOn_merkleDamgardChain`; run
 `scripts/build.sh CslibFrontierTests.Crypto.MerkleDamgardLengthPadding`.
+
+For the length-strengthened Merkle–Damgård hash of [bs23][bs23], §8.4 (pp. 295–298), import
+[`MerkleDamgard/LengthStrengthened.lean`](../../CslibFrontier/Crypto/Computational/MerkleDamgard/LengthStrengthened.lean).
+`lengthStrengthenedMD h k msg` runs `merkleDamgardChain` on `mdLengthBlocks k.length msg` starting
+from the all-zero `k.length`-bit IV `List.replicate k.length false`; when `h k` maps `2 * k.length`-bit
+inputs to `k.length`-bit digests, the hash output also has `k.length` bits
+(`length_lengthStrengthenedMD`), and together with a uniform `2 * k.length`-bit length
+assumption and polynomial-time `h` this certifies `lengthStrengthenedMD h` in deterministic
+polynomial time (`computableInPolyTime_lengthStrengthenedMD`). The book uses an independent block
+length `ℓ`, any fixed `IV`, and a block-count field of fixed width (typically 64 bits); here
+`ℓ = n = k.length`, `IV = 0^n`, the key `k` is uniform over `n`-bit strings, and the count field
+has `n / 2` bits, so the count fits only when `mdLengthBlockCount n msg < 2 ^ (n / 2)`. For
+Theorem 8.3 (pp. 297–298), `lengthStrengthenedWrapper h valid adversary` runs `adversary`, tests
+`isCollision (lengthStrengthenedMD h) valid`, extracts a compression collision via
+`extractChainCollision` when that check passes, and returns `([], [])` otherwise, certified
+uniformly strict PPT by `isPPT_lengthStrengthenedWrapper` (from polynomial-time `h` and `valid`,
+`2 * k.length`-to-`k.length` length preservation, and strict PPT `adversary`).
+For `succProbability_collisionGame_lengthStrengthenedMD_eq`: at a parameter `n`, if
+`(h k x).length = n` whenever `k.length = n` and `x.length = 2 * n`, and `valid n m = true`
+implies `mdLengthBlockCount n m < 2 ^ (n / 2)`, then `adversary` wins
+`collisionGame (lengthStrengthenedMD h) valid` with the exact same probability with which
+`lengthStrengthenedWrapper h valid adversary` wins `collisionGame h validCompressionInput`.
+Because every strict PPT adversary outputs messages of polynomially bounded length while
+`2 ^ (n / 2)` grows exponentially, any `CompressionFamily h` yields
+`CollisionResistant (lengthStrengthenedMD h)`
+(`CompressionFamily.collisionResistant_lengthStrengthenedMD`) and `HashFamily (lengthStrengthenedMD h)`
+(`CompressionFamily.hashFamily_lengthStrengthenedMD`). The
+[checked examples](../../CslibFrontierTests/Crypto/MerkleDamgardLengthStrengthened.lean) compute
+known-answer digests under an XOR compression function at `n = 4`, apply
+`succProbability_collisionGame_lengthStrengthenedMD_eq` to a concrete 5-bit collision domain under
+that XOR compression function (`1` vs `1`), verify the suffix collision behind the `n = 4` overflow
+pair (`mdLengthBlockCount 4 msg = 7`), and build an `n = 4` overflow collision under an all-zero
+compression function (`1` vs `0`); run
+`scripts/build.sh CslibFrontierTests.Crypto.MerkleDamgardLengthStrengthened`.
 
 Merkle–Damgård chains have many messages with one digest at little more than the cost of one
 collision (Joux's attack, [bs23][bs23], §8.4.1, pp. 298–299). Import
