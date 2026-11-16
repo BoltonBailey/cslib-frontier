@@ -4783,6 +4783,7 @@ public import CslibFrontier.Crypto.Computational.SIS.Polynomial
 public import CslibFrontier.Crypto.Computational.SIS.Polynomial.Coefficients
 public import CslibFrontier.Crypto.Computational.SNOVA.SigningAttempts
 public import CslibFrontier.Crypto.Computational.SchnorrEavesdrop
+public import CslibFrontier.Crypto.Computational.SchnorrGuessing
 public import CslibFrontier.Crypto.Computational.SchnorrIdentification
 public import CslibFrontier.Crypto.Computational.SchnorrProofOfKnowledge
 public import CslibFrontier.Crypto.Computational.SchnorrProtocol
@@ -5065,6 +5066,7 @@ public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Efficient.Verifier
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.FiatShamir
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.FiatShamirNIZK
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.ForkingReduction
+public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Guessing
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Identification
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.Interactive
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.LanguageReduction
