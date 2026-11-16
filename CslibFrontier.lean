@@ -4451,6 +4451,7 @@ public import CslibFrontier.Crypto.Computational.Encryption.CBCMode
 public import CslibFrontier.Crypto.Computational.Encryption.CCA
 public import CslibFrontier.Crypto.Computational.Encryption.CCA.Interleaved
 public import CslibFrontier.Crypto.Computational.Encryption.CCA.Malleability
+public import CslibFrontier.Crypto.Computational.Encryption.CCA.NonAdaptive
 public import CslibFrontier.Crypto.Computational.Encryption.CCA.Sloppy
 public import CslibFrontier.Crypto.Computational.Encryption.CCAToCPA
 public import CslibFrontier.Crypto.Computational.Encryption.CTRMode
