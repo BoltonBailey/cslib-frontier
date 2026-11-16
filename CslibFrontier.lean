@@ -4675,6 +4675,7 @@ public import CslibFrontier.Crypto.Computational.NaorYungUOWHF
 public import CslibFrontier.Crypto.Computational.Nonuniform.Advice
 public import CslibFrontier.Crypto.Computational.Nonuniform.Basic
 public import CslibFrontier.Crypto.Computational.Nonuniform.ZeroKnowledge
+public import CslibFrontier.Crypto.Computational.OneTimeSignature.ContainmentFree
 public import CslibFrontier.Crypto.Computational.OneTimeSignature.DominationFree
 public import CslibFrontier.Crypto.Computational.OneWay
 public import CslibFrontier.Crypto.Computational.OneWay.Amplification
