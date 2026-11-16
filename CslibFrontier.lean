@@ -3642,8 +3642,10 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.Pol
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimePrimitives
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimeRadix
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.ResourceFacts
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.RiceDispatch
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.SpaceNormalForm
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.StepMachineCompiler
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.TotalComputability
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.UnaryMachines
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.WordMachines
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.WordPredicates
@@ -3778,6 +3780,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.Cl
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.Complexity
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.Correct
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.Decode
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.DescriptionLookup
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.Encoding
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.InPlace
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Universal.Input
