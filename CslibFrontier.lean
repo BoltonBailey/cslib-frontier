@@ -4474,6 +4474,7 @@ public import CslibFrontier.Crypto.Computational.Encryption.KEMFromPKE.CCA
 public import CslibFrontier.Crypto.Computational.Encryption.LoRCPA
 public import CslibFrontier.Crypto.Computational.Encryption.LoRCPA.FromSingle
 public import CslibFrontier.Crypto.Computational.Encryption.MACThenEncrypt
+public import CslibFrontier.Crypto.Computational.Encryption.MACThenEncrypt.EncForge
 public import CslibFrontier.Crypto.Computational.Encryption.MessageRecovery
 public import CslibFrontier.Crypto.Computational.Encryption.Nested
 public import CslibFrontier.Crypto.Computational.Encryption.OFBMode
