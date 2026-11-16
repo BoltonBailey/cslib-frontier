@@ -4577,6 +4577,8 @@ public import CslibFrontier.Crypto.Computational.GenericGroup.Basic
 public import CslibFrontier.Crypto.Computational.GenericGroup.DiffieHellman
 public import CslibFrontier.Crypto.Computational.GenericGroup.DiscreteLog
 public import CslibFrontier.Crypto.Computational.GenericGroup.LinearGame
+public import CslibFrontier.Crypto.Computational.GenericGroup.Power
+public import CslibFrontier.Crypto.Computational.GenericGroup.RecursiveDlog
 public import CslibFrontier.Crypto.Computational.GenericGroup.Relabel
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.Decoding
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.HardCore
