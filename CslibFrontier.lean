@@ -4766,6 +4766,7 @@ public import CslibFrontier.Crypto.Computational.PseudorandomFunction.TruthTable
 public import CslibFrontier.Crypto.Computational.PseudorandomGenerator
 public import CslibFrontier.Crypto.Computational.PseudorandomGenerator.LFSR
 public import CslibFrontier.Crypto.Computational.PseudorandomGenerator.ModReduction
+public import CslibFrontier.Crypto.Computational.PseudorandomGenerator.Parallel
 public import CslibFrontier.Crypto.Computational.PseudorandomPermutation
 public import CslibFrontier.Crypto.Computational.QuadraticResiduosity
 public import CslibFrontier.Crypto.Computational.Quantum
@@ -4971,6 +4972,7 @@ public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.MXCircuit
 public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.Queries
 public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.Reconstruction
 public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.Sampling
+public import CslibFrontier.Crypto.Primitives.PRG.Parallel
 public import CslibFrontier.Crypto.Primitives.PRP.BirthdayAttack
 public import CslibFrontier.Crypto.Primitives.PRP.Finite
 public import CslibFrontier.Crypto.Primitives.SDitH.ExpandSeed
@@ -5953,6 +5955,7 @@ public import CslibFrontier.Foundations.Data.BitString.List.LowBits
 public import CslibFrontier.Foundations.Data.BitString.List.Operations
 public import CslibFrontier.Foundations.Data.BitString.List.Positions
 public import CslibFrontier.Foundations.Data.BitString.List.PrefixFree
+public import CslibFrontier.Foundations.Data.BitString.List.Rows
 public import CslibFrontier.Foundations.Data.BitString.List.Single
 public import CslibFrontier.Foundations.Data.BitString.List.Vote
 public import CslibFrontier.Foundations.Data.BitString.ListParity
