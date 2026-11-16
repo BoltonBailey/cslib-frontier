@@ -425,6 +425,35 @@ instead of writing another sampling block. The inner product of bit lists is
 Mathlib's `dotProduct` on `List.ofFn` inputs (`listDot_ofFn`); use it, and its polynomial-time rule
 `ComputableInPolyTime.bitsListDot`, instead of spelling out the zip-and-fold parity.
 
+For offline dictionary attacks against a hash oracle `H` ([bs23][bs23], §18.3.1.2–§18.3.1.3,
+(18.1)–(18.3), pp. 721–723, and §18.4.1–§18.4.2, pp. 724–726), import
+[`Computational/DictionarySearch.lean`](../../CslibFrontier/Crypto/Computational/DictionarySearch.lean).
+`dictionarySearch input accept D` searches a candidate list `D` in order by querying `H` at
+`input w` and testing replies with `accept`. Against `H` it returns the first candidate whose
+reply passes, or `none` (`evalPure_dictionarySearch`). If the secret `pw` is in `D` and its reply
+passes, the output is a candidate whose reply passes (`exists_evalPure_dictionarySearch_of_mem`),
+and `dictionaryPreimageSearch input (H (input pw)) D` returns `pw` itself when `pw ∈ D` and
+`w ↦ H (input w)` is injective on `D` (`evalPure_dictionaryPreimageSearch_of_injOn`; injectivity
+of `H` alone is not enough). The search queries only candidate inputs
+(`queriesSatisfy_dictionarySearch`) and makes at most `D.length` oracle calls on every path
+(`isQueryBounded_dictionarySearch`); when `accept` rejects some reply, no smaller number bounds
+it (`not_isQueryBounded_dictionarySearch`). The preprocessing table `dictionaryTable` makes at most
+`D.length` oracle calls (`isQueryBounded_dictionaryTable`) and matches `dictionaryPreimageSearch`
+via `List.lookup` (`lookup_evalPure_dictionaryTable`), so the batch search
+`dictionaryBatchSearch` answers a whole file `F` in at most `D.length` calls
+(`isQueryBounded_dictionaryBatchSearch`); separate searches are bounded by `F.length * D.length`
+(`isQueryBounded_mapM_dictionaryPreimageSearch`), an upper bound that is not shown to be attained.
+For any distribution `μ` of the secret, `dictionarySearch_inverts` states the bound of `D.length`
+calls together with a lower bound on success: `dictionaryInverter` (the preimage search, returning
+`default` on failure) wins `inversionExperiment` for `pw ↦ H (input pw)` with probability at
+least `μ.toOuterMeasure {pw | pw ∈ D}`. The probability form is this library's; the book states
+that a password in `D` is found, up to a collision (p. 722).
+The cost is a count of oracle evaluations of `H` and nothing else: comparisons, `accept`, and
+`List.lookup` are uncounted, and no running time in a machine model is stated. Salted and
+secret-salt instances, MAC-key and §21.11 search shapes, and failing cases showing each hypothesis
+is needed are in
+[`Crypto/DictionarySearch.lean`](../../CslibFrontierTests/Crypto/DictionarySearch.lean).
+
 For a one-bit expanding PRG, [Stretch/Prefix.lean](../../CslibFrontier/Crypto/Computational/Stretch/Prefix.lean)
 proves that `(forwardIterate g ℓ seed).take ℓ` has length `ℓ` and agrees with the first `ℓ`
 emitted bits of every longer run. The premise is global: `length (g seed) = length seed + 1`
