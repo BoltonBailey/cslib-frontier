@@ -4517,6 +4517,7 @@ public import CslibFrontier.Crypto.Computational.Encryption.OFBMode
 public import CslibFrontier.Crypto.Computational.Encryption.OFBMode.Uniform
 public import CslibFrontier.Crypto.Computational.Encryption.OneWay
 public import CslibFrontier.Crypto.Computational.Encryption.ParityPrediction
+public import CslibFrontier.Crypto.Computational.Encryption.PlaintextIntegrity
 public import CslibFrontier.Crypto.Computational.Encryption.PolyTime
 public import CslibFrontier.Crypto.Computational.Encryption.PublicKeyCPA
 public import CslibFrontier.Crypto.Computational.Encryption.PublicKeyReplacement
@@ -6762,6 +6763,7 @@ public import CslibFrontier.Languages.Probabilistic.Oracle.Run
 public import CslibFrontier.Languages.Probabilistic.Oracle.RunLogAgree
 public import CslibFrontier.Languages.Probabilistic.Oracle.RunState
 public import CslibFrontier.Languages.Probabilistic.Oracle.Simulation
+public import CslibFrontier.Languages.Probabilistic.Oracle.Simulation.Handler
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution.QueryCount
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution.RunWith
