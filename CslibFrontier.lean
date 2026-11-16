@@ -4474,6 +4474,7 @@ public import CslibFrontier.Crypto.Computational.ElGamal.Malleability
 public import CslibFrontier.Crypto.Computational.ElGamal.OneWay
 public import CslibFrontier.Crypto.Computational.ElGamal.ProbComp
 public import CslibFrontier.Crypto.Computational.ElGamal.StronglyUnpredictable
+public import CslibFrontier.Crypto.Computational.ElGamal.Unpredictable
 public import CslibFrontier.Crypto.Computational.Encryption.Authenticated
 public import CslibFrontier.Crypto.Computational.Encryption.Basic
 public import CslibFrontier.Crypto.Computational.Encryption.BlockModeWord
@@ -4531,6 +4532,7 @@ public import CslibFrontier.Crypto.Computational.Encryption.Scheme
 public import CslibFrontier.Crypto.Computational.Encryption.StreamMalleability
 public import CslibFrontier.Crypto.Computational.Encryption.StronglyUnpredictable
 public import CslibFrontier.Crypto.Computational.Encryption.SymmetricCPA
+public import CslibFrontier.Crypto.Computational.Encryption.Unpredictable
 public import CslibFrontier.Crypto.Computational.EnhancedTargetCollisionResistant
 public import CslibFrontier.Crypto.Computational.EvenMansour
 public import CslibFrontier.Crypto.Computational.Factoring
