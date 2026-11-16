@@ -4486,6 +4486,7 @@ public import CslibFrontier.Crypto.Computational.Encryption.DecryptionBound
 public import CslibFrontier.Crypto.Computational.Encryption.Deterministic
 public import CslibFrontier.Crypto.Computational.Encryption.EncForge
 public import CslibFrontier.Crypto.Computational.Encryption.EncryptThenMAC
+public import CslibFrontier.Crypto.Computational.Encryption.EncryptThenMAC.PartialTag
 public import CslibFrontier.Crypto.Computational.Encryption.Functional
 public import CslibFrontier.Crypto.Computational.Encryption.HalfBlockPRP
 public import CslibFrontier.Crypto.Computational.Encryption.Hybrid
@@ -4529,6 +4530,7 @@ public import CslibFrontier.Crypto.Computational.Falcon.BerExp
 public import CslibFrontier.Crypto.Computational.Falcon.BerExpLazy
 public import CslibFrontier.Crypto.Computational.Falcon.Verification
 public import CslibFrontier.Crypto.Computational.Falcon.VerificationFrontend
+public import CslibFrontier.Crypto.Computational.FlipHeadBit
 public import CslibFrontier.Crypto.Computational.FuzzyExtractor.Basic
 public import CslibFrontier.Crypto.Computational.FuzzyExtractor.DecodeThenExtract
 public import CslibFrontier.Crypto.Computational.FuzzyExtractor.DecodeThenExtract.Security
