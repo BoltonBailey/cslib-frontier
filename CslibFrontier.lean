@@ -5196,6 +5196,7 @@ public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.Queries
 public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.Reconstruction
 public import CslibFrontier.Crypto.Primitives.PRG.NisanWigderson.Sampling
 public import CslibFrontier.Crypto.Primitives.PRG.Parallel
+public import CslibFrontier.Crypto.Primitives.PRG.ReadOnceBias
 public import CslibFrontier.Crypto.Primitives.PRP.BirthdayAttack
 public import CslibFrontier.Crypto.Primitives.PRP.Finite
 public import CslibFrontier.Crypto.Primitives.PRP.StrongSwitching
@@ -7908,6 +7909,7 @@ public import CslibFrontier.Probability.Shearer
 public import CslibFrontier.Probability.SmallBias
 public import CslibFrontier.Probability.SmallBias.Code
 public import CslibFrontier.Probability.SmallBias.Correlation
+public import CslibFrontier.Probability.SmallBias.Degree
 public import CslibFrontier.Probability.SmallBias.Pointwise
 public import CslibFrontier.Probability.SmallBias.Powering
 public import CslibFrontier.Probability.SmallBias.Random
