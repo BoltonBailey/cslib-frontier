@@ -4940,6 +4940,8 @@ public import CslibFrontier.Crypto.Computational.RSATrapdoor
 public import CslibFrontier.Crypto.Computational.RSAUnitInversion
 public import CslibFrontier.Crypto.Computational.RSAUnitInversion.Converse
 public import CslibFrontier.Crypto.Computational.RabinFactoring
+public import CslibFrontier.Crypto.Computational.RainbowTable
+public import CslibFrontier.Crypto.Computational.RainbowTable.RunCost
 public import CslibFrontier.Crypto.Computational.Rompel
 public import CslibFrontier.Crypto.Computational.SIS.Ajtai
 public import CslibFrontier.Crypto.Computational.SIS.Basic
