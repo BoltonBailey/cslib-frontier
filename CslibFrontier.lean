@@ -2495,6 +2495,9 @@ public import CslibFrontier.Computability.Complexity.Problems.BipartitePerfectMa
 public import CslibFrontier.Computability.Complexity.Problems.BipartitePerfectMatching.Membership
 public import CslibFrontier.Computability.Complexity.Problems.BoundedComputation
 public import CslibFrontier.Computability.Complexity.Problems.BoundedHalting
+public import CslibFrontier.Computability.Complexity.Problems.BoundedSTCON
+public import CslibFrontier.Computability.Complexity.Problems.BoundedSTCON.LogSpace
+public import CslibFrontier.Computability.Complexity.Problems.BoundedSTCON.Membership
 public import CslibFrontier.Computability.Complexity.Problems.BoundedTermination
 public import CslibFrontier.Computability.Complexity.Problems.CMMSA
 public import CslibFrontier.Computability.Complexity.Problems.CMMSA.Size
@@ -6399,6 +6402,7 @@ public import CslibFrontier.Foundations.Data.Nat.LogStar
 public import CslibFrontier.Foundations.Data.Nat.LogTwoRpow
 public import CslibFrontier.Foundations.Data.Nat.MasterTheorem
 public import CslibFrontier.Foundations.Data.Nat.MasterTheoremAsymptotics
+public import CslibFrontier.Foundations.Data.Nat.Min
 public import CslibFrontier.Foundations.Data.Nat.Morton
 public import CslibFrontier.Foundations.Data.Nat.MultiplyHigh
 public import CslibFrontier.Foundations.Data.Nat.OddMulMod
