@@ -4253,6 +4253,10 @@ public import CslibFrontier.Computability.RAM.Input
 public import CslibFrontier.Computability.RAM.Squaring
 public import CslibFrontier.Computability.Reduction.ManyOne
 public import CslibFrontier.Computability.Reduction.TruthTable
+public import CslibFrontier.Computability.RelationAlgebra.Tiling.Frame
+public import CslibFrontier.Computability.RelationAlgebra.Tiling.Reduction
+public import CslibFrontier.Computability.RelationAlgebra.Tiling.TilingOfWinning
+public import CslibFrontier.Computability.RelationAlgebra.Tiling.WinningOfTiling
 public import CslibFrontier.Computability.StreamArithmetic.EstimatorRecipes
 public import CslibFrontier.Computability.StreamArithmetic.Interface
 public import CslibFrontier.Computability.StreamArithmetic.Primitives
@@ -4328,6 +4332,7 @@ public import CslibFrontier.Computability.USTCON.Reader.Invariant
 public import CslibFrontier.Computability.USTCON.Space
 public import CslibFrontier.Computability.WangTile.Basic
 public import CslibFrontier.Computability.WangTile.Compactness
+public import CslibFrontier.Computability.WangTile.EveryTileOccurs
 public import CslibFrontier.Computability.WangTile.OfTM0
 public import CslibFrontier.Computability.WangTile.Pointed
 public import CslibFrontier.Computability.WangTile.Robinson.Canonical.Certificates
@@ -6769,7 +6774,10 @@ public import CslibFrontier.Foundations.Relation.Acyclic
 public import CslibFrontier.Foundations.Relation.InductiveCounting
 public import CslibFrontier.Foundations.Relation.RelatesWithinSteps
 public import CslibFrontier.Foundations.Relation.Transport
+public import CslibFrontier.Foundations.RelationAlgebra.AtomStructure
+public import CslibFrontier.Foundations.RelationAlgebra.AtomTable
 public import CslibFrontier.Foundations.RelationAlgebra.AtomicNetwork
+public import CslibFrontier.Foundations.RelationAlgebra.Finite
 public import CslibFrontier.Foundations.RelationAlgebra.Game
 public import CslibFrontier.Foundations.RingTheory.AdjoinRoot
 public import CslibFrontier.Foundations.RingTheory.CyclicIntRing
