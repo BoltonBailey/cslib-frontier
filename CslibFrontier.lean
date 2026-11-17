@@ -2339,6 +2339,7 @@ public import CslibFrontier.Computability.Complexity.Classes.Tally
 public import CslibFrontier.Computability.Complexity.Classes.Time
 public import CslibFrontier.Computability.Complexity.Classes.Time.AcceptCount
 public import CslibFrontier.Computability.Complexity.Classes.Time.BoundedExists
+public import CslibFrontier.Computability.Complexity.Classes.Time.LasVegas
 public import CslibFrontier.Computability.Complexity.Classes.Time.Polynomial
 public import CslibFrontier.Computability.Complexity.Classes.Time.SampleVerify
 public import CslibFrontier.Computability.Complexity.Classes.Time.SigmaTwo
@@ -3791,6 +3792,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilisti
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.CoinTape.Space
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.CoinTape.Substitution
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Composition
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Composition.ExpectedTime
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Composition.Space
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Deterministic
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.ExpectedTime
@@ -3808,6 +3810,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilisti
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.IntervalTensor
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.IterateWhile
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Loop
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Loop.ExpectedTime
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Loop.Space
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.OrElse
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Oracle
