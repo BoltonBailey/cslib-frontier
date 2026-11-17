@@ -6668,6 +6668,7 @@ public import CslibFrontier.Foundations.LinearAlgebra.Matrix.VertexOrientation
 public import CslibFrontier.Foundations.LinearAlgebra.MultivariateQuadratic
 public import CslibFrontier.Foundations.LinearAlgebra.PivotSpace
 public import CslibFrontier.Foundations.LinearAlgebra.PlaneRotation
+public import CslibFrontier.Foundations.LinearAlgebra.RandomOrthogonal
 public import CslibFrontier.Foundations.LinearAlgebra.Rank
 public import CslibFrontier.Foundations.LinearAlgebra.ReplacementDesign
 public import CslibFrontier.Foundations.LinearAlgebra.Tensor.Amplify
