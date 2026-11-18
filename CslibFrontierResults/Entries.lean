@@ -172,6 +172,7 @@ import CslibFrontier.Computability.QueryComplexity.Quantum.NayakWuConsequences
 import CslibFrontier.Computability.QueryComplexity.Quantum.PermutationInversion
 import CslibFrontier.Computability.QueryComplexity.Quantum.SpectralAdversary
 import CslibFrontier.Computability.QueryComplexity.Quantum.WeightedAdversary
+import CslibFrontier.Crypto.Computational.ElGamal.Decodable
 import CslibFrontier.Crypto.Computational.ElGamal.ProbComp
 import CslibFrontier.Crypto.Computational.Encryption.CTRMode.Uniform
 import CslibFrontier.Crypto.Computational.Encryption.OFBMode.Uniform
@@ -179,6 +180,7 @@ import CslibFrontier.Crypto.Computational.GoldreichLevin.HardCore
 import CslibFrontier.Crypto.Computational.InaccessibleEntropy.OneWay
 import CslibFrontier.Crypto.Primitives.PRG.ReadOnceBias
 import CslibFrontier.Crypto.Computational.InaccessibleEntropy.TargetCollision
+import CslibFrontier.Crypto.Computational.LubyRackoff
 import CslibFrontier.Crypto.Computational.MLDSA.KeyOnly
 import CslibFrontier.Crypto.Computational.NaorYungUOWHF
 import CslibFrontier.Crypto.Computational.Nonuniform.ZeroKnowledge
@@ -187,6 +189,9 @@ import CslibFrontier.Crypto.Computational.OneWay.LiuPass
 import CslibFrontier.Crypto.Computational.OneWay.MCSP
 import CslibFrontier.Crypto.Computational.OneWayToPRF
 import CslibFrontier.Crypto.Computational.OneWayToPRG
+import CslibFrontier.Crypto.Computational.PedersenCommitment.ProbComp
+import CslibFrontier.Crypto.Computational.PseudorandomFunction.ToPRG
+import CslibFrontier.Crypto.Computational.PseudorandomGenerator.Parallel
 import CslibFrontier.Crypto.Computational.SIS.Ajtai
 import CslibFrontier.Crypto.Primitives.PRP.Finite
 import CslibFrontier.Crypto.Protocols.KEM.FujisakiOkamoto.Bot
@@ -5768,6 +5773,148 @@ register_result "ofb-mode-cpa" where
     typed bound of two PRF advantages plus 2 K (K + ℓ) / 2^n for block-mode adversaries asking \
     at most K blocks in total and at most ℓ per query, over a finite key set; it charges no \
     running time."
+
+register_result "prg-parallel-composition" where
+  title := "The parallel composition of a secure pseudorandom generator is secure"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Theorem 3.2", locator := "Section 3.4.1, p. 55" }
+  ]
+  theorems := [
+    Cslib.Crypto.computationallyIndistinguishable_parallelGenerator,
+    Cslib.Crypto.computableInPolyTime_parallelGenerator,
+    Cslib.Crypto.length_parallelGenerator
+  ]
+  scope := "Let G be a PseudorandomGenerator: deterministic polynomial time, n-bit seeds, \
+    output length length n with strict expansion n < length n, and secure against uniform \
+    strict PPT tests (Attack Game 3.1 and Definition 3.1, pp. 46–47, which require neither the \
+    seed convention nor expansion). Let the repetition parameter count be computable in \
+    polynomial time from 1^n, where the source asks only that it be poly-bounded. Then G applied \
+    to count n independent uniform n-bit seeds, with the outputs concatenated \
+    (parallelGenerator), is computationally indistinguishable from count n · length n uniform \
+    bits against uniform strict PPT distinguishers that read 1^n and the word. The conclusion is \
+    stated for the two ensembles indexed by n (ComputationallyIndistinguishable), not as \
+    PseudorandomGenerator, which would index security by the seed length count n · n. The \
+    composed generator is deterministic polynomial time (computableInPolyTime_parallelGenerator) \
+    with output length count · length width (length_parallelGenerator). The hybrid reduction \
+    draws its hybrid index from a padded dyadic range, so the advantage is multiplied by at most \
+    2 (count n + 1), where the source's factor is count n. Asymptotic; no concrete bound is \
+    stated."
+
+register_result "prg-from-prf" where
+  title := "A pseudorandom function evaluated at fixed distinct points is a pseudorandom generator"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Theorem 4.8", locator := "Section 4.4.4, p. 138" }
+  ]
+  theorems := [
+    Cslib.Crypto.PseudorandomFunctionOver.toPRG,
+    Cslib.Crypto.indistinguishable_prgFromPRF,
+    Cslib.Crypto.advantage_prgFromPRF_eq
+  ]
+  scope := "Let F be a PseudorandomFunctionOver inLen outLen: n-bit keys, inLen n-bit inputs, \
+    outLen n-bit outputs, deterministic polynomial-time evaluation, secure against adaptive \
+    uniform oracle-PPT tests, with queries of another length answered by the empty word \
+    (Attack Game 4.2 and Definition 4.2, pp. 132–133, allow any key space). Let x n be ℓ n \
+    distinct inLen n-bit points whose list is computable in polynomial time from 1^n; the source \
+    fixes ℓ ≥ 1 poly-bounded points. Then prgFromPRF, mapping an n-bit seed k to \
+    F(k, x₁) ‖ … ‖ F(k, x_ℓ), is a PseudorandomGenerator of output length ℓ n · outLen n \
+    (toPRG), under the extra hypothesis n < ℓ n · outLen n, because that notion includes strict \
+    expansion, which Definition 3.1 does not. indistinguishable_prgFromPRF states the \
+    indistinguishability without expansion, for outLen computable in polynomial time. \
+    advantage_prgFromPRF_eq is the theorem's exact equality PRGadv[A, G] = PRFadv[B, F] at every \
+    n and for every distinguisher A, with the explicit wrapper B = prgFromPRFReduction, which is \
+    certified oracle PPT (isOraclePPT_prgFromPRFReduction)."
+
+register_result "luby-rackoff-prp" where
+  title := "Luby–Rackoff: three Feistel rounds of a pseudorandom function give a pseudorandom \
+    permutation"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Theorem 4.9",
+      locator := "Section 4.5, pp. 141–143 (construction p. 141, Figure 4.14 p. 142, \
+        Theorem 4.9 p. 143)" },
+    { paper := LubyRackoff1988, theorem := unverified, locator := unverified }
+  ]
+  theorems := [
+    Cslib.Crypto.PseudorandomFunction.prp_lubyRackoffCipher
+  ]
+  scope := "Let F be a PseudorandomFunction: n-bit keys, inputs and outputs, deterministic \
+    polynomial-time evaluation, secure against adaptive uniform oracle-PPT tests. The \
+    three-round Feistel cipher lubyRackoffCipher, with 3n-bit keys k₁ ‖ k₂ ‖ k₃ and 2n-bit blocks \
+    u ‖ v, encrypts by w = u ⊕ F(k₁, v), x = v ⊕ F(k₂, w), y = w ⊕ F(k₃, x) and outputs \
+    x ‖ y; decryption runs the rounds backwards. It is a pseudorandom permutation \
+    (BlockCipher.PRP: Attack Game 4.1 and Definition 4.1, pp. 97–98, read asymptotically) \
+    against uniform oracle-PPT distinguishers making adaptive forward queries. The real game \
+    draws one uniform 3n-bit key, that is, three independent round keys; the ideal game draws a \
+    uniform permutation of 2n-bit blocks; a query that is not 2n bits long is answered with the \
+    empty word in both games. Theorem 4.9 allows any key space and half-blocks of n(λ) bits with \
+    2^n(λ) super-poly; here round keys and half-blocks have exactly n bits, n being the security \
+    parameter, so 2^n is super-polynomial. The cipher proved secure is the BlockCipher value \
+    whose fields certify polynomial-time encryption and decryption and their mutual inversion. \
+    Asymptotic; the theorem's concrete bound 3 PRFadv + Q²/N + Q²/2N² is not stated, and the \
+    random-round step advantage_lubyRackoffRandomRounds_prpIdealGame_le bounds the gap to a \
+    uniform permutation by 2 C(Q, 2) / 2^n + C(Q, 2) / 4^n for Q queries. The [LubyRackoff1988] \
+    theorem number and locator were not checked: no copy is recorded in the manual's sources. \
+    The four-round strong pseudorandom permutation in the same module is not part of this \
+    entry."
+
+register_result "pedersen-commitment-binding" where
+  title := "Pedersen commitments are computationally binding under the discrete-logarithm \
+    assumption"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Theorem 10.4 and Fact 10.3",
+      locator := "Section 10.6.1, pp. 414–415; binding: Section 8.12, pp. 344 and 346" },
+    { paper := Pedersen1991, theorem := unverified, locator := unverified }
+  ]
+  theorems := [
+    Cslib.Crypto.PrimeOrderGroupFamily.DiscreteLog.pedersenScheme_binding_pedersenKeyDistProb
+  ]
+  scope := "Over any prime-order group family and setup law for the group, under the \
+    discrete-logarithm assumption DiscreteLog for that setup law (Attack Game 10.4 and \
+    Definition 10.6, p. 409), Pedersen's scheme pedersenScheme is binding \
+    (CommitmentScheme.Binding, the binding experiment of Section 8.12, p. 344) under the key \
+    law pedersenKeyDistProb: draw the group d, then h = α·g with α from the fair-coin program \
+    sampleExp, within statistical distance 1/2^n of uniform on Z_q, where Theorem 10.4 draws h \
+    uniformly. Adversaries are uniform strict PPT word programs reading 1^n and the encoded key \
+    (d, h) and outputting (c, (m₀, o₀), (m₁, o₁)); they win when m₀ ≠ m₁ and both openings \
+    verify. Messages must be canonical binary words of naturals below q, while openings may be \
+    any words, read modulo q, which admits more adversaries than canonical openings would. A \
+    binding break is a collision of H_dl(m, o) = g^m h^o, so the scheme is Section 8.12's \
+    commitment from a collision-resistant hash (p. 346) with the hash H_dl of Section 10.6.1; \
+    the explicit reduction pedersenToDLAdversary computes the logarithm as in Fact 10.3 and is \
+    certified strict PPT (isPPTOn_pedersenToDLAdversary). The setup law need not be efficiently \
+    samplable; the assumption is Boneh–Shoup's when it is. Asymptotic; the per-parameter bound \
+    succProbability_pedersenBindingGame_pedersenKeyDistProb_le adds 1/2^n to the \
+    discrete-logarithm success probability. The [Pedersen1991] theorem number and locator were \
+    not checked: no copy is recorded in the manual's sources."
+
+register_result "elgamal-ddh-ind-cpa" where
+  title := "Multiplicative ElGamal is semantically secure under DDH"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Exercise 11.5(a)", locator := "Section 11.8, p. 459" }
+  ]
+  theorems := [
+    Cslib.Crypto.DecodablePrimeOrderGroupFamily.DDH.indcpaOn_elGamalGroupEncryptProb
+  ]
+  scope := "The scheme E_MEG of the exercise, encrypting a group element m as \
+    (β·g, β·u + m) in additive notation, over a decodable prime-order group family, whose \
+    membership test is polynomial time (the efficiently recognizable groups of \
+    Definition 10.9(1), p. 413). The group is a deterministic polynomial-time schedule d, the \
+    group at parameter n being d n, in place of a randomized system parameterization; DDH \
+    (Attack Game 10.6 and Definition 10.8, pp. 410–411) is assumed for the point-mass setup at d, \
+    which is efficiently samplable, and the public key word carries d n alongside u. Key \
+    generation and encryption are the scheme's own fair-coin strict PPT programs \
+    (elGamalKeyGenProb, elGamalEncryptProb), which draw each exponent with sampleExp, within \
+    statistical distance 1/2^n of uniform on Z_q. The notion is single-challenge IND-CPA \
+    (INDCPAOn: Attack Game 11.1 and Definition 11.2, pp. 436–437) against uniform strict PPT \
+    two-stage adversaries reading 1^n. A challenge pair is admissible when both words encode \
+    elements of the group d n (elGamalGroupValid), in place of the equal-length rule and \
+    without requiring equal lengths; an inadmissible pair makes both experiments output false. \
+    Decryption correctness on the same programs is elGamalDecryptDet_elGamalEncryptProb. \
+    Asymptotic; the exercise's concrete bound 2ε is not stated."
 
 register_result "hashed-elgamal-ddh-kdf-cpa" where
   title := "Hashed ElGamal (the variant E′_EG) is semantically secure under DDH and a secure KDF"
