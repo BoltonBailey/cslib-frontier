@@ -189,6 +189,8 @@ import CslibFrontier.Computability.QueryComplexity.Quantum.NayakWuConsequences
 import CslibFrontier.Computability.QueryComplexity.Quantum.PermutationInversion
 import CslibFrontier.Computability.QueryComplexity.Quantum.SpectralAdversary
 import CslibFrontier.Computability.QueryComplexity.Quantum.WeightedAdversary
+import CslibFrontier.Crypto.Computational.CollisionResistant.Birthday
+import CslibFrontier.Crypto.Computational.CollisionResistant.BruteForce
 import CslibFrontier.Crypto.Computational.CramerShoup.Decodable
 import CslibFrontier.Crypto.Computational.DiffieHellman.BlindedFamily
 import CslibFrontier.Crypto.Computational.DiffieHellman.ListCDHFamily
@@ -6209,6 +6211,66 @@ register_result "prp-iff-prf" where
     as a PRF over (K, X, X), from prfIdealGame blockLen blockLen; the library's named PRF notion \
     PseudorandomFunctionOver draws n-bit keys, and the keyLen = id case in that notion is \
     BlockCipher.prp_iff_pseudorandomFunctionOver_of_keyLen_eq_id, in the same module."
+
+register_result "brute-force-collision-search" where
+  title := "Brute-force collision search finds a collision in 2^ℓ + 1 hash evaluations"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Section 8.3 brute-force collision search",
+      locator := "Section 8.3, pp. 293–294" }
+  ]
+  theorems := [
+    Cslib.Crypto.isQueryBounded_bruteForceHashFinder,
+    Cslib.Crypto.bruteForceHashFinder_success,
+    Cslib.Crypto.bruteForceFinder_two_pow_succ_success,
+    Cslib.Crypto.isQueryBounded_bruteForceFinder,
+    Cslib.Crypto.bruteForceFinder_success
+  ]
+  scope := "For any s distinct messages ms : Fin s → M and oracle program digest making at most \
+    c external oracle calls per message, bruteForceFinder digest ms makes at most s·c oracle \
+    calls on every path (isQueryBounded_bruteForceFinder) and, against any deterministic oracle \
+    realizing f : M → T with digests in a finite set D of cardinality D.card < s, outputs a \
+    collision in collisionOutputs f with probability 1 (bruteForceFinder_success); every \
+    non-none output is a collision (bruteForceFinder_sound). Specializing to ℓ-bit digests \
+    (D = BitString.wordsOfLength ℓ, of size 2^ℓ < 2^ℓ + 1) for any ℓ : ℕ gives probability-1 \
+    collision finding on any 2^ℓ + 1 distinct messages (bruteForceFinder_two_pow_succ_success), \
+    and bruteForceHashFinder ℓ queries a hash H : List Bool → List Bool once on each of the \
+    first 2^ℓ + 1 binary words of length ℓ + 1 (BitString.lowBits (ℓ + 1)), finding a collision \
+    with probability 1 whenever H maps (ℓ + 1)-bit words to ℓ-bit digests \
+    (bruteForceHashFinder_success) in at most 2^ℓ + 1 hash evaluations \
+    (isQueryBounded_bruteForceHashFinder). Deviations: (1) costs count external oracle calls \
+    (ProbOracleComp.IsQueryBounded), not Turing-machine steps for message enumeration or \
+    searching the 2^ℓ + 1 digests in collidingPair? (the polynomial-time Turing-machine \
+    refutation of CollisionResistantOn when 2^ℓ(n) is polynomial in n is \
+    not_collisionResistantOn_of_bruteForce in CollisionResistant/GenericAttacks.lean); \
+    (2) the 2^ℓ + 1 theorems hold for every ℓ : ℕ, whereas the book illustrates small ℓ \
+    (such as ℓ = 16, 2^16 + 1 = 65537). Outside check: PR #6415, review 5953780402."
+
+register_result "birthday-collision-finder" where
+  title := "The birthday collision finder finds a collision with probability at least 1/2 in \
+    ⌈2√|D|⌉ + 1 hash evaluations"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Lemma 8.2", locator := "Section 8.3, p. 294" }
+  ]
+  theorems := [
+    Cslib.Crypto.birthdayFinder_success_book,
+    Cslib.Crypto.birthdayFinder_success
+  ]
+  scope := "For any finite nonempty message space M, oracle program digest making at most c \
+    external oracle calls per message, and deterministic oracle realizing f : M → T with values \
+    in a finite set D, birthdayFinder digest (ProbComp.uniform M) s samples s i.i.d. uniform \
+    messages and runs bruteForceFinder digest on them, making at most s·c oracle calls on every \
+    path (isQueryBounded_birthdayFinder) and never outputting a non-collision \
+    (birthdayFinder_sound). In birthdayFinder_success, the probability of outputting a \
+    collision in collisionOutputs f is at least 1 − exp(−s(s − 1)/(2|D|)) − C(s, 2)/|M|; \
+    in birthdayFinder_success_book, when |M| ≥ 100|D| and s = ⌈2√|D|⌉ + 1, this probability is \
+    at least 1/2. Deviations: (1) stated for the output of the oracle program birthdayFinder \
+    rather than the sampled messages alone, with no running-time claim (sampling and the search \
+    in collidingPair? are not charged); (2) |D| replaces the codomain size N = |T|, allowing any \
+    finite D containing the range of f; (3) birthdayFinder_success keeps explicit error terms \
+    and uses the union bound C(s, 2)/|M| in place of Theorem B.1(ii); (4) digest may be any \
+    oracle program. Outside check: PR #6415, review 5953780402."
 
 register_result "merkle-tree-position-binding" where
   title := "Merkle trees are position binding under collision resistance of the hash's domain"
