@@ -4131,6 +4131,7 @@ public import CslibFrontier.Computability.PolyTime.CSP.AffineTemplate
 public import CslibFrontier.Computability.PolyTime.CSP.Boolean
 public import CslibFrontier.Computability.PolyTime.CSP.BoundaryAppend
 public import CslibFrontier.Computability.PolyTime.CSP.CNFTemplate
+public import CslibFrontier.Computability.PolyTime.CSP.CrossInsertion
 public import CslibFrontier.Computability.PolyTime.CSP.CyclicDifference.BlackCounts
 public import CslibFrontier.Computability.PolyTime.CSP.CyclicDifference.FaceParity
 public import CslibFrontier.Computability.PolyTime.CSP.CyclicDifference.Native
