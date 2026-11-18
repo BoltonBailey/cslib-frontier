@@ -59,7 +59,7 @@ private theorem seedInput_injective {n : ℕ} (key : List Byte) (t : Fin n ↪ F
   by_cases hij : i = j
   · subst j
     exact Prod.ext rfl (List.ofFn_inj.mp (List.append_cancel_left h))
-  · exact (QuantumSigningForger.maskSeedAddress_ne t hij key _ _ h).elim
+  · exact (hij (t.injective (hedge_eq_of_maskSeedInput_eq h))).elim
 
 private abbrev SeedCell (n : ℕ) := (Fin n × BitString 512) × Fin 64
 
@@ -381,6 +381,17 @@ theorem Xofs.prob_representative_ne_sampleSigningMaskSeeds (base : Xofs) (s : Le
 
 namespace QuantumSigningForger
 
+private noncomputable def withMaskSeedOracles {α : Type} (s : Level) (base : Xofs) {a b n : ℕ}
+    (ha : 1024 ≤ a) (hb : 64 ≤ b) (hsize : n ≤ 2 ^ 256)
+    (run : (Fin n ↪ FixedBytes 32) → FixedBytes 32 → SigningMaskSeedOracles → PMF α) : PMF α :=
+  let _ : Nonempty (Fin n ↪ FixedBytes 32) := hedgeEmbedding_nonempty hsize
+  do
+    let t ← PMF.uniformOfFintype (Fin n ↪ FixedBytes 32)
+    let seed ← PMF.uniformOfFintype (FixedBytes 32)
+    let rows ← PMF.uniformOfFintype (SigningMaskSeeds n)
+    let pair ← base.sampleSigningMaskSeeds s seed t ha hb rows
+    run t seed pair
+
 /-- The two mask-seed experiments for the signed-game comparison. Key generation uses the
 background table, and the signer and scorer use the shared table. With `deviceSeesRows = true`
 the device reads the shared table. With `false` it reads the background throughout its execution.
@@ -388,12 +399,7 @@ The same setup seed and tape determine the installed addresses and the actual si
 noncomputable def maskSeedGame (C : QuantumSigningForger) (s : Level) (base : Xofs)
     {a b n : ℕ} (ha : 1024 ≤ a) (hb : 64 ≤ b) (_hn : C.SigningCallsLe n)
     (hsize : n ≤ 2 ^ 256) (deviceSeesRows : Bool) (score : SignedMatrixTrial s → Bool) : Game :=
-  let _ : Nonempty (Fin n ↪ FixedBytes 32) := hedgeEmbedding_nonempty hsize
-  do
-    let t ← PMF.uniformOfFintype (Fin n ↪ FixedBytes 32)
-    let seed ← PMF.uniformOfFintype (FixedBytes 32)
-    let rows ← PMF.uniformOfFintype (SigningMaskSeeds n)
-    let pair ← base.sampleSigningMaskSeeds s seed t ha hb rows
+  withMaskSeedOracles s base ha hb hsize fun t seed pair =>
     C.scoreWithSetup s (if deviceSeesRows then pair.shared else pair.background)
       pair.shared (pair.background.keyGen s seed) (List.ofFn t) score
 
@@ -405,7 +411,8 @@ theorem shared_maskSeedGame_eq_distinctHedgeGame (C : QuantumSigningForger) (s :
     (hsize : n ≤ 2 ^ 256) (score : SignedMatrixTrial s → Bool) :
     C.maskSeedGame s base ha hb hn hsize true score =
       C.distinctHedgeGame s base a b hn hsize score := by
-  simp only [maskSeedGame, distinctHedgeGame, fixedHedgeGame, PMF.monad_bind_eq_bind, ↓reduceIte]
+  simp only [maskSeedGame, withMaskSeedOracles, distinctHedgeGame, fixedHedgeGame,
+    PMF.monad_bind_eq_bind, ↓reduceIte]
   congr 1
   funext t
   rw [PMF.bind_comm (base.uniformPrefixes a b)]
