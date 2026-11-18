@@ -400,6 +400,7 @@ import CslibFrontier.Computability.Complexity.Classes.BPP.Derandomization.NonExp
 import CslibFrontier.Computability.Complexity.Classes.ArthurMerlin.Derandomization
 import CslibFrontier.Computability.Complexity.Classes.ArthurMerlin.SetLowerBound
 import CslibFrontier.Computability.Complexity.Problems.ModularSquareRoot
+import CslibFrontier.Computability.Automata.MPDA.WellNested
 import CslibFrontier.Crypto.Computational.PseudorandomGenerator.ModReduction
 import CslibFrontier.Crypto.Computational.StatisticalIndistinguishability
 import CslibFrontier.Crypto.Primitives.PRG.LinearCongruential
@@ -9353,6 +9354,28 @@ register_result "owf-iterate-not-one-way" where
     asymptotically; the draft's hint only asks for a counterexample, and the construction is \
     the library's own. Source check: independent review on PR #6278."
 
+register_result "mpda-well-nested-reachability" where
+  title := "Inductive saturation characterizes well-nested reachability"
+  topic := "automata theory"
+  sources := [
+    { paper := AkshayGastinKrishnaRoychowdhury2020, theorem := "Lemma 1",
+      locator := "arXiv:2002.05950v2, Section 3, paragraph \"Binary well-nested reachability \
+        for MPDA\"; Algorithm 2 in Appendix B" }
+  ]
+  theorems := [Cslib.Automata.MPDA.wellNestedReach_iff]
+  scope := "For every MPDA, with arbitrary control-state and input types, finitely many \
+    stacks and no finiteness assumption, and all control states s and s': s' is related to s \
+    by WellNestedReach exactly when some well-nested sequence of transitions labels a finite \
+    run of the control from s to s'. WellNestedReach is the least relation containing the \
+    identity pairs, closed under prefixing a nop transition, and closed under pushPop: a push \
+    from s1 to s2, a related pair (s2, s3), the pop of the same stack and symbol from s3 to s4, \
+    and an independently related suffix (s4, s5) give the pair (s1, s5); the suffix supplies \
+    the concatenation needed for consecutive matched pairs. This is the relational \
+    characterization of the table computed by Algorithm 2, which starts from the identity pairs \
+    and the nop transitions; the finite iteration of Algorithm 2, its termination and the \
+    equality of its output with WellNestedReach are not formalized. Source check: outside-fleet \
+    agent review (review_6193_endpoint, codex-coord-20261111-1634) on PR #6474, against \
+    arXiv:2002.05950v2 Section 2 p. 4, Section 3 pp. 7-8 and Appendix B p. 22."
 register_result "offline-dictionary-attack" where
   title := "The offline dictionary attack recovers a password in the dictionary, or one with the \
     same hash, with at most |D| hash evaluations"
