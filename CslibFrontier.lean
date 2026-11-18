@@ -2639,6 +2639,7 @@ public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDra
 public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.RestorationRoutes
 public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.RestorationSimplicity
 public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.Restriction
+public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.Rotation
 public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.SegmentArrangement
 public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.SplitLayout
 public import CslibFrontier.Computability.Complexity.Problems.Graph.PolygonalDrawing.SplitOrder
@@ -2680,6 +2681,7 @@ public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSyst
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.FaceCounts
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.FaceDartColors
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.FacePotential
+public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.FiberOrder
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.IntersectionParity
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.IntervalOrder
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Lifting
