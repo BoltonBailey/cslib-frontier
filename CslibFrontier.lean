@@ -5000,6 +5000,7 @@ public import CslibFrontier.Crypto.Computational.MLDSA.RandomXofMatrix
 public import CslibFrontier.Crypto.Computational.MLDSA.RejNTTExhaustion
 public import CslibFrontier.Crypto.Computational.MLDSA.RejNTTProgramming
 public import CslibFrontier.Crypto.Computational.MLDSA.ResponseBinding
+public import CslibFrontier.Crypto.Computational.MLDSA.SignedExtraction
 public import CslibFrontier.Crypto.Computational.MLDSA.SignedMatrix
 public import CslibFrontier.Crypto.Computational.MLDSA.Signing
 public import CslibFrontier.Crypto.Computational.MLDSA.SigningHedges
