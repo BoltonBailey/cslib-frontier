@@ -3637,6 +3637,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.DP
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Decoder
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Decoder.Basic
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Decoder.Nat
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Decoder.Partial
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Decoder.Sum
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Finite
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Frame
@@ -3667,6 +3668,9 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Pa
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Pair.Projections
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Pi
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Rat
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.Recursive
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.RecursiveChild
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.RecursiveParser
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.StepMachine
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.StepMachineComp
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Encodings.StreamFold
@@ -3718,6 +3722,9 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.Deg
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.EqualityPrimitives
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.FoldCompiler
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.FrameMachines
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.InductiveRecursive
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.InductiveRecursiveAccess
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.InductiveValidation
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.KernelAppend
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.KernelComp
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.KernelFacts
@@ -3770,6 +3777,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.Pol
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimeListToBits
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimeLoops
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimeNatFrontends
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimeOptionPair
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimeOptionPrimitives
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimePiPrimitives
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Internal.PolyTimePrimitives
