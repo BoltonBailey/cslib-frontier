@@ -381,6 +381,7 @@ import CslibFrontier.Computability.Probabilistic.CoinOfDigits
 import CslibFrontier.Probability.BilinearFingerprint
 import CslibFrontier.Probability.Extractor.LeftoverHash
 import CslibFrontier.Probability.Extractor.TwoSource
+import CslibFrontier.Probability.Fooling.DecisionTree
 import CslibFrontier.Probability.LocalitySensitiveHash.PStable
 import CslibFrontier.Probability.LocalitySensitiveHash.SimHash
 import CslibFrontier.Foundations.Data.Code.LowDegreeExtension
@@ -9030,6 +9031,32 @@ register_result "goldreich-read-once-prg-stretch" where
     s ≥ 1, with error ε < 1/2 has ℓ < 2^k, via the 2ε-bias bound and Exercise 8.37. The \
     printed hypothesis ε < 1 does not suffice: σ ↦ σσ has ℓ = 2 = 2^1 with error 1/2 \
     (exists_secure_not_isSmallBias)."
+
+register_result "goldreich-adaptive-t-wise-independence" where
+  title := "Adaptive block tests of t-wise independent generators"
+  topic := "pseudorandomness"
+  sources := [
+    { paper := Goldreich2007DraftR4, theorem := "Exercise 8.29",
+      locator := "March 2007 draft, printed pp. 376–377 / PDF pp. 112–113" }
+  ]
+  theorems := [Cslib.Probability.IsKWiseIndependentHash.bind_map_eval_eq]
+  scope := "With a uniform seed and t-wise independent Boolean blocks, an adaptive test has \
+    the same output law as on uniform bits. A test samples independent coins to select a \
+    decision tree and reads bits from at most t distinct blocks on each input. This includes \
+    whole-block tests. Outside-fleet source check: review 5954380213 on PR #6421."
+
+register_result "goldreich-adaptive-almost-t-wise-independence" where
+  title := "Adaptive bit tests of almost t-wise independent distributions"
+  topic := "pseudorandomness"
+  sources := [
+    { paper := Goldreich2007DraftR4, theorem := "Exercise 8.32(2)",
+      locator := "March 2007 draft, printed p. 378 / PDF p. 114" }
+  ]
+  theorems := [Cslib.DecisionTree.abs_bind_map_eval_apply_sub_le]
+  scope := "For a law on n bits with n ≥ t, if every t-bit marginal has statistical distance \
+    at most ε from uniform, an adaptive test reading at most t distinct positions on each \
+    input has distinguishing gap at most 2^t ε. The test uses finitely many random-coin \
+    outcomes. Outside-fleet source check: review 5954380213 on PR #6421."
 
 register_result "arora-barak-nonexplicit-prg" where
   title := "Non-explicit pseudorandom generators: length and indistinguishability properties"
