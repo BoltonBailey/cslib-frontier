@@ -4914,6 +4914,7 @@ public import CslibFrontier.Crypto.Computational.OneWay.BPP
 public import CslibFrontier.Crypto.Computational.OneWay.Collision
 public import CslibFrontier.Crypto.Computational.OneWay.CondEPPRG
 public import CslibFrontier.Crypto.Computational.OneWay.Iterate
+public import CslibFrontier.Crypto.Computational.OneWay.IterateCounterexample
 public import CslibFrontier.Crypto.Computational.OneWay.LiuPass
 public import CslibFrontier.Crypto.Computational.OneWay.LiuPassConverse
 public import CslibFrontier.Crypto.Computational.OneWay.MCSP
