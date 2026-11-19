@@ -2742,6 +2742,7 @@ public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSyst
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.CSPBounds
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.CrossingNeighborhoods
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.Declarations
+public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.EmbeddingNecessity
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.Frame
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.FrozenReference
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Recognition.Input
@@ -6807,6 +6808,7 @@ public import CslibFrontier.Foundations.FieldTheory.Finite.UnitSum
 public import CslibFrontier.Foundations.FieldTheory.TensorBasis
 public import CslibFrontier.Foundations.Geometry.Euclidean.Angle.Cap
 public import CslibFrontier.Foundations.Geometry.Euclidean.Angle.Unoriented.Basic
+public import CslibFrontier.Foundations.Geometry.FiniteLineAvoidance
 public import CslibFrontier.Foundations.Geometry.Orthogonal
 public import CslibFrontier.Foundations.Geometry.Orthogonal.Directions
 public import CslibFrontier.Foundations.Geometry.Orthogonal.Endpoint
@@ -6855,6 +6857,7 @@ public import CslibFrontier.Foundations.Geometry.Polygonal.RayParityTransport
 public import CslibFrontier.Foundations.Geometry.Polygonal.Reverse
 public import CslibFrontier.Foundations.Geometry.Polygonal.Route
 public import CslibFrontier.Foundations.Geometry.Polygonal.RouteInterior
+public import CslibFrontier.Foundations.Geometry.Polygonal.RouteParity
 public import CslibFrontier.Foundations.Geometry.Polygonal.Segment
 public import CslibFrontier.Foundations.Geometry.Polygonal.SegmentRays
 public import CslibFrontier.Foundations.Geometry.Polygonal.SlopeDetour
