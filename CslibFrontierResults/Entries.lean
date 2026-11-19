@@ -16,6 +16,7 @@ import CslibFrontier.Foundations.Algebra.Group.HomomorphismTesting
 import CslibFrontier.Foundations.Quantum.DensityMatrix.ClassicalQuantumEntropy
 import CslibFrontier.Foundations.Quantum.DensityMatrix.PurificationOverlap
 import CslibFrontier.Foundations.Quantum.DensityMatrix.RelativeEntropy
+import CslibFrontier.Foundations.Quantum.DensityMatrix.RelativeEntropyConvexity
 import CslibFrontier.Foundations.Quantum.DensityMatrix.FidelityTraceDistance
 import CslibFrontier.Foundations.LinearAlgebra.Matrix.PowersStormer
 import CslibFrontier.Probability.MarkovChain.RandomWalk
@@ -10972,6 +10973,20 @@ register_result "quantum-relative-entropy-nonnegative" where
     singular states, quantum relative entropy is nonnegative. The trace formula uses natural \
     logarithms and requires support containment, stated as reverse kernel inclusion. When that \
     containment fails, the divergence is positive infinity."
+
+register_result "quantum-relative-entropy-joint-convexity" where
+  title := "Joint convexity of quantum relative entropy"
+  topic := "quantum information"
+  sources := [
+    { paper := Ruskai2007, theorem := "Theorem 1",
+      locator := "arXiv:quant-ph/0604206v1, printed p. 2; proof in §§2.1–2.4" }
+  ]
+  theorems := [Cslib.Quantum.relativeEntropy_sum_smul_le]
+  scope := "Finite complex positive semidefinite matrix pairs with arbitrary nonnegative \
+    weights. The normalized weights give joint convexity; this homogeneous form also allows \
+    unnormalized weights and assigns positive infinity to a support mismatch. Zero-weight \
+    terms contribute zero. The natural-log formula uses the standard positive Umegaki sign \
+    as in equation (11), correcting the leading minus sign in the introductory equation (3)."
 
 register_result "classical-quantum-relative-entropy-chain" where
   title := "Relative entropy chain rule for classical–quantum states"
