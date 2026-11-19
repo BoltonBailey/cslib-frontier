@@ -53,6 +53,7 @@ import CslibFrontier.Crypto.Primitives.IdealCipher.CompressionVariants
 import CslibFrontier.Crypto.Primitives.PRF.RandomOracleModel
 import CslibFrontier.Crypto.Protocols.Cipher.LinearCryptanalysis
 import CslibFrontier.Crypto.Protocols.MAC.GHASH
+import CslibFrontier.Probability.HashFamily.Polynomial
 import CslibFrontier.Computability.QueryComplexity.MajorityThree
 import CslibFrontier.Computability.QueryComplexity.Randomized.Nisan
 import CslibFrontier.Computability.QueryComplexity.YaoExpected
@@ -10556,6 +10557,23 @@ register_result "partial-tag-encrypt-then-mac" where
     adds that when F is a PseudorandomFunction (Attack Game 4.2 and Definition 4.2, \
     pp. 132–133), the same scheme is INDCPA (Attack Game 5.2 and Definition 5.2, \
     pp. 181–182, on n-bit messages) while it lacks one-time ciphertext integrity."
+
+register_result "fixed-length-polynomial-universality" where
+  title := "Collision and difference bounds for fixed-length polynomial hashing"
+  topic := "cryptography"
+  sources := [
+    { paper := BonehShoup2023, theorem := "Exercise 7.16(a)–(b)",
+      locator := "v0.6, printed p. 281; Hfpoly in §7.2.1, equation (7.5), p. 257" }
+  ]
+  theorems := [
+    Cslib.Probability.isUniversalHash_coeffPolyHash,
+    Cslib.Probability.isDeltaUniversalHash_mul_coeffPolyHash
+  ]
+  scope := "For length-n coefficient vectors and an exactly uniform field element, the \
+    collision probability is at most (n − 1)/|F|. Multiplying the evaluation by the key bounds \
+    the probability of any specified difference by n/|F|. Both statements quantify over \
+    distinct vectors, extend from prime fields to all finite fields, and apply pointwise in n \
+    without a growth condition. The zero-length vector has no distinct partner."
 
 register_result "ghash-gcm-length-block-xor-duf" where
   title := "GHASH on the bit-length version of GCM's line (∗) input, zero-padded with its \
