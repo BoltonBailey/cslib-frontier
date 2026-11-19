@@ -435,6 +435,7 @@ import CslibFrontier.Crypto.Primitives.PRG.LinearCongruential
 import CslibFrontier.Crypto.Protocols.PerfectSecrecy.Characterization
 import CslibFrontier.Crypto.Protocols.PerfectSecrecy.ShannonCiphers
 import CslibFrontier.Algorithms.Lean.CDCL.System
+import CslibFrontier.Algorithms.Lean.DPLL.RefutationSize
 
 /-!
 # Collected results
@@ -10874,6 +10875,28 @@ register_result "bvy-anchored-conditioning-bounds" where
     and the second sums transcript and question-resampling distances. Distances are half-L1. \
     The constants use natural logs with Pinsker’s factor 1/2 and the full checked-answer \
     alphabet. Any checked set is allowed, including when no free coordinate remains."
+
+register_result "dpll-pigeonhole-refutation-size" where
+  title := "The DPLL solver's refutations and certificates of pigeonhole formulas are exponential"
+  topic := "SAT algorithms"
+  sources := [
+    { paper := BeyersdorffGalesiLauria2010, theorem := "Theorem 2",
+      locator := "White Rose eprint 74432 (manuscript of 2010-07-01), §4, printed p. 4; PDF p. 5; \
+        the bound 2^((n/2) log(n/2 + 1)) at the end of the proof, printed p. 6; PDF p. 7" }
+  ]
+  theorems := [
+    Cslib.Algorithms.Lean.DPLL.pow_half_le_size_refutation?_pigeonhole,
+    Cslib.Algorithms.Lean.DPLL.pow_half_le_size_solve_pigeonhole
+  ]
+  scope := "The source bound holds for every tree-like resolution refutation of PHP^m_n, m > n; \
+    these theorems apply it to the output of the library's DPLL solver on PHP^m_n relabelled \
+    along any injective numbering Fin m × Fin n → ℕ: the solver finds a refutation with at \
+    least (n/2 + 1)^(n/2) nodes and returns an LRAT certificate with at least that many steps \
+    (one per leaf of the refutation). The source's proof takes n even; the Lean bound uses \
+    floor division n/2 and has no parity hypothesis. Dantchev and Riis (CCC 2001) proved an \
+    earlier asymptotic 2^Ω(n log n) bound for regular tree resolution; it is historical \
+    context, not a source of this exact bound. These bound the output, not the running time; \
+    the running time on the word RAM is issue #6610."
 
 register_result "synchronous-correlations-tracial-representation" where
   title := "Tracial representation of synchronous commuting correlations"
