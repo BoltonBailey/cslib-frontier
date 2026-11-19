@@ -416,6 +416,7 @@ import CslibFrontier.Crypto.Computational.StatisticalIndistinguishability
 import CslibFrontier.Crypto.Primitives.PRG.LinearCongruential
 import CslibFrontier.Crypto.Protocols.PerfectSecrecy.Characterization
 import CslibFrontier.Crypto.Protocols.PerfectSecrecy.ShannonCiphers
+import CslibFrontier.Algorithms.Lean.CDCL.System
 
 /-!
 # Collected results
@@ -10427,3 +10428,52 @@ register_result "plaisted-greenbaum-correctness" where
     equivalences, and falsum is added (negation is implication to falsum). The size bound of \
     2 · A.size + 1 clauses and the non-uniqueness of the extension are separate results and \
     are not part of this entry. Outside check: PR #6181, review 5948254834."
+
+register_result "abstract-dpll-termination" where
+  title := "Abstract Basic DPLL terminates"
+  topic := "SAT algorithms"
+  sources := [
+    { paper := NieuwenhuisOliverasTinelli2006, theorem := "Theorem 2.10",
+      locator := "authors' manuscript, printed p. 14" }
+  ]
+  theorems := [Cslib.Algorithms.Lean.CDCL.wellFounded_basicStep]
+  scope := "Propositional list CNFs over ℕ, from the initial state with the empty trail. Basic \
+    DPLL is UnitPropagate, Decide, Fail and Backjump with the side conditions of Definition 2.4. \
+    Stated as well-foundedness of the converse Basic DPLL step relation on states reachable by \
+    DPLL with learning, which includes every state reachable by Basic DPLL. The proof uses a \
+    single natural-number measure in place of the source's lexicographic order."
+
+register_result "abstract-dpll-learning-termination" where
+  title := "Abstract DPLL with learning terminates without infinite Learn/Forget stretches"
+  topic := "SAT algorithms"
+  sources := [
+    { paper := NieuwenhuisOliverasTinelli2006, theorem := "Theorem 2.11",
+      locator := "authors' manuscript, printed p. 15" }
+  ]
+  theorems := [Cslib.Algorithms.Lean.CDCL.wellFounded_learnOrForget_basicStep]
+  scope := "DPLL with learning is Basic DPLL with Learn and Forget (Definition 2.5); clause sets \
+    are lists, so Learn prepends a clause and Forget removes one occurrence. Forget uses the \
+    entailment of §2.1, by partial models; Backjump and Learn use entailment by total \
+    assignments, which the §2.1 entailment implies, so every step of the source is a step here. \
+    A derivation with no \
+    infinite subderivation of Learn and Forget steps is a sequence of moves, each finitely many \
+    Learn and Forget steps followed by a Basic DPLL step; the theorem is the well-foundedness of \
+    these moves from the initial state."
+
+register_result "abstract-dpll-learning-correctness" where
+  title := "Final states of abstract DPLL with learning decide satisfiability"
+  topic := "SAT algorithms"
+  sources := [
+    { paper := NieuwenhuisOliverasTinelli2006, theorem := "Theorem 2.12",
+      locator := "authors' manuscript, printed p. 15" }
+  ]
+  theorems := [Cslib.Algorithms.Lean.CDCL.final_of_reachable]
+  scope := "For a propositional list CNF φ over ℕ and a state reachable from the initial state \
+    by DPLL with learning (Basic DPLL, Learn and Forget), if no Basic DPLL step applies then the \
+    state is fail exactly when φ is unsatisfiable, and otherwise the trail is a model of φ in the \
+    sense of §2.1: every clause of φ has a literal on the trail. The total assignment that makes \
+    the trail's literals true, and the others false, is then a model as well. Forget uses the \
+    §2.1 entailment, by partial models, which this conclusion needs: with entailment by total \
+    assignments, Forget could remove the tautology b ∨ ¬b from a, b ∨ ¬b and end at the trail a. \
+    Backjump and Learn use entailment by total assignments, which the §2.1 entailment implies, \
+    so every step of the source is a step here."
