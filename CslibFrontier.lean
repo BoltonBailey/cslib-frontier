@@ -5013,6 +5013,7 @@ public import CslibFrontier.Crypto.Computational.MLDSA.KeyOnly
 public import CslibFrontier.Crypto.Computational.MLDSA.KeySeedSearch
 public import CslibFrontier.Crypto.Computational.MLDSA.MaskSeedQuery
 public import CslibFrontier.Crypto.Computational.MLDSA.MatrixOracle
+public import CslibFrontier.Crypto.Computational.MLDSA.PrivateMaskExpansion
 public import CslibFrontier.Crypto.Computational.MLDSA.PrivateMaskSeedGame
 public import CslibFrontier.Crypto.Computational.MLDSA.PublicPairSigning
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumCommitmentRegister
