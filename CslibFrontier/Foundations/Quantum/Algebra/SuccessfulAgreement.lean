@@ -8,6 +8,7 @@ module
 -- upstream: candidate
 
 public import CslibFrontier.Foundations.Quantum.Algebra.Consistency
+public import CslibFrontier.Foundations.Quantum.Algebra.MeasurementMixture
 public import Mathlib.Data.Fintype.Option
 import Mathlib.Analysis.Real.Sqrt
 
@@ -64,6 +65,18 @@ theorem successfulMismatch_map_map {β γ : Type*} [Fintype β] [Fintype γ]
       | none => simp
       | some a =>
         simp [ne_comm, sum_ite_eq]
+
+/-- The successful mismatch averages over a classical choice of the first measurement. -/
+theorem successfulMismatch_mixture_left {ι : Type*} [Fintype ι] [IsOrderedAddMonoid A]
+    [PosSMulMono ℝ A] (φ : AlgState A) (p : PMF ι) (M : ι → Measurement (Option α) A)
+    (Q : Measurement α A) :
+    successfulMismatch φ (mixture p M) Q = ∑ i, (p i).toReal * successfulMismatch φ (M i) Q := by
+  have h (r : ℝ) (a b : A) : (φ ((r • a) * b)).re = r * (φ (a * b)).re := by
+    rw [← IsScalarTower.algebraMap_smul ℂ r a, smul_mul_assoc, map_smul, Complex.coe_algebraMap,
+      smul_eq_mul, Complex.re_ofReal_mul]
+  simp only [successfulMismatch, mixture_effect, sum_mul, map_sum, Complex.re_sum, h,
+    Finset.mul_sum]
+  exact sum_comm
 
 variable [StarRing A] [StarOrderedRing A] [TopologicalSpace A]
   [ContinuousFunctionalCalculus ℝ A IsSelfAdjoint] [NonnegSpectrumClass ℝ A]

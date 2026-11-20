@@ -4147,6 +4147,7 @@ public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PolynomialAnswer
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.RestrictedStrategy
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.Slices
+public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.VerifierPasting
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.VerticalAxis
 public import CslibFrontier.Computability.PCP.TwoProverGame.MagicSquare
 public import CslibFrontier.Computability.PCP.TwoProverGame.Naimark
