@@ -3034,12 +3034,15 @@ public import CslibFrontier.Computability.Complexity.Problems.XORSAT.Dense
 public import CslibFrontier.Computability.Complexity.Problems.XSAT
 public import CslibFrontier.Computability.Complexity.ProofSystem
 public import CslibFrontier.Computability.Complexity.ProofSystem.Exhaustive
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CharacteristicCoefficients
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CoefficientEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.Controlled
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledCoefficients
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledSigns
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.Factorial
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.GridEnumeration
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.MultivariateCoefficients
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.TraceExponential
 public import CslibFrontier.Computability.Complexity.Reduction
 public import CslibFrontier.Computability.Complexity.Reduction.Autoreducibility
 public import CslibFrontier.Computability.Complexity.Reduction.BoundedOracle
@@ -6935,6 +6938,7 @@ public import CslibFrontier.Foundations.Data.Polynomial.CoeffList
 public import CslibFrontier.Foundations.Data.Polynomial.CoeffNorm1
 public import CslibFrontier.Foundations.Data.Polynomial.CoeffProd
 public import CslibFrontier.Foundations.Data.Polynomial.CoeffSumBounds
+public import CslibFrontier.Foundations.Data.Polynomial.FiniteExponential
 public import CslibFrontier.Foundations.Data.Polynomial.HermiteInterpolation
 public import CslibFrontier.Foundations.Data.Polynomial.InterpolationCoeff
 public import CslibFrontier.Foundations.Data.Polynomial.LagrangeEval
@@ -7079,6 +7083,7 @@ public import CslibFrontier.Foundations.LinearAlgebra.Matrix.BlockDiagonalOrder
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.BlockEmbedding
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.BranchingProgramDeterminant
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.CauchyBinet
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Charpoly.TraceExponential
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.ClosedSubmatrix
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.CoinStep
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Copositive
@@ -7349,6 +7354,7 @@ public import CslibFrontier.Foundations.RelationAlgebra.Game
 public import CslibFrontier.Foundations.RingTheory.AdjoinRoot
 public import CslibFrontier.Foundations.RingTheory.CyclicIntRing
 public import CslibFrontier.Foundations.RingTheory.CyclicIntRing.Coefficients
+public import CslibFrontier.Foundations.RingTheory.Derivation.Determinant
 public import CslibFrontier.Foundations.RingTheory.Derivation.Wronskian
 public import CslibFrontier.Foundations.RingTheory.GaloisRing
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Basis
