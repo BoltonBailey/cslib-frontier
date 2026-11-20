@@ -6701,6 +6701,7 @@ public import CslibFrontier.Foundations.Data.List.Sort
 public import CslibFrontier.Foundations.Data.List.SortedAssoc
 public import CslibFrontier.Foundations.Data.List.SortedAssoc.Flatten
 public import CslibFrontier.Foundations.Data.List.SortedAssoc.Scan
+public import CslibFrontier.Foundations.Data.List.SortedAssoc.Update
 public import CslibFrontier.Foundations.Data.List.SortedCount
 public import CslibFrontier.Foundations.Data.List.Splits
 public import CslibFrontier.Foundations.Data.List.SumIndicator
