@@ -4206,6 +4206,7 @@ public import CslibFrontier.Computability.PointerMachine.Data
 public import CslibFrontier.Computability.PointerMachine.Defs
 public import CslibFrontier.Computability.PointerMachine.Embedding
 public import CslibFrontier.Computability.PointerMachine.Frame
+public import CslibFrontier.Computability.PointerMachine.Program
 public import CslibFrontier.Computability.PointerMachine.Renaming
 public import CslibFrontier.Computability.PointerMachine.Simulation
 public import CslibFrontier.Computability.PointerMachine.Symbols
@@ -4400,6 +4401,7 @@ public import CslibFrontier.Computability.Probabilistic.Time
 public import CslibFrontier.Computability.Probabilistic.Traverse
 public import CslibFrontier.Computability.Probabilistic.UniformNat
 public import CslibFrontier.Computability.Probabilistic.UniformNat.ModIndex
+public import CslibFrontier.Computability.Program.Blocks
 public import CslibFrontier.Computability.PropertyTesting.DenseGraph.Basic
 public import CslibFrontier.Computability.PropertyTesting.DenseGraph.Bipartite
 public import CslibFrontier.Computability.PropertyTesting.DenseGraph.Canonical
@@ -4686,6 +4688,13 @@ public import CslibFrontier.Computability.WordRAM.OfTuring
 public import CslibFrontier.Computability.WordRAM.OfTuring.Space
 public import CslibFrontier.Computability.WordRAM.OutputLowerBound
 public import CslibFrontier.Computability.WordRAM.PackedCount
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Compile
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Defs
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Input
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Operations
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Representation
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Scalar
+public import CslibFrontier.Computability.WordRAM.PointerMachine.Simulation
 public import CslibFrontier.Computability.WordRAM.Power
 public import CslibFrontier.Computability.WordRAM.Power.Rename
 public import CslibFrontier.Computability.WordRAM.RAM
@@ -5668,6 +5677,8 @@ public import CslibFrontier.DataStructure.AVLTree.Impl
 public import CslibFrontier.DataStructure.AVLTree.PointerMachine
 public import CslibFrontier.DataStructure.AVLTree.PointerMachine.Balance
 public import CslibFrontier.DataStructure.AVLTree.PointerMachine.Context
+public import CslibFrontier.DataStructure.AVLTree.PointerMachine.Dictionary
+public import CslibFrontier.DataStructure.AVLTree.PointerMachine.DictionaryRepresentation
 public import CslibFrontier.DataStructure.AVLTree.PointerMachine.Insert
 public import CslibFrontier.DataStructure.AVLTree.PointerMachine.Representation
 public import CslibFrontier.DataStructure.AVLTree.PointerMachine.Rotation
@@ -5965,9 +5976,11 @@ public import CslibFrontier.DataStructure.SearchTree.Impl
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Allocation
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Child
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Context
+public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Encoding
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Graft
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Height
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.InsertLeaf
+public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Lookup
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Reconnect
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.ReconnectContext
 public import CslibFrontier.DataStructure.SearchTree.PointerMachine.Representation
