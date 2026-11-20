@@ -334,6 +334,7 @@ public import CslibFrontier.Algorithms.WordRAM.AKS.PerfectPower
 public import CslibFrontier.Algorithms.WordRAM.AKS.PolyArray
 public import CslibFrontier.Algorithms.WordRAM.AKS.PolyMul
 public import CslibFrontier.Algorithms.WordRAM.AKS.PolyPow
+public import CslibFrontier.Algorithms.WordRAM.ClauseCode
 public import CslibFrontier.Algorithms.WordRAM.Deduplicate.Count
 public import CslibFrontier.Algorithms.WordRAM.Deduplicate.Model
 public import CslibFrontier.Algorithms.WordRAM.Deduplicate.Program
@@ -549,6 +550,11 @@ public import CslibFrontier.Algorithms.WordRAM.Karger.Contract
 public import CslibFrontier.Algorithms.WordRAM.Karger.OutputLaw
 public import CslibFrontier.Algorithms.WordRAM.KargerMinCut
 public import CslibFrontier.Algorithms.WordRAM.KargerStein
+public import CslibFrontier.Algorithms.WordRAM.LRAT.Checker
+public import CslibFrontier.Algorithms.WordRAM.LRAT.Program
+public import CslibFrontier.Algorithms.WordRAM.LRAT.Propagate
+public import CslibFrontier.Algorithms.WordRAM.LRAT.Scan
+public import CslibFrontier.Algorithms.WordRAM.LRAT.Steps
 public import CslibFrontier.Algorithms.WordRAM.MatrixMultiplication.CyclicConvolution.Coefficient
 public import CslibFrontier.Algorithms.WordRAM.MatrixMultiplication.CyclicConvolution.Exec
 public import CslibFrontier.Algorithms.WordRAM.MatrixMultiplication.CyclicConvolution.Flat
