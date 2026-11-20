@@ -6073,6 +6073,7 @@ public import CslibFrontier.DataStructure.WordRAM.Resizable.Randomized.StateTran
 public import CslibFrontier.DataStructure.WordRAM.Resizable.StateTransition
 public import CslibFrontier.DataStructure.WordRAM.StateTransition
 public import CslibFrontier.Foundations.Algebra.BigOperators.Fin
+public import CslibFrontier.Foundations.Algebra.BigOperators.Selection
 public import CslibFrontier.Foundations.Algebra.DFT
 public import CslibFrontier.Foundations.Algebra.FiniteMagnitude
 public import CslibFrontier.Foundations.Algebra.GeometricTail
@@ -7090,6 +7091,7 @@ public import CslibFrontier.Foundations.LinearAlgebra.Matrix.NonnegRank
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.NonnegativeForm
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.PairedPorts
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.PartialDerivatives
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Polar
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.PolarDecomposition
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.PosDef
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.PosSemidefKernel
@@ -7264,6 +7266,7 @@ public import CslibFrontier.Foundations.Quantum.Algebra.JointMeasurement
 public import CslibFrontier.Foundations.Quantum.Algebra.MaxEntangled
 public import CslibFrontier.Foundations.Quantum.Algebra.Measurement
 public import CslibFrontier.Foundations.Quantum.Algebra.MeasurementMixture
+public import CslibFrontier.Foundations.Quantum.Algebra.Orthogonalization
 public import CslibFrontier.Foundations.Quantum.Algebra.OutcomeCommutator
 public import CslibFrontier.Foundations.Quantum.Algebra.PrefixCommutator
 public import CslibFrontier.Foundations.Quantum.Algebra.SequentialBinomial
@@ -7301,6 +7304,7 @@ public import CslibFrontier.Foundations.Quantum.Measurement.ReadoutOverlap
 public import CslibFrontier.Foundations.Quantum.Measurement.Restrict
 public import CslibFrontier.Foundations.Quantum.Naimark
 public import CslibFrontier.Foundations.Quantum.NoCloning
+public import CslibFrontier.Foundations.Quantum.Orthogonalization
 public import CslibFrontier.Foundations.Quantum.POVM
 public import CslibFrontier.Foundations.Quantum.POVM.Density
 public import CslibFrontier.Foundations.Quantum.POVM.Mixture
