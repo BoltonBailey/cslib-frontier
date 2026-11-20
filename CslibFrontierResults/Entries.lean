@@ -451,6 +451,7 @@ import CslibFrontier.Crypto.Protocols.PerfectSecrecy.Characterization
 import CslibFrontier.Crypto.Protocols.PerfectSecrecy.ShannonCiphers
 import CslibFrontier.Algorithms.Lean.CDCL.System
 import CslibFrontier.Algorithms.Lean.DPLL.RefutationSize
+import CslibFrontier.Foundations.BooleanAnalysis.EdgeIsoperimetry
 
 /-!
 # Collected results
@@ -11393,3 +11394,19 @@ register_result "mpda-hole-bounded-not-scope-bounded" where
     formalized here. Source check: outside-fleet agent review (reviewer-codex-edemaine) on PR \
     #6714 at 17f93ab43d, against arXiv:2002.05950v2, printed pp. 4-7: \
     https://github.com/cslib-community/cslib-frontier/pull/6714#issuecomment-7037725174."
+
+-- https://github.com/cslib-community/cslib-frontier/pull/5817#pullrequestreview-5913387425
+register_result "odonnell-edge-isoperimetric-inequality" where
+  title := "Edge-isoperimetric inequality for the Boolean cube"
+  topic := "analysis of Boolean functions"
+  sources := [
+    { paper := ODonnell2014, theorem := "Theorem 2.39",
+      locator := "arXiv:2105.10386v1, §2.3, printed p. 52" }
+  ]
+  theorems := [Cslib.BitString.two_mul_min_mul_logb_inv_le_totalInfluence]
+  scope := "For every f : (ι → Bool) → Bool over a finite coordinate type ι, read as signs \
+    through signVal (false ↦ 1), 2 α log₂(1/α) ≤ I[f], where α is the smaller of the two \
+    relative Hamming distances hammingDist f (fun _ => b) / 2 ^ card ι to the constants \
+    b = true and b = false; these are the book's Pr[f = 1] and Pr[f = −1]. The logarithm is \
+    Real.logb 2, the book's log. The book's optimality remark for α a power of 1/2 is checked \
+    only for the conjunction of two bits. Source check: outside-fleet review on PR #5817."
