@@ -22,6 +22,7 @@ import CslibFrontier.Foundations.Quantum.DensityMatrix.RelativeEntropy
 import CslibFrontier.Foundations.Quantum.DensityMatrix.RelativeEntropyConvexity
 import CslibFrontier.Foundations.Quantum.DensityMatrix.RelativeEntropyDataProcessing
 import CslibFrontier.Foundations.Quantum.DensityMatrix.QuantumPinsker
+import CslibFrontier.Foundations.Quantum.DensityMatrix.RelativeEntropyDomination
 import CslibFrontier.Foundations.Quantum.DensityMatrix.FidelityTraceDistance
 import CslibFrontier.Foundations.LinearAlgebra.Matrix.PowersStormer
 import CslibFrontier.Probability.MarkovChain.RandomWalk
@@ -11113,6 +11114,26 @@ register_result "quantum-pinsker" where
     base-two logarithms to natural logarithms gives the coefficient 1/2. The extended \
     relative entropy is positive infinity on a support mismatch. Outside source check: \
     https://github.com/cslib-community/cslib-frontier/pull/6662#issuecomment-7020765004."
+
+register_result "quantum-relative-entropy-reference-domination" where
+  title := "Quantum relative entropy under reference domination"
+  topic := "quantum information"
+  sources := [
+    { paper := BavarianVidickYuen2022, theorem := "Proposition 5.8 (bound proved)",
+      locator := "arXiv:1509.07466v2, §5.1, printed p. 20" }
+  ]
+  theorems := [
+    Cslib.Quantum.relativeEntropy_le_add_log_of_le_smul,
+    Cslib.Quantum.relativeEntropy_le_neg_log_weight
+  ]
+  scope := "The proof of Proposition 5.8 bounds Umegaki relative entropy. Its displayed \
+    conclusion uses max-relative entropy. For a finite complex density source and positive \
+    semidefinite references with σ ≤ c • τ and c > 0, changing the reference from σ to τ \
+    costs at most log c nats. References may be singular or unnormalized. A component of \
+    positive weight p has divergence at most −log p from the finite weighted sum, including \
+    when total weight differs from one. Claim 5.13 uses these comparisons and remains open. \
+    Outside source check: \
+    https://github.com/cslib-community/cslib-frontier/pull/6664#issuecomment-7020792318."
 
 register_result "uhlmann-finite-dimensional-local-overlap" where
   title := "Uhlmann’s theorem for finite-dimensional purifications"
