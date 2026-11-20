@@ -4194,6 +4194,7 @@ public import CslibFrontier.Computability.PCP.TwoProverGame.AnchoredNoisyStates
 public import CslibFrontier.Computability.PCP.TwoProverGame.AnchoredTranscript
 public import CslibFrontier.Computability.PCP.TwoProverGame.AnchoredTranscriptDistance
 public import CslibFrontier.Computability.PCP.TwoProverGame.Anchoring
+public import CslibFrontier.Computability.PCP.TwoProverGame.AveragedAnswerMarginals
 public import CslibFrontier.Computability.PCP.TwoProverGame.AveragedAnswerStates
 public import CslibFrontier.Computability.PCP.TwoProverGame.CHSH
 public import CslibFrontier.Computability.PCP.TwoProverGame.CHSHRigidity
