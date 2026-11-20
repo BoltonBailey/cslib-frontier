@@ -4207,14 +4207,17 @@ public import CslibFrontier.Computability.PCP.TwoProverGame.LinearSystemConverse
 public import CslibFrontier.Computability.PCP.TwoProverGame.LinearSystemPerfect
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.AxisScore
+public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.BoundedPolynomial
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.OneCoordinate
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.Pasting
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PastingCompleteness
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PastingConsistency
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PointCommutativity
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PolynomialAnswer
+public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PolynomialPointEffect
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.PolynomialSliceCommutativity
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.RestrictedStrategy
+public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.SelfImprovementSDP
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.SliceBoundedness
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.SliceCommutativity
 public import CslibFrontier.Computability.PCP.TwoProverGame.LowIndividualDegree.Slices
@@ -7324,6 +7327,7 @@ public import CslibFrontier.Foundations.Quantum.Orthogonalization
 public import CslibFrontier.Foundations.Quantum.POVM
 public import CslibFrontier.Foundations.Quantum.POVM.Density
 public import CslibFrontier.Foundations.Quantum.POVM.Mixture
+public import CslibFrontier.Foundations.Quantum.POVM.Optimization
 public import CslibFrontier.Foundations.Quantum.POVM.OutcomeVector
 public import CslibFrontier.Foundations.Quantum.POVM.Postprocessing
 public import CslibFrontier.Foundations.Quantum.Pauli
