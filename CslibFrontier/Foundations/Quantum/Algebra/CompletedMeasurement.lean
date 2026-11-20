@@ -93,6 +93,12 @@ private theorem sum_norm_selected_effect_mul_sq_le (φ : AlgState A) (M : Measur
     _ = ∑ b ∈ univ.map ι, φ.norm (M.effect b * x) ^ 2 := by rw [sum_map]
     _ ≤ _ := sum_le_sum_of_subset_of_nonneg (subset_univ _) fun _ _ _ => sq_nonneg _
 
+/-- Summing the successful projections does not increase the squared state norm. -/
+theorem sum_norm_some_effect_mul_sq_le (φ : AlgState A) (M : Measurement (Option α) A)
+    (hM : M.IsProjective) (x : A) :
+    (∑ a, φ.norm (M.effect (some a) * x) ^ 2) ≤ φ.norm x ^ 2 :=
+  sum_norm_selected_effect_mul_sq_le φ M hM Function.Embedding.some x
+
 /-- Commuting with each successful projection, together with a commuting copy for those
 projections, controls commutation with the total successful effect. -/
 theorem sum_successfulEffect_commutator_sq_le (φ : AlgState A)

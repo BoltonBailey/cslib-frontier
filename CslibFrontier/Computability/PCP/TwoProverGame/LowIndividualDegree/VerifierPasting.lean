@@ -156,12 +156,6 @@ theorem completedPaste_effect (k : ℕ) [Nonempty (Fin k ↪ F)]
         (pasteSlices k M hM).effect (some p) := by
   rw [completedPaste_eq_map, Measurement.map_getD_effect]
 
-private theorem evaluation_none (M : Measurement (Option (BoundedPolynomial F (n + 1) d)) A)
-    (w : Point F (n + 1)) : (evaluatePolynomialMeasurement M w).effect none = M.effect none := by
-  classical
-  rw [evaluatePolynomialMeasurement, Measurement.map_effect, sum_filter, Fintype.sum_option]
-  simp
-
 private theorem completedPaste_disagreement_le (k : ℕ) [Nonempty (Fin k ↪ F)]
     (S : RawStrategy) (M : F → Measurement (Option (BoundedPolynomial F n d)) A)
     (hM : ∀ t, (M t).IsProjective)
@@ -185,10 +179,10 @@ private theorem completedPaste_disagreement_le (k : ℕ) [Nonempty (Fin k ↪ F)
     cases q <;> rfl
   have hc : Commute ((evaluatePolynomialMeasurement P w).effect none)
       ((decodedPoint S.bob w).effect z) := by
-    rw [evaluation_none]
+    rw [evaluatePolynomialMeasurement_effect_none]
     exact Measurement.commute_map_right (S.bob (.point w)) decodePoint _
       (fun a => commute_pasteSlices k M hM _ (fun x q => hComm x (.point w) q a) none) z
-  rw [he, ← evaluation_none P w]
+  rw [he, ← evaluatePolynomialMeasurement_effect_none P w]
   exact Measurement.one_sub_agreement_map_getD_le _ _ _ _ hc
 
 /-- Conditional pasting bound for the completed polynomial measurement against the verifier's
