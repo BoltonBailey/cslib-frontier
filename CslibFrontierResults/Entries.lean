@@ -7,6 +7,7 @@ Authors: Christian Reitwiessner, Samuel Schlesinger
 -- upstream: local-only (result registry collection)
 import CslibFrontierResults.Registry
 import CslibFrontier.Algorithms.Lean.Knapsack.ApproximationSchemes
+import CslibFrontier.Computability.Complexity.Reduction.LinearApproximation
 import CslibFrontier.Computability.PCP.TwoProverGame.Anchoring
 import CslibFrontier.Computability.PCP.TwoProverGame.AnchoredDependency
 import CslibFrontier.Computability.PCP.TwoProverGame.AnchoredConditioning
@@ -11410,6 +11411,20 @@ register_result "mpda-hole-bounded-not-scope-bounded" where
     formalized here. Source check: outside-fleet agent review (reviewer-codex-edemaine) on PR \
     #6714 at 17f93ab43d, against arXiv:2002.05950v2, printed pp. 4-7: \
     https://github.com/cslib-community/cslib-frontier/pull/6714#issuecomment-7037725174."
+
+register_result "linear-reductions-preserve-ptas" where
+  title := "Linear reductions transfer approximation guarantees and PTAS"
+  topic := "approximation complexity"
+  sources := [
+    { paper := PapadimitriouYannakakis1991, theorem := "Proposition 2", locator := "§1, p. 427" }
+  ]
+  theorems := [
+    Cslib.Complexity.LReduction.isApproximate_recover,
+    Cslib.Complexity.LReduction.ptas
+  ]
+  scope := "Typed NP optimization problems with natural objectives and all feasible solutions \
+    length-bounded. Positive natural factors bound optimum growth and absolute error. \
+    Target inverse accuracy is the requested inverse accuracy multiplied by both factors."
 
 -- https://github.com/cslib-community/cslib-frontier/pull/5817#pullrequestreview-5913387425
 register_result "odonnell-edge-isoperimetric-inequality" where

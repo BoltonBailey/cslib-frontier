@@ -3016,6 +3016,7 @@ public import CslibFrontier.Computability.Complexity.Reduction.Isomorphism.Conje
 public import CslibFrontier.Computability.Complexity.Reduction.Isomorphism.Paddable
 public import CslibFrontier.Computability.Complexity.Reduction.Isomorphism.SchroederBernstein
 public import CslibFrontier.Computability.Complexity.Reduction.Levin
+public import CslibFrontier.Computability.Complexity.Reduction.LinearApproximation
 public import CslibFrontier.Computability.Complexity.Reduction.LocalSelfReducibility
 public import CslibFrontier.Computability.Complexity.Reduction.LocalSelfReducibility.RuntimeAccess
 public import CslibFrontier.Computability.Complexity.Reduction.LocalSelfReducibility.RuntimeEvaluator
