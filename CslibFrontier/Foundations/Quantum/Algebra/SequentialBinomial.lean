@@ -8,10 +8,10 @@ module
 -- upstream: candidate
 
 public import CslibFrontier.Foundations.Quantum.Algebra.BinomialTail
+public import CslibFrontier.Foundations.Quantum.Algebra.MeasurementMixture
 public import CslibFrontier.Foundations.Quantum.Algebra.SequentialCopy
 public import Mathlib.Algebra.BigOperators.Expect
 import CslibFrontier.Foundations.Data.Finset.Expect
-public import CslibFrontier.Foundations.Quantum.Algebra.MeasurementMixture
 import Mathlib.Algebra.Order.BigOperators.Expect
 
 /-!
