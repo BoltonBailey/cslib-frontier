@@ -6781,6 +6781,7 @@ public import CslibFrontier.Foundations.Data.Finset.SymmDiff
 public import CslibFrontier.Foundations.Data.Finset.Tournament
 public import CslibFrontier.Foundations.Data.Finset.UniqueTail
 public import CslibFrontier.Foundations.Data.Finset.Variance
+public import CslibFrontier.Foundations.Data.Finsupp.Interval
 public import CslibFrontier.Foundations.Data.Finsupp.OddSupport
 public import CslibFrontier.Foundations.Data.Fintype.AgreeOn
 public import CslibFrontier.Foundations.Data.Fintype.FiberEquiv
@@ -7529,6 +7530,7 @@ public import CslibFrontier.GameTheory.Strategic.StrongNash
 public import CslibFrontier.GameTheory.Strategic.SwapRegretDynamics
 public import CslibFrontier.GameTheory.Strategic.Universality.Binary
 public import CslibFrontier.GameTheory.Strategic.Universality.DattaBinary
+public import CslibFrontier.GameTheory.Strategic.Universality.DattaHorner
 public import CslibFrontier.GameTheory.Strategic.Universality.DattaThree
 public import CslibFrontier.GameTheory.Strategic.Universality.Realize
 public import CslibFrontier.GameTheory.Strategic.Universality.SimplexGame
