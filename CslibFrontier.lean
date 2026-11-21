@@ -6851,6 +6851,7 @@ public import CslibFrontier.Foundations.Data.MvPolynomial.AffineTaylor
 public import CslibFrontier.Foundations.Data.MvPolynomial.Bihomogeneous
 public import CslibFrontier.Foundations.Data.MvPolynomial.Catalecticant
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoeffNorm1
+public import CslibFrontier.Foundations.Data.MvPolynomial.CoeffSumBounds
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoefficientDegree
 public import CslibFrontier.Foundations.Data.MvPolynomial.CriticalSystem
 public import CslibFrontier.Foundations.Data.MvPolynomial.Degrees
@@ -6871,6 +6872,7 @@ public import CslibFrontier.Foundations.Data.MvPolynomial.LowestComponent
 public import CslibFrontier.Foundations.Data.MvPolynomial.MixedOperator
 public import CslibFrontier.Foundations.Data.MvPolynomial.PDerivConst
 public import CslibFrontier.Foundations.Data.MvPolynomial.PDerivDegree
+public import CslibFrontier.Foundations.Data.MvPolynomial.ParameterCoeffNorm
 public import CslibFrontier.Foundations.Data.MvPolynomial.PartialDerivatives
 public import CslibFrontier.Foundations.Data.MvPolynomial.PartialEval
 public import CslibFrontier.Foundations.Data.MvPolynomial.PowerSum
@@ -7413,6 +7415,7 @@ public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Kernel
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.MultiplicationMatrix
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Relations
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Residue
+public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.ResidueCoeffNorm
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Specialization
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Trace
 public import CslibFrontier.Foundations.RingTheory.Polynomial.Hermite
