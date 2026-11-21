@@ -7295,6 +7295,7 @@ public import CslibFrontier.Foundations.Probability.Gaussian.HermiteExpansion
 public import CslibFrontier.Foundations.Probability.Gaussian.MassBounds
 public import CslibFrontier.Foundations.Probability.Gaussian.Measure
 public import CslibFrontier.Foundations.Probability.Gaussian.Moments
+public import CslibFrontier.Foundations.Probability.Gaussian.MomentsDiscrete
 public import CslibFrontier.Foundations.Probability.Gaussian.Multivariate
 public import CslibFrontier.Foundations.Probability.Gaussian.NoiseOperator
 public import CslibFrontier.Foundations.Probability.Gaussian.NoiseSemigroup
@@ -7315,6 +7316,7 @@ public import CslibFrontier.Foundations.Probability.Gaussian.ShiftBounds
 public import CslibFrontier.Foundations.Probability.Gaussian.Smoothing
 public import CslibFrontier.Foundations.Probability.Gaussian.Standard
 public import CslibFrontier.Foundations.Probability.Gaussian.Stein
+public import CslibFrontier.Foundations.Probability.IndependentSumNorm
 public import CslibFrontier.Foundations.Probability.InfinitePi
 public import CslibFrontier.Foundations.Probability.InnerProductResampling
 public import CslibFrontier.Foundations.Probability.Multilinear.Basic
