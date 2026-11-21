@@ -5170,6 +5170,8 @@ public import CslibFrontier.Crypto.Computational.LWE.Regev.Security
 public import CslibFrontier.Crypto.Computational.LWE.Trapdoor
 public import CslibFrontier.Crypto.Computational.LWE.Trapdoor.Basic
 public import CslibFrontier.Crypto.Computational.LWE.Trapdoor.Gadget
+public import CslibFrontier.Crypto.Computational.Lattice.GIVP
+public import CslibFrontier.Crypto.Computational.Lattice.QaryKernel
 public import CslibFrontier.Crypto.Computational.Lattice.ShortestVector
 public import CslibFrontier.Crypto.Computational.LinearSigmaProtocol
 public import CslibFrontier.Crypto.Computational.LubyRackoff
@@ -5345,6 +5347,7 @@ public import CslibFrontier.Crypto.Computational.RainbowTable.RunCost
 public import CslibFrontier.Crypto.Computational.Rompel
 public import CslibFrontier.Crypto.Computational.SIS.Ajtai
 public import CslibFrontier.Crypto.Computational.SIS.Basic
+public import CslibFrontier.Crypto.Computational.SIS.Ell2
 public import CslibFrontier.Crypto.Computational.SIS.Hermite
 public import CslibFrontier.Crypto.Computational.SIS.MLKEM.Asymptotic
 public import CslibFrontier.Crypto.Computational.SIS.MLKEM.Compress
