@@ -2052,6 +2052,7 @@ public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.D
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.DyadicSummation
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.FirstEventSign
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Generator
+public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.ModularArithmetic
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Primality
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.PrimeCofactor
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Products
@@ -2060,6 +2061,7 @@ public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.R
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.ResidueSign
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.SignParameters
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Space
+public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.UnaryModularList
 public import CslibFrontier.Computability.Complexity.Classes.CountingSimulation.Accumulate
 public import CslibFrontier.Computability.Complexity.Classes.CountingSimulation.Admissible
 public import CslibFrontier.Computability.Complexity.Classes.CountingSimulation.Assembly
@@ -3045,14 +3047,21 @@ public import CslibFrontier.Computability.Complexity.RealAlgebraic.CoefficientEv
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.Controlled
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledCoefficients
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledSigns
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalJacobianEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalNumericEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalPolynomialEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.Factorial
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.GridEnumeration
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.IndexedPowerProduct
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.ModularMatrixDeterminant
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.MultivariateCoefficients
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.PartialDerivativeEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.PowerProductCoefficients
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.QuotientTraceEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ResidueEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.TraceExponential
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.TranslatedCoefficientEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.TranslatedPoint
 public import CslibFrontier.Computability.Complexity.Reduction
 public import CslibFrontier.Computability.Complexity.Reduction.Autoreducibility
 public import CslibFrontier.Computability.Complexity.Reduction.BoundedOracle
@@ -6829,6 +6838,7 @@ public import CslibFrontier.Foundations.Data.MvPolynomial.Bihomogeneous
 public import CslibFrontier.Foundations.Data.MvPolynomial.Catalecticant
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoeffNorm1
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoefficientDegree
+public import CslibFrontier.Foundations.Data.MvPolynomial.CriticalSystem
 public import CslibFrontier.Foundations.Data.MvPolynomial.Degrees
 public import CslibFrontier.Foundations.Data.MvPolynomial.Determinant
 public import CslibFrontier.Foundations.Data.MvPolynomial.DividedDifferences
@@ -6846,6 +6856,7 @@ public import CslibFrontier.Foundations.Data.MvPolynomial.LowDegreeRoot
 public import CslibFrontier.Foundations.Data.MvPolynomial.LowestComponent
 public import CslibFrontier.Foundations.Data.MvPolynomial.MixedOperator
 public import CslibFrontier.Foundations.Data.MvPolynomial.PDerivConst
+public import CslibFrontier.Foundations.Data.MvPolynomial.PDerivDegree
 public import CslibFrontier.Foundations.Data.MvPolynomial.PartialDerivatives
 public import CslibFrontier.Foundations.Data.MvPolynomial.PartialEval
 public import CslibFrontier.Foundations.Data.MvPolynomial.PowerSum
@@ -6856,6 +6867,7 @@ public import CslibFrontier.Foundations.Data.MvPolynomial.SetMultilinearProjecti
 public import CslibFrontier.Foundations.Data.MvPolynomial.SetMultilinearProjectionProd
 public import CslibFrontier.Foundations.Data.MvPolynomial.SetPartitioned
 public import CslibFrontier.Foundations.Data.MvPolynomial.Shift
+public import CslibFrontier.Foundations.Data.MvPolynomial.ShiftDerivatives
 public import CslibFrontier.Foundations.Data.MvPolynomial.SliceMatrix
 public import CslibFrontier.Foundations.Data.MvPolynomial.SparseShift
 public import CslibFrontier.Foundations.Data.MvPolynomial.SplitRank
