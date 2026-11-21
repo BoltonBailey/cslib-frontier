@@ -7323,6 +7323,7 @@ public import CslibFrontier.Foundations.Probability.Gaussian.Smoothing
 public import CslibFrontier.Foundations.Probability.Gaussian.SmoothingParameter
 public import CslibFrontier.Foundations.Probability.Gaussian.Standard
 public import CslibFrontier.Foundations.Probability.Gaussian.Stein
+public import CslibFrontier.Foundations.Probability.Gaussian.SuccessiveMinimum
 public import CslibFrontier.Foundations.Probability.IndependentSumNorm
 public import CslibFrontier.Foundations.Probability.InfinitePi
 public import CslibFrontier.Foundations.Probability.InnerProductResampling
