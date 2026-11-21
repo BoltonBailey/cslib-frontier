@@ -6198,6 +6198,7 @@ public import CslibFrontier.Foundations.AlgebraicGeometry.EllipticCurve.PointCou
 public import CslibFrontier.Foundations.AlgebraicGeometry.EllipticCurve.QuadraticTwist
 public import CslibFrontier.Foundations.AlgebraicGeometry.EllipticCurve.VariableChange
 public import CslibFrontier.Foundations.AlgebraicGeometry.Semialgebraic
+public import CslibFrontier.Foundations.AlgebraicGeometry.StableIsomorphism
 public import CslibFrontier.Foundations.Analysis.Asymptotics.CostBound
 public import CslibFrontier.Foundations.Analysis.Asymptotics.Exponential
 public import CslibFrontier.Foundations.Analysis.Asymptotics.PolyErr
@@ -7549,6 +7550,7 @@ public import CslibFrontier.GameTheory.Strategic.Universality.DattaHorner
 public import CslibFrontier.GameTheory.Strategic.Universality.DattaThree
 public import CslibFrontier.GameTheory.Strategic.Universality.Realize
 public import CslibFrontier.GameTheory.Strategic.Universality.SimplexGame
+public import CslibFrontier.GameTheory.Strategic.Universality.StableUniversality
 public import CslibFrontier.Init
 public import CslibFrontier.Languages.Probabilistic.Basic
 public import CslibFrontier.Languages.Probabilistic.BitString
