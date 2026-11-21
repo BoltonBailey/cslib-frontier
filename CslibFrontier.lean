@@ -8233,6 +8233,7 @@ public import CslibFrontier.MachineLearning.Replicable.Amplification
 public import CslibFrontier.MachineLearning.Replicable.Basic
 public import CslibFrontier.MachineLearning.Replicable.BiasEstimation
 public import CslibFrontier.MachineLearning.Replicable.Composition
+public import CslibFrontier.MachineLearning.Replicable.MoserTardos
 public import CslibFrontier.MachineLearning.Replicable.Rounding
 public import CslibFrontier.MachineLearning.StatisticalQuery.Basic
 public import CslibFrontier.MachineLearning.StatisticalQuery.Dimension
@@ -8323,6 +8324,7 @@ public import CslibFrontier.Probability.Conditioning
 public import CslibFrontier.Probability.CorrelatedSampling
 public import CslibFrontier.Probability.CorrelatedSampling.Embeddability
 public import CslibFrontier.Probability.CorrelatedSampling.Embedding
+public import CslibFrontier.Probability.CorrelatedSampling.Grid
 public import CslibFrontier.Probability.CorrelatedSampling.SharedSeed
 public import CslibFrontier.Probability.DDGTree
 public import CslibFrontier.Probability.DDGTree.Biased
@@ -8426,6 +8428,7 @@ public import CslibFrontier.Probability.MoserTardos.Coupling
 public import CslibFrontier.Probability.MoserTardos.Lopsided
 public import CslibFrontier.Probability.MoserTardos.Parallel
 public import CslibFrontier.Probability.MoserTardos.Symmetric
+public import CslibFrontier.Probability.MoserTardos.TotalVariation
 public import CslibFrontier.Probability.MoserTardos.Witness
 public import CslibFrontier.Probability.MutualInformation
 public import CslibFrontier.Probability.MutualInformation.DataProcessing
