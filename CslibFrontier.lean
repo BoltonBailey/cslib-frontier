@@ -6194,6 +6194,7 @@ public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.ParameterExc
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.RatPoly
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.RootBound
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.Sturm
+public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.ThomSign
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.TotalIsolation
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.TotalRatPoly
 public import CslibFrontier.Foundations.Algebra.Quaternion.BpInfinity
