@@ -7,7 +7,7 @@ Authors: Christian Reitwiessner, Samuel Schlesinger
 module
 -- upstream: local-only (test driver)
 
-import CslibFrontier.Computability.Complexity.Problems.STCON.JustesenWeightedSubdivision
+import CslibFrontier.Computability.Complexity.Problems.STCON.JustesenBoundedWalk
 import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.LogSpace.Words
 
 /-! Ordinary-import clients for weighted STCON adjacency and the flat scan interface. -/
@@ -113,5 +113,32 @@ example {k : ℕ} {State : Type} [Fintype State] (ntm : MultiTapeNTM k Bool Stat
   refine ⟨C, fun w => ?_⟩
   intro I s size index seed ctx u v M start
   exact hC w seed u v
+
+open Cslib.DoubleCounting.Scan Turing.DoubleCounting.BoundedWalk in
+-- Check the zero-edge success, common clock, and state bound on a wrong return selector.
+example {k : ℕ} {State : Type} [Fintype State] (ntm : MultiTapeNTM k Bool State) (c : ℕ) :
+    ∃ C, ∀ w : List Bool,
+      let I := configurationInstance ntm c w
+      let setup := configurationSeedSearchSetup ntm c w
+      let size := setup.parameters.search.subdivision
+      let seed : Fin (2 ^ codeLength I.n (I.n - 1)) := ⟨0, Nat.pow_pos (by decide)⟩
+      let source : Fin size.vertexCount :=
+        ⟨setup.sourceID, (configurationSeedSearchSetup_endpoints_lt_vertexCount ntm c w).1⟩
+      let r : Registers size.vertexCount := ⟨source, source, 0⟩
+      let M := configurationJustesenBoundedWalk ntm c w seed.val r
+      let bits := selectors (N := size.vertexCount) 3 []
+      M.FirstHalting w bits M.init ∧ Runtime.remainingFuel (M.run w bits) = some 0 ∧
+        M.HaltsWithin w (size.vertexCount.size + 2) ∧
+        (Runtime.encState encJustesenSubdivisionContext encJustesenSubdivisionState
+          (M.run w [false, true])).length ≤ C * (Nat.log2 w.length + 1) := by
+  obtain ⟨C, hC⟩ := configurationJustesenBoundedWalk_bounds ntm c
+  refine ⟨C, fun w => ?_⟩
+  intro I setup size seed source r M bits
+  have hfuel : r.fuel ≤ size.vertexCount := Nat.zero_le _
+  obtain ⟨hclock, hstates⟩ := hC w seed r hfuel
+  have hrun := (configurationJustesenBoundedWalk_firstHalting_iff ntm c w seed r bits 0).mpr
+    ⟨[], rfl, by simp [r, walkM, readNext, bind, StateT.bind, pure, StateT.pure]⟩
+  refine ⟨hrun.1, hrun.2, ?_, hstates [false, true]⟩
+  simpa only [r, Nat.zero_mul, Nat.zero_add] using hclock
 
 end CslibFrontierTests.STCONWeightedSubdivisionCall
