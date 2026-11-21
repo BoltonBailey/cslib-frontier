@@ -7080,6 +7080,7 @@ public import CslibFrontier.Foundations.Geometry.Polygonal.Noncrossing
 public import CslibFrontier.Foundations.Geometry.Polygonal.NoncrossingOrder
 public import CslibFrontier.Foundations.Geometry.Polygonal.ParabolaChord
 public import CslibFrontier.Foundations.Geometry.Polygonal.PlateauShear
+public import CslibFrontier.Foundations.Geometry.Polygonal.RadialOrder
 public import CslibFrontier.Foundations.Geometry.Polygonal.RayOrder
 public import CslibFrontier.Foundations.Geometry.Polygonal.RayParity
 public import CslibFrontier.Foundations.Geometry.Polygonal.RayParityColors
@@ -7094,6 +7095,7 @@ public import CslibFrontier.Foundations.Geometry.Polygonal.RouteInterior
 public import CslibFrontier.Foundations.Geometry.Polygonal.RouteParity
 public import CslibFrontier.Foundations.Geometry.Polygonal.SampledRoute
 public import CslibFrontier.Foundations.Geometry.Polygonal.Segment
+public import CslibFrontier.Foundations.Geometry.Polygonal.SegmentOrder
 public import CslibFrontier.Foundations.Geometry.Polygonal.SegmentRays
 public import CslibFrontier.Foundations.Geometry.Polygonal.SlopeDetour
 public import CslibFrontier.Foundations.Geometry.Polygonal.Translation
