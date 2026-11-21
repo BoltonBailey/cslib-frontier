@@ -14,6 +14,7 @@ import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Degree.B
 import Mathlib.Data.List.GetD
 import CslibFrontier.Foundations.Data.Nat.Bits
 import CslibFrontier.Tactic.EncLen
+import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.Constructible
 
 /-!
 # Native reversal and binary slicing of framed lists
@@ -141,9 +142,17 @@ theorem bitsGetD (fallback : Bool) : ComputableInSpace
     (fun p => (encPair encBits encNat p).length) := by
   have hhead : ComputableInSpace (fun w : List Bool => w.headD fallback) encBits encBool
       (fun w => w.length) := of_inO (.of_linear (ListEncoding.headD fallback))
-  refine (budget_comp_linear hhead bitsDrop).of_enc_eq ?_
-  intro p
-  rw [List.getD_eq_getElem?_getD, List.headD_eq_head?_getD, List.head?_drop]
+  -- Check the length before dropping, since an out-of-range binary index can be very large.
+  have hlen := budget_comp_linear (of_inO ComputableInO.lengthNat) (fst encBits encNat)
+  have hin := budget_natLt (snd encBits encNat) hlen
+  have hread := budget_comp_linear hhead bitsDrop
+  refine (budget_ite hin hread (budget_const fallback (.refl _))).of_enc_eq fun p => ?_
+  simp only [List.getD_eq_getElem?_getD, List.headD_eq_head?_getD, List.head?_drop,
+    decide_eq_true_eq]
+  split_ifs with hi
+  · rfl
+  · rw [List.getElem?_eq_none (Nat.le_of_not_gt hi)]
+    rfl
 
 /-- Reverse a bit word in space linear in its length. -/
 theorem bitsReverse : ComputableInSpace List.reverse encBits encBits (fun w => w.length) :=
