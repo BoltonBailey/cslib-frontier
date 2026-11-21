@@ -6264,6 +6264,7 @@ public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.RatPoly
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.RootBound
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.ShiftedLabel
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.SparseIntegerRootLabel
+public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.SparseRootProduct
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.Sturm
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.ThomSign
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.TotalIsolation
@@ -7275,6 +7276,7 @@ public import CslibFrontier.Foundations.LinearAlgebra.Matrix.BlockEmbedding
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.BranchingProgramDeterminant
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.CauchyBinet
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Charpoly.CoeffNorm
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Charpoly.EvalDeterminant
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Charpoly.ParameterDegree
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Charpoly.TraceExponential
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.ClosedSubmatrix
