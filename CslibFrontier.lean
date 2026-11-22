@@ -3446,6 +3446,9 @@ public import CslibFrontier.Computability.Distributed.ClockSync.ByzantineSync
 public import CslibFrontier.Computability.Distributed.ClockSync.LundeliusLynch
 public import CslibFrontier.Computability.Distributed.DijkstraScholten.Basic
 public import CslibFrontier.Computability.Distributed.DijkstraScholten.Correctness
+public import CslibFrontier.Computability.Distributed.FailureDetectors.Consensus
+public import CslibFrontier.Computability.Distributed.FailureDetectors.Hierarchy
+public import CslibFrontier.Computability.Distributed.FailureDetectors.Reduction
 public import CslibFrontier.Computability.Distributed.LocalGraph.Basic
 public import CslibFrontier.Computability.Distributed.LocalGraph.Coloring
 public import CslibFrontier.Computability.Distributed.LocalGraph.LubyMIS
@@ -3468,6 +3471,7 @@ public import CslibFrontier.Computability.Distributed.Paxos.Liveness
 public import CslibFrontier.Computability.Distributed.RingElection.Anonymous
 public import CslibFrontier.Computability.Distributed.RingElection.ChangRoberts
 public import CslibFrontier.Computability.Distributed.RingElection.Peterson
+public import CslibFrontier.Computability.Distributed.RoundRobin
 public import CslibFrontier.Computability.Distributed.SelfStabilization.Basic
 public import CslibFrontier.Computability.Distributed.SelfStabilization.DijkstraRing
 public import CslibFrontier.Computability.Distributed.SetAgreement.AtomicSnapshot
