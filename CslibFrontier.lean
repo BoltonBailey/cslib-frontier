@@ -5711,6 +5711,9 @@ public import CslibFrontier.Crypto.Primitives.UHF.Finite
 public import CslibFrontier.Crypto.Primitives.UHF.PairwiseUnpredictability
 public import CslibFrontier.Crypto.Primitives.UHF.PolynomialPrediction
 public import CslibFrontier.Crypto.Primitives.UHF.XorHash
+public import CslibFrontier.Crypto.Protocols.AnonymousToken.Basic
+public import CslibFrontier.Crypto.Protocols.AnonymousToken.Credit
+public import CslibFrontier.Crypto.Protocols.AnonymousToken.RandomTarget
 public import CslibFrontier.Crypto.Protocols.BCS.Basic
 public import CslibFrontier.Crypto.Protocols.BCS.Interactive
 public import CslibFrontier.Crypto.Protocols.BCS.ROM
@@ -5887,6 +5890,7 @@ public import CslibFrontier.Crypto.Protocols.SigmaProtocol.RelatedNonce
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.SchnorrIdentification
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.SchnorrSignature
 public import CslibFrontier.Crypto.Protocols.SigmaProtocol.UniqueResponses
+public import CslibFrontier.Crypto.Protocols.Signature.OneMore
 public import CslibFrontier.Crypto.Protocols.Signature.RandomOracle
 public import CslibFrontier.Crypto.Protocols.Signature.RandomOracle.Simulation
 public import CslibFrontier.Crypto.Protocols.UC.Adaptive
@@ -5902,7 +5906,9 @@ public import CslibFrontier.Crypto.Protocols.UC.Linking
 public import CslibFrontier.Crypto.Protocols.UC.Machine
 public import CslibFrontier.Crypto.Protocols.UC.MultiSession
 public import CslibFrontier.Crypto.Protocols.UC.WordInterface
+public import CslibFrontier.Crypto.Protocols.UOV.Attacks
 public import CslibFrontier.Crypto.Protocols.UOV.Field
+public import CslibFrontier.Crypto.Protocols.UOV.Games
 public import CslibFrontier.Crypto.Protocols.VOLE.AdaptiveMulCheck
 public import CslibFrontier.Crypto.Protocols.VOLE.Basic
 public import CslibFrontier.Crypto.Protocols.VOLE.BatchMulCheck
@@ -7788,6 +7794,7 @@ public import CslibFrontier.Languages.Probabilistic.Oracle.Simulation
 public import CslibFrontier.Languages.Probabilistic.Oracle.Simulation.Handler
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution.QueryCount
+public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution.RunLog
 public import CslibFrontier.Languages.Probabilistic.Oracle.Substitution.RunWith
 public import CslibFrontier.Languages.Probabilistic.Oracle.Support
 public import CslibFrontier.Languages.Probabilistic.Oracle.Tabulate
