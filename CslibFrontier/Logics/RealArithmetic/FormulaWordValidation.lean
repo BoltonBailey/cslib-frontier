@@ -11,6 +11,7 @@ public import CslibFrontier.Logics.RealArithmetic.FormulaTokenDecoding
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.Basic
 import CslibFrontier.Logics.RealArithmetic.TokenEvaluationPolyTime
 import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.List
+import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.Nat.Binary
 import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.Option
 import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.Plain
 import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.PolyTime.Sum
@@ -27,6 +28,10 @@ payloads. Valid words encode formulas in the dimension given by their length.
 
 The total view adapts `LeanCanny.ETR.FormulaView` at the same revision. It preserves the exact
 bits of valid encodings and gives malformed words the semantics of falsity.
+Its indexed token reader adapts the constructor and term-word access of
+`LeanCanny.ETR.FormulaBooleanCircuitSource` to the frontier prefix token list.
+The subtree span adapts the same source's traversal of the first operand to locate the
+second operand, using the native splitter for framed prefix tokens.
 -/
 
 public section
@@ -180,15 +185,16 @@ private theorem inspectToken_polyTime :
         (sumElim (const (1, true))
           (sumElim (const (2, true)) (const (2, true))))))
 
+private theorem inspectToken_arity_le (token : FormulaToken) : (inspectToken token).1 ≤ 2 := by
+  rcases token with _ | (_ | (_ | (_ | (_ | _)))) <;>
+    simp only [inspectToken, Sum.elim_inl, Sum.elim_inr, Nat.zero_le, Nat.reduceLeDiff, le_refl]
+
 /-- Syntax validation runs in polynomial time uniformly in the raw bit word. -/
 theorem validFormulaWord_polyTime :
     ComputableInPolyTime validFormulaWord encBits encBool := by
   let encTokens := encList encFormulaToken
   have harity := (fst encUnary encBool).comp inspectToken_polyTime
-  have hshape := RecursiveEncoding.isTree_polyTime harity (maximum := 2) fun token => by
-    rcases token with _ | (_ | (_ | (_ | (_ | _)))) <;>
-      simp only [Function.comp_apply, inspectToken, Sum.elim_inl, Sum.elim_inr,
-        Nat.zero_le, Nat.reduceLeDiff, le_refl]
+  have hshape := RecursiveEncoding.isTree_polyTime harity inspectToken_arity_le
   have hvalid := (snd encUnary encBool).comp inspectToken_polyTime
   have hall := allWith (hvalid.comp (snd encUnit encFormulaToken)) (const ()) id'
   exact optionElimWithInput formulaTokensDecoder.computable (const false)
@@ -219,12 +225,104 @@ theorem encFormula_ofWord (word : List Bool) :
   · rw [Formula.ofWord_of_not_valid h, normalizeFormulaWord, ite_eq_right h]
     rfl
 
+/-- Formula word normalization is uniformly polynomial time. -/
+theorem normalizeFormulaWord_polyTime :
+    ComputableInPolyTime normalizeFormulaWord encBits encBits :=
+  validFormulaWord_polyTime.ite' id' (const (encFormula 0 .false))
+
 /-- Re-encoding the total formula view is uniformly polynomial time on raw bit words. -/
 theorem encFormula_ofWord_polyTime :
     ComputableInPolyTime (fun word => encFormula word.length (Formula.ofWord word))
-      encBits encBits := by
-  have h : ComputableInPolyTime normalizeFormulaWord encBits encBits :=
-    validFormulaWord_polyTime.ite' id' (const (encFormula 0 .false))
-  exact h.of_enc_eq fun word => congrArg encBits (encFormula_ofWord word)
+      encBits encBits :=
+  normalizeFormulaWord_polyTime.of_enc_eq fun word => congrArg encBits (encFormula_ofWord word)
+
+/-- The prefix tokens of the total formula view, retaining the original comparison term words. -/
+@[expose] def formulaWordTokens (word : List Bool) : List FormulaToken :=
+  (formulaTokensDecoder.decode (normalizeFormulaWord word)).getD []
+
+/-- The executable token stream agrees with the typed formula view on every input. -/
+theorem formulaWordTokens_eq (word : List Bool) :
+    formulaWordTokens word =
+      (encFormula_tokens word.length (Formula.ofWord word)).map FormulaToken.encodeTerms := by
+  rw [formulaWordTokens, ← encFormula_ofWord, formulaTokensDecoder_decode_encFormula]
+  rfl
+
+/-- Each token of a valid word occupies at least one bit. Malformed words have one falsity
+token, including for the empty input. -/
+theorem formulaWordTokens_length_le (word : List Bool) :
+    (formulaWordTokens word).length ≤ max 1 word.length := by
+  by_cases h : validFormulaWord word = true
+  · have hnormalize : normalizeFormulaWord word = word := ite_eq_left h
+    have hdecode := formulaTokensDecoder_decode_encFormula (Formula.ofWord word)
+    rw [encFormula_ofWord, hnormalize, ← formulaWordTokens_eq] at hdecode
+    have hword := (formulaTokensDecoder.decode_eq_some_iff _ _).mp hdecode
+    calc
+      (formulaWordTokens word).length ≤ (encList encFormulaToken (formulaWordTokens word)).length :=
+        SizedListEncoding.length_le (encA := encFormulaToken) (encL := encList encFormulaToken) _
+      _ ≤ max 1 word.length := by
+        rw [hword]
+        exact le_max_right ..
+  · rw [formulaWordTokens_eq, Formula.ofWord_of_not_valid h]
+    exact le_max_left 1 word.length
+
+/-- Recover the framed prefix token stream in polynomial time. -/
+theorem formulaWordTokens_polyTime :
+    ComputableInPolyTime formulaWordTokens encBits (encList encFormulaToken) :=
+  optionGetDWithInput (formulaTokensDecoder.computable.comp normalizeFormulaWord_polyTime)
+    (const [])
+
+/-- Read a prefix token by position. Positions beyond the stream return the falsity token. -/
+@[expose] def formulaWordTokenAt (word : List Bool) (index : ℕ) : FormulaToken :=
+  (formulaWordTokens word).getD index (.inl ())
+
+/-- Token lookup takes polynomial time in the raw word and binary index. -/
+theorem formulaWordTokenAt_polyTime :
+    ComputableInPolyTime (fun p : List Bool × ℕ => formulaWordTokenAt p.1 p.2)
+      (encPair encBits encNat) encFormulaToken :=
+  listGetD_binary (encA := encFormulaToken) (.inl ())
+    (formulaWordTokens_polyTime.comp (fst encBits encNat)) (snd encBits encNat)
+
+/-- The number of prefix tokens in the subtree beginning at this index of the total formula
+view. A position outside the token stream has no subtree. -/
+def formulaSubtreeSizeAt (word : List Bool) (index : ℕ) : Option ℕ :=
+  (RecursiveEncoding.splitTree (fun token => (inspectToken token).1)
+    ((formulaWordTokens word).drop index)).map fun split => split.1.length
+
+/-- A serialized subtree starting at the given position is consumed exactly, leaving any
+following tokens out of the span. -/
+theorem formulaSubtreeSizeAt_of_prefix {n : ℕ} {word : List Bool} (p : Formula n)
+    (before after : List FormulaToken)
+    (h : formulaWordTokens word =
+      before ++ ((encFormula_tokens n p).map FormulaToken.encodeTerms ++ after)) :
+    formulaSubtreeSizeAt word before.length = some (encFormula_tokens n p).length := by
+  have htree := (formulaForest_map_encodeTerms (encFormula_tokens n p)).mpr
+    (encFormula_tokens_forest n p)
+  rw [formulaSubtreeSizeAt, h, List.drop_left, RecursiveEncoding.splitTree_append htree,
+    Option.map_some, List.length_map]
+
+/-- Subtree span takes polynomial time with a binary index and an optional binary result.
+The index is capped by the number of tokens before converting it to unary for list dropping. -/
+theorem formulaSubtreeSizeAt_polyTime :
+    ComputableInPolyTime (fun p : List Bool × ℕ => formulaSubtreeSizeAt p.1 p.2)
+      (encPair encBits encNat) (encOption encNat) := by
+  let encTokens := encList encFormulaToken
+  have ht := formulaWordTokens_polyTime.comp (fst encBits encNat)
+  have hi := snd encBits encNat
+  have hcap := binary_min_unary' ((length_list encFormulaToken).comp ht) hi
+  have hdrop : ComputableInPolyTime (fun p : List Bool × ℕ => (formulaWordTokens p.1).drop p.2)
+      (encPair encBits encNat) encTokens := by
+    refine (listDropWithInput ht hcap).of_enc_eq ?_
+    rintro ⟨word, index⟩
+    apply congrArg encTokens
+    change (formulaWordTokens word).drop index =
+      (formulaWordTokens word).drop (min (formulaWordTokens word).length index)
+    rcases le_total index (formulaWordTokens word).length with h | h
+    · rw [Nat.min_eq_right h]
+    · rw [Nat.min_eq_left h, List.drop_length, List.drop_eq_nil_of_le h]
+  have harity := (fst encUnary encBool).comp inspectToken_polyTime
+  have hsplit := (RecursiveEncoding.splitTree_polyTime harity inspectToken_arity_le).comp hdrop
+  have hsize := unary_to_binary.comp ((length_list encFormulaToken).comp (fst encTokens encTokens))
+  exact hsplit.optionMapWithInput
+    (hsize.comp (snd (encPair encBits encNat) (encPair encTokens encTokens)))
 
 end Cslib.Logic.RealArithmetic
