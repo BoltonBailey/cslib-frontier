@@ -7332,6 +7332,7 @@ public import CslibFrontier.Foundations.Geometry.Polyhedra.Complex
 public import CslibFrontier.Foundations.Geometry.Polyhedra.PiecewiseLinear
 public import CslibFrontier.Foundations.Geometry.Polyhedra.PiecewiseQuadratic
 public import CslibFrontier.Foundations.Geometry.Polyhedra.Polytope
+public import CslibFrontier.Foundations.Geometry.PuncturedPaths
 public import CslibFrontier.Foundations.Geometry.SegmentSign
 public import CslibFrontier.Foundations.Geometry.SeparatedStarObstacles
 public import CslibFrontier.Foundations.Geometry.StarConvexEscape
