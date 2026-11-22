@@ -142,6 +142,8 @@ import CslibFrontier.Foundations.BooleanAnalysis.OrDegree
 import CslibFrontier.Foundations.BooleanAnalysis.Hypercontractivity.ReverseTwoPoint
 import CslibFrontier.Foundations.BooleanAnalysis.ReverseHypercontractivity
 import CslibFrontier.Foundations.BooleanAnalysis.DegreeOneWeight
+
+import CslibFrontier.Foundations.BooleanAnalysis.LevelOneInequality
 import CslibFrontier.Computability.Circuit.NNF.Negation.Separation
 import CslibFrontier.Computability.Communication.CliqueIndependentSet
 import CslibFrontier.Computability.Communication.AhoUllmanYannakakis
@@ -12755,3 +12757,21 @@ register_result "odonnell-unbiased-noise-stability-dictators" where
     the closed interval containing the book's 0 < ρ < 1; and for 0 < ρ < 1, Stab_ρ[f] = ρ if \
     and only if f x = b ⊕ x i for some coordinate i and bit b, the book's ±χ_i. The equality \
     case fails at both endpoints."
+
+register_result "odonnell-level-one-inequality" where
+  title := "Level-1 Inequality with the explicit constant 16"
+  topic := "analysis of Boolean functions"
+  sources := [
+    { paper := ODonnell2014, theorem := "Level-1 Inequality",
+      locator := "arXiv:2105.10386v1, §5.4, printed p. 126; proof for [−1, 1]-valued functions \
+        on printed p. 128" }
+  ]
+  theorems := [
+    Cslib.BitString.levelWeight_one_le_of_abs_le_one,
+    Cslib.BitString.levelWeight_one_bitVal_le
+  ]
+  scope := "Uniform cube on any finite coordinate type. The source's O(α² log(1/α)) is stated \
+    with the explicit constant 16 and the natural logarithm: W¹[f] ≤ 16 α² ln(1/α) whenever \
+    α ≤ 1/2, for f with values in [−1, 1] and α = 𝔼|f| (the setting of the source's proof), and \
+    for a Boolean function read as 0 or 1 with α its mean. The sharp constant 2 of Remark 5.28 \
+    is not covered."
