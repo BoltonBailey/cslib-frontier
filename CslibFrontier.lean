@@ -8793,3 +8793,5 @@ public import CslibFrontier.Tactic.Space
 public import CslibFrontier.Tactic.SuppCases
 public import CslibFrontier.Tactic.SuppCases.Init
 public import CslibFrontier.Tactic.Synthesis
+public import CslibFrontier.Tactic.WramOmega
+public import CslibFrontier.Tactic.WramOmega.Init
