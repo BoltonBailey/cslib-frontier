@@ -4699,6 +4699,7 @@ public import CslibFrontier.Computability.PolyTime.CSP.ToCNF
 public import CslibFrontier.Computability.PolyTime.CSP.Vars
 public import CslibFrontier.Computability.PolyTime.CommonCountingAccum
 public import CslibFrontier.Computability.PolyTime.FineGrained.ParameterCheck
+public import CslibFrontier.Computability.PolyTime.FixedPointExp
 public import CslibFrontier.Computability.PolyTime.GaloisRingArithmetic
 public import CslibFrontier.Computability.PolyTime.GaloisRingInterpolation
 public import CslibFrontier.Computability.PolyTime.GaloisRingSeries
@@ -4740,6 +4741,7 @@ public import CslibFrontier.Computability.Probabilistic.CenteredBinomial
 public import CslibFrontier.Computability.Probabilistic.CoinOfDigits
 public import CslibFrontier.Computability.Probabilistic.CoinTape
 public import CslibFrontier.Computability.Probabilistic.CoinTape.Bounds
+public import CslibFrontier.Computability.Probabilistic.DiscreteGaussian1D
 public import CslibFrontier.Computability.Probabilistic.ExponentialIterate
 public import CslibFrontier.Computability.Probabilistic.Finite
 public import CslibFrontier.Computability.Probabilistic.Fold
@@ -5695,6 +5697,7 @@ public import CslibFrontier.Crypto.Computational.SIS.MLKEM.PRFSecurity
 public import CslibFrontier.Crypto.Computational.SIS.MLKEM.Security
 public import CslibFrontier.Crypto.Computational.SIS.MLKEM.SeedExpansion
 public import CslibFrontier.Crypto.Computational.SIS.MR07Core
+public import CslibFrontier.Crypto.Computational.SIS.MR07Samplers
 public import CslibFrontier.Crypto.Computational.SIS.Module
 public import CslibFrontier.Crypto.Computational.SIS.Module.ApproximateSampling
 public import CslibFrontier.Crypto.Computational.SIS.Module.MatrixSampling
@@ -7750,6 +7753,7 @@ public import CslibFrontier.Foundations.Probability.Gaussian.ExpSq
 public import CslibFrontier.Foundations.Probability.Gaussian.Fourier
 public import CslibFrontier.Foundations.Probability.Gaussian.Hermite
 public import CslibFrontier.Foundations.Probability.Gaussian.HermiteExpansion
+public import CslibFrontier.Foundations.Probability.Gaussian.Int
 public import CslibFrontier.Foundations.Probability.Gaussian.MassBounds
 public import CslibFrontier.Foundations.Probability.Gaussian.Measure
 public import CslibFrontier.Foundations.Probability.Gaussian.Moments
