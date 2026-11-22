@@ -3465,6 +3465,9 @@ public import CslibFrontier.Computability.Distributed.SetAgreement.Impossibility
 public import CslibFrontier.Computability.Distributed.SharedMemory.Basic
 public import CslibFrontier.Computability.Distributed.SharedMemory.Hierarchy
 public import CslibFrontier.Computability.Distributed.SharedMemory.Universal
+public import CslibFrontier.Computability.Distributed.VectorClock.Basic
+public import CslibFrontier.Computability.Distributed.VectorClock.Clocks
+public import CslibFrontier.Computability.Distributed.VectorClock.LowerBound
 public import CslibFrontier.Computability.GenericRAM.Algebraic
 public import CslibFrontier.Computability.GenericRAM.Defs
 public import CslibFrontier.Computability.GenericRAM.Native
