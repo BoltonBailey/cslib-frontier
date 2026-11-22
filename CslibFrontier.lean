@@ -3106,6 +3106,7 @@ public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalJacob
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalNumericEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalParameterEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalPolynomialEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.DyadicSignEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.Factorial
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.GridEnumeration
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.IndexedPowerProduct
@@ -3116,9 +3117,11 @@ public import CslibFrontier.Computability.Complexity.RealAlgebraic.PowerProductC
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.QuotientCharacteristicEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.QuotientTraceEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ResidueEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.SparseDerivativeTestEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.TraceExponential
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.TranslatedCoefficientEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.TranslatedPoint
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.UnivariateDerivativeEvaluation
 public import CslibFrontier.Computability.Complexity.Reduction
 public import CslibFrontier.Computability.Complexity.Reduction.Autoreducibility
 public import CslibFrontier.Computability.Complexity.Reduction.BoundedOracle
