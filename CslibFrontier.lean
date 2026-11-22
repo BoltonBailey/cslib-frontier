@@ -4612,6 +4612,7 @@ public import CslibFrontier.Computability.Probabilistic.Time
 public import CslibFrontier.Computability.Probabilistic.Traverse
 public import CslibFrontier.Computability.Probabilistic.UniformNat
 public import CslibFrontier.Computability.Probabilistic.UniformNat.ModIndex
+public import CslibFrontier.Computability.Probabilistic.Vector
 public import CslibFrontier.Computability.Program.Assemble
 public import CslibFrontier.Computability.Program.Blocks
 public import CslibFrontier.Computability.Program.Structured
@@ -5324,6 +5325,7 @@ public import CslibFrontier.Crypto.Computational.MLDSA.KeyOnly
 public import CslibFrontier.Crypto.Computational.MLDSA.KeySeedSearch
 public import CslibFrontier.Crypto.Computational.MLDSA.MaskSeedQuery
 public import CslibFrontier.Crypto.Computational.MLDSA.MatrixOracle
+public import CslibFrontier.Crypto.Computational.MLDSA.MatrixSampling
 public import CslibFrontier.Crypto.Computational.MLDSA.PriorCommitmentRefresh
 public import CslibFrontier.Crypto.Computational.MLDSA.PrivateMaskExpansion
 public import CslibFrontier.Crypto.Computational.MLDSA.PrivateMaskSeedGame
@@ -5332,6 +5334,7 @@ public import CslibFrontier.Crypto.Computational.MLDSA.PublicKeyHash
 public import CslibFrontier.Crypto.Computational.MLDSA.PublicPairSigning
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumCommitment
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumCommitmentRegister
+public import CslibFrontier.Crypto.Computational.MLDSA.QuantumKeyOnly
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumSigning
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumSigningPrefix
 public import CslibFrontier.Crypto.Computational.MLDSA.RandomXof
@@ -5346,6 +5349,7 @@ public import CslibFrontier.Crypto.Computational.MLDSA.ResponseBinding
 public import CslibFrontier.Crypto.Computational.MLDSA.SecretExpansionLaw
 public import CslibFrontier.Crypto.Computational.MLDSA.SecretRowPrediction
 public import CslibFrontier.Crypto.Computational.MLDSA.SecretRowServices
+public import CslibFrontier.Crypto.Computational.MLDSA.SharedDigest
 public import CslibFrontier.Crypto.Computational.MLDSA.SharedKeyGame
 public import CslibFrontier.Crypto.Computational.MLDSA.SharedSecretExpansion
 public import CslibFrontier.Crypto.Computational.MLDSA.SignedExtraction
