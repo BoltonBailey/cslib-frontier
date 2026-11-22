@@ -1648,6 +1648,7 @@ public import CslibFrontier.Computability.Circuit.Frontier.Layouts.Switched.Swit
 public import CslibFrontier.Computability.Circuit.Frontier.Layouts.Switched.SwitchedLayout
 public import CslibFrontier.Computability.Circuit.Frontier.Layouts.Switched.Triangle
 public import CslibFrontier.Computability.Circuit.Frontier.Layouts.VertexGaussian
+public import CslibFrontier.Computability.Circuit.Frontier.Layouts.WeightedKernel
 public import CslibFrontier.Computability.Circuit.Frontier.Ledger.Aggregate
 public import CslibFrontier.Computability.Circuit.Frontier.Ledger.Basic
 public import CslibFrontier.Computability.Circuit.Frontier.Ledger.LowerBound
@@ -1657,6 +1658,7 @@ public import CslibFrontier.Computability.Circuit.Frontier.Linear.DirectedShift
 public import CslibFrontier.Computability.Circuit.Frontier.Linear.LowerBound
 public import CslibFrontier.Computability.Circuit.Frontier.Linear.Unconditional
 public import CslibFrontier.Computability.Circuit.Frontier.LowerBound
+public import CslibFrontier.Computability.Circuit.Frontier.MultiPass
 public import CslibFrontier.Computability.Circuit.Frontier.Multigraph
 public import CslibFrontier.Computability.Circuit.Frontier.Network
 public import CslibFrontier.Computability.Circuit.Frontier.Nondeterministic
