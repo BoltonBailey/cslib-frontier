@@ -351,6 +351,8 @@ public import CslibFrontier.Algorithms.Reachability.ReingoldEval
 public import CslibFrontier.Algorithms.Reachability.Savitch
 public import CslibFrontier.Algorithms.Reachability.SavitchWalk
 public import CslibFrontier.Algorithms.Reachability.ShortestWalk
+public import CslibFrontier.Algorithms.Recursion.StackRecursionTree
+public import CslibFrontier.Algorithms.Recursion.StackScheme
 public import CslibFrontier.Algorithms.ShortestPaths.FloydWarshall
 public import CslibFrontier.Algorithms.ShortestPaths.NegativeTriangle
 public import CslibFrontier.Algorithms.ShortestPaths.Power
@@ -3386,7 +3388,6 @@ public import CslibFrontier.Computability.GenericRAM.Native.MeasurementFold
 public import CslibFrontier.Computability.GenericRAM.Native.Nat
 public import CslibFrontier.Computability.GenericRAM.Native.PolynomialOverhead
 public import CslibFrontier.Computability.GenericRAM.Native.StackRecursion
-public import CslibFrontier.Computability.GenericRAM.Native.StackRecursionTree
 public import CslibFrontier.Computability.GenericRAM.Native.SubsetPairFold
 public import CslibFrontier.Computability.GenericRAM.Signed
 public import CslibFrontier.Computability.GenericRAM.Signed.Fits
@@ -8784,6 +8785,7 @@ public import CslibFrontier.Probability.BitString.Rademacher
 public import CslibFrontier.Probability.BitString.SubsetSum
 public import CslibFrontier.Probability.BitString.SubsetSum.Matrix
 public import CslibFrontier.Probability.BitString.ToeplitzHash
+public import CslibFrontier.Probability.BitString.UniformSplit
 public import CslibFrontier.Probability.BoundedDifferences
 public import CslibFrontier.Probability.ChangeOfMeasure
 public import CslibFrontier.Probability.Chernoff
