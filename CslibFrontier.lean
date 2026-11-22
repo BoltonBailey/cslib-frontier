@@ -5171,10 +5171,12 @@ public import CslibFrontier.Crypto.Computational.GenericGroup.RecursiveDlog
 public import CslibFrontier.Crypto.Computational.GenericGroup.Relabel
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.Decoding
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.HardCore
+public import CslibFrontier.Crypto.Computational.GoldreichLevin.ListDecoding
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.Nonuniform
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.Parameters
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.Reduction
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.WordDecoder
+public import CslibFrontier.Crypto.Computational.GoldreichLevin.WordListDecoder
 public import CslibFrontier.Crypto.Computational.GoldreichLevin.WordReduction
 public import CslibFrontier.Crypto.Computational.GoldwasserMicali
 public import CslibFrontier.Crypto.Computational.GoldwasserMicali.Malleability
@@ -6880,6 +6882,7 @@ public import CslibFrontier.Foundations.Data.BitString.SignWord
 public import CslibFrontier.Foundations.Data.BitString.Single
 public import CslibFrontier.Foundations.Data.BitString.Sum
 public import CslibFrontier.Foundations.Data.BitString.Support
+public import CslibFrontier.Foundations.Data.BitString.Support.Equiv
 public import CslibFrontier.Foundations.Data.BitString.Support.Weight
 public import CslibFrontier.Foundations.Data.BitString.Threshold
 public import CslibFrontier.Foundations.Data.BitString.Weight
