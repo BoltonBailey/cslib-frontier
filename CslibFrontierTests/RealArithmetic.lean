@@ -148,6 +148,30 @@ set_option linter.hashCommand false in
 set_option linter.hashCommand false in
 #guard formulaSubtreeSizeAt [] 0 == some 1 && (formulaSubtreeSizeAt [] 1).isNone
 
+-- Both binary connectives skip their first subtree, and negation has only one child.
+set_option linter.hashCommand false in
+#guard
+  let word := encFormula 0 (.and (.not (.eqZero (.const 0))) (.or .false (.ltZero (.const (-1)))))
+  formulaWordChildIndices word 0 == [1, 3] && formulaWordChildIndices word 1 == [2] &&
+    formulaWordChildIndices word 3 == [4, 5] && formulaWordChildIndices word 5 == []
+
+-- Neither the malformed formula view nor an oversized index yields a child.
+set_option linter.hashCommand false in
+#guard formulaWordChildIndices [] 0 == [] &&
+  formulaWordChildIndices (encFormula 0 (.not .false)) (2 ^ 80) == []
+
+-- The same negative sign makes the equality false and the strict inequality true.
+-- Connectives read their own child indices, including the skipped left subtree at the root.
+set_option linter.hashCommand false in
+#guard
+  let term : Term 0 := .const (-1)
+  let word := encFormula 0 (.and (.not (.eqZero term)) (.or .false (.ltZero term)))
+  let termSign := fun bits => if bits == encTerm 0 term then (-1 : SignType) else 0
+  let gate := fun index => formulaWordGateValue word index termSign
+  let value := fun index => index == 1 || index == 3 || index == 5
+  gate 0 value && !gate 0 (· == 1) && gate 1 value && !gate 2 value &&
+    gate 3 value && !gate 4 value && gate 5 value && !gate (2 ^ 80) value
+
 -- The total view preserves the existential semantics of a satisfiable formula.
 example :
     (Formula.ofWord (encFormula 0 (.eqZero (.const 0)))).solutionSet.Nonempty := by
