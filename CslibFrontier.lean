@@ -3234,6 +3234,8 @@ public import CslibFrontier.Computability.Distributed.ApproxAgreement.TrimmedMid
 public import CslibFrontier.Computability.Distributed.AsyncByzantine.Basic
 public import CslibFrontier.Computability.Distributed.AsyncByzantine.Bracha
 public import CslibFrontier.Computability.Distributed.AsyncByzantine.Impossibility
+public import CslibFrontier.Computability.Distributed.AtomicCommit.ThreePhaseCommit
+public import CslibFrontier.Computability.Distributed.AtomicCommit.TwoPhaseCommit
 public import CslibFrontier.Computability.Distributed.BenOr.Basic
 public import CslibFrontier.Computability.Distributed.BenOr.Liveness
 public import CslibFrontier.Computability.Distributed.Byzantine.Basic
