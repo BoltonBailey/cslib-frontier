@@ -4648,6 +4648,7 @@ public import CslibFrontier.Computability.QueryComplexity.Quantum.BitQuery
 public import CslibFrontier.Computability.QueryComplexity.Quantum.Composition
 public import CslibFrontier.Computability.QueryComplexity.Quantum.DeutschJozsa
 public import CslibFrontier.Computability.QueryComplexity.Quantum.Grover
+public import CslibFrontier.Computability.QueryComplexity.Quantum.MeasuredPrefix
 public import CslibFrontier.Computability.QueryComplexity.Quantum.NayakWuConsequences
 public import CslibFrontier.Computability.QueryComplexity.Quantum.PermutationInversion
 public import CslibFrontier.Computability.QueryComplexity.Quantum.Polynomial
@@ -5316,6 +5317,7 @@ public import CslibFrontier.Crypto.Computational.MLDSA.PublicPairSigning
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumCommitment
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumCommitmentRegister
 public import CslibFrontier.Crypto.Computational.MLDSA.QuantumSigning
+public import CslibFrontier.Crypto.Computational.MLDSA.QuantumSigningPrefix
 public import CslibFrontier.Crypto.Computational.MLDSA.RandomXof
 public import CslibFrontier.Crypto.Computational.MLDSA.RandomXofCoverage
 public import CslibFrontier.Crypto.Computational.MLDSA.RandomXofMask
