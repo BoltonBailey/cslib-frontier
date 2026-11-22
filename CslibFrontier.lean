@@ -6726,6 +6726,7 @@ public import CslibFrontier.Foundations.BooleanAnalysis.LowDegreeMoments
 public import CslibFrontier.Foundations.BooleanAnalysis.LowDegreeParity
 public import CslibFrontier.Foundations.BooleanAnalysis.LowDegreePhase
 public import CslibFrontier.Foundations.BooleanAnalysis.Majority
+public import CslibFrontier.Foundations.BooleanAnalysis.MajorityFourier
 public import CslibFrontier.Foundations.BooleanAnalysis.MaximalSupport
 public import CslibFrontier.Foundations.BooleanAnalysis.MirrorSets
 public import CslibFrontier.Foundations.BooleanAnalysis.Mobius
@@ -6741,6 +6742,7 @@ public import CslibFrontier.Foundations.BooleanAnalysis.QuadraticForm
 public import CslibFrontier.Foundations.BooleanAnalysis.RelevantCoordinates
 public import CslibFrontier.Foundations.BooleanAnalysis.ReverseHypercontractivity
 public import CslibFrontier.Foundations.BooleanAnalysis.SignApproximation
+public import CslibFrontier.Foundations.BooleanAnalysis.SmallSetExpansion
 public import CslibFrontier.Foundations.BooleanAnalysis.SparseBranching
 public import CslibFrontier.Foundations.BooleanAnalysis.SparseClearedSpecialization
 public import CslibFrontier.Foundations.BooleanAnalysis.SparseEquations
