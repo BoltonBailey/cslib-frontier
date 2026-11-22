@@ -337,6 +337,7 @@ public import CslibFrontier.Algorithms.Reachability.InductiveCounting.Semantics
 public import CslibFrontier.Algorithms.Reachability.MinIsolation.AllPairs
 public import CslibFrontier.Algorithms.Reachability.MinIsolation.Collisions
 public import CslibFrontier.Algorithms.Reachability.MinIsolation.Generator
+public import CslibFrontier.Algorithms.Reachability.MinIsolation.Generator.Certificate
 public import CslibFrontier.Algorithms.Reachability.MinIsolation.Generator.Scale
 public import CslibFrontier.Algorithms.Reachability.MinIsolation.Generator.SeedDigits
 public import CslibFrontier.Algorithms.Reachability.MinIsolation.Generator.SeedRank
@@ -2247,6 +2248,7 @@ public import CslibFrontier.Computability.Complexity.Classes.LogSpace.FirstOrder
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.FirstOrder.TransitiveClosure.Loop
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Hoza
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.LayeredReachability
+public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Modular
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.PolyTime
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.QueryCompiler
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized
