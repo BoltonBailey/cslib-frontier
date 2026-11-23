@@ -69,7 +69,7 @@ import CslibFrontier.Algorithms.Lean.MaxTwoSAT.GoemansWilliamsonMaxTwoSAT
 import CslibFrontier.Algorithms.Lean.TwoSAT
 import CslibFrontier.Algorithms.WordRAM.TrimmedYates
 import CslibFrontier.Algorithms.LinearAlgebra.BareissElimination
-import CslibFrontier.Algorithms.Lean.TreeDecomposition.CSP
+import CslibFrontier.Algorithms.WordRAM.TreeDecomposition.CSP
 import CslibFrontier.Algorithms.WordRAM.Schoening.Amplify
 import CslibFrontier.Crypto.Computational.Encryption.IVStream.Malleability
 import CslibFrontier.Crypto.Computational.RSACRT
@@ -9721,22 +9721,31 @@ register_result "csp-bounded-treewidth" where
   title := "Exact counting and decision for finite-domain CSPs over bounded treewidth"
   topic := "parameterized algorithms"
   sources := [
-    { paper := CyganEtAl2015, theorem := "Lemma 7.4 (nice trees)", locator := "p.161" }
+    { paper := CyganEtAl2015, theorem := "Lemma 7.4 (nice trees, background)",
+      locator := "p.161 (May 30, 2016 PDF)" }
   ]
   theorems := [
-    Cslib.Algorithms.Lean.TreeDecomposition.ret_cspCountRootedM,
-    Cslib.Algorithms.Lean.TreeDecomposition.ret_cspDecideRootedM,
-    Cslib.Algorithms.Lean.TreeDecomposition.time_cspCountRootedM_le,
-    Cslib.Algorithms.Lean.TreeDecomposition.ret_cspCountActiveRootedM,
-    Cslib.Algorithms.Lean.TreeDecomposition.ret_cspCountNiceM_equiv
+    Cslib.Algorithms.WordRAM.TreeDecomposition.exists_program_cspDecide_rooted,
+    Cslib.Algorithms.WordRAM.TreeDecomposition.exists_program_cspCount_rooted,
+    Cslib.Algorithms.WordRAM.TreeDecomposition.exists_program_cspDecide_nice,
+    Cslib.Algorithms.WordRAM.TreeDecomposition.exists_program_cspCount_nice
   ]
-  scope := "Finite constraint domains Fin q (and arbitrary Fintype/Inhabited D via Equiv D \
-    (Fin q)) over a supplied RootedTreeDecomposition of the primal or active primal graph. \
-    Normalizes via toNiceTreePruned to at most (3 w + 5)(|V| + 1) nice nodes (size, not runtime \
-    bound) and charges unit-cost TimeM inner-loop ticks bounded by (3 w + 5)(|V| + 1) · q^(w + 1) \
-    · dpNodeCost w F (excluding recursive list-manipulation overhead like bagList, sem \
-    evaluations, and unbounded integer arithmetic). The generic CSP-counting DP extension is an \
-    adaptation/original implementation. Computing the tree decomposition is external."
+  scope := "Original formalization of generic exact counting and satisfiability for finite-domain \
+    CSPs over Fin q with q > 0 (and arbitrary Fintype/Inhabited D via Equiv D (Fin q)) over a \
+    supplied RootedTreeDecomposition or NiceTreeDecomposition of width ≤ k of the primal graph, \
+    using Cygan et al., Lemma 7.4 (p. 161 in the authors' May 30, 2016 PDF) as background to \
+    normalize a rooted decomposition via toNiceTreePruned to at most (3 * k + 5) * (m + 1) nice \
+    nodes (m = |V|). Proves exact-basis Word-RAM step bounds C * (cspNiceStepBound q N.size k \
+    |F.vars| |F| + 1) + 1 for nice trees and C * (cspRootedStepBound q m k |F.vars| |F| + 1) + 1 \
+    for rooted trees (including additive terms at k = 0 and empty inputs) at any word width w \
+    satisfying Fits w inst.wordBound (which implies InputFits w inst.encode; decision requires \
+    entries ≤ 1, while exact counting additionally requires word capacity for counts up to \
+    q ^ T.size), charging bag construction/erasure, materialized constraint truth-table
+    lookups, radix projections, and bounded-word arithmetic. Pure DP correctness
+    (cspCountRooted_eq_modelCount, cspDecideRooted_eq_true_iff,
+    cspCountActiveRooted_eq_modelCount, cspCountNice_equiv) is in
+    CslibFrontier.Algorithms.Lean.TreeDecomposition.CSP; tree-decomposition computation,
+    nice-tree conversion, and truth-table materialization are external to the Word-RAM program."
 
 register_result "kleene-post-incomparable" where
   title := "Kleene–Post theorem: existence of Turing-incomparable degrees"
