@@ -3416,6 +3416,7 @@ public import CslibFrontier.Computability.Complexity.RealAlgebraic.PowerProductC
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.QuotientCharacteristicEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.QuotientTraceEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ResidueEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.RootIsolation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.RootLabelWitness
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ShiftedCriticalObjectiveEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.SignLabelEvaluation
@@ -6832,9 +6833,9 @@ public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.SparseIntege
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.SparseRootDeterminant
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.SparseRootProduct
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.Sturm
+public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.SturmBitBounds
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.ThomSign
 public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.TotalIsolation
-public import CslibFrontier.Foundations.Algebra.Polynomial.RealRoot.TotalRatPoly
 public import CslibFrontier.Foundations.Algebra.Polynomial.SignLabelPolynomial
 public import CslibFrontier.Foundations.Algebra.Polynomial.SignLabelPolynomialBounds
 public import CslibFrontier.Foundations.Algebra.Quaternion.BpInfinity
