@@ -2093,6 +2093,7 @@ public import CslibFrontier.Computability.Complexity.Classes.Advice.LengthCompar
 public import CslibFrontier.Computability.Complexity.Classes.Advice.OneBit
 public import CslibFrontier.Computability.Complexity.Classes.AlgorithmsToLowerBounds
 public import CslibFrontier.Computability.Complexity.Classes.Alternation
+public import CslibFrontier.Computability.Complexity.Classes.Alternation.DeterministicSpace
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.DeterministicTime
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.Game
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.GuessVerify
@@ -3793,6 +3794,7 @@ public import CslibFrontier.Computability.Machines.ReadMachine.VirtualWord.Nativ
 public import CslibFrontier.Computability.Machines.ReadMachine.VirtualWord.Runtime
 public import CslibFrontier.Computability.Machines.ReadMachine.VirtualWord.Simulation
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Alternating
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Alternating.DeterministicSpace
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Alternating.DeterministicTime
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Alternating.Game
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Alternating.GuessVerify
@@ -4470,6 +4472,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilisti
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Sequential
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Sequential.CoinTape
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.SingleOracle
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.StateFlags
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Tidy
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Tidy.Redirect
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Probabilistic.Universal.Decode
