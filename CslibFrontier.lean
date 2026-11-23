@@ -4208,6 +4208,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.S
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space.Savitch
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space.SavitchWalk
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.SpaceInTime
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.StreamFold
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Streaming
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Sublinear
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Translate
