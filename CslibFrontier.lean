@@ -6358,6 +6358,7 @@ public import CslibFrontier.Crypto.Protocols.UC.JointState
 public import CslibFrontier.Crypto.Protocols.UC.Linking
 public import CslibFrontier.Crypto.Protocols.UC.Machine
 public import CslibFrontier.Crypto.Protocols.UC.MultiSession
+public import CslibFrontier.Crypto.Protocols.UC.PPT
 public import CslibFrontier.Crypto.Protocols.UC.PushExecution
 public import CslibFrontier.Crypto.Protocols.UC.Reactive
 public import CslibFrontier.Crypto.Protocols.UC.WordInterface
