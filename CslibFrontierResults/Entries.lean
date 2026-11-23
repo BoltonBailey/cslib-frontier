@@ -5607,10 +5607,13 @@ register_result "edmonds-optimum-branchings" where
     thresholds in binary (encIntBin); roots are binary naturals (encNat). Subtraction-free \
     contraction keeps intermediate table entries within (n + 1) ^ i · M₀, yielding native \
     multi-tape P deciders for bounded-cost spanning in- and out-arborescences and \
-    bounded-weight branchings. Related O(n³) TimeM bounds and weight-shift reductions live \
-    in the sibling Arborescence.Table and Arborescence.Branching modules; Edmonds' Theorem 2 \
-    (the branching polytope) and sparse O(m log n) / O(m + n log n) implementations are not \
-    formalized."
+    bounded-weight branchings. Materialized Vector-table solvers, weight-shift reductions, and \
+    standard-basis Word-RAM programs running in C * (n + 1) ^ 3 instructions at every word width \
+    w satisfying Fits w I.wordBound (I.wordBound < 2 ^ w, where the polynomial wordBound bounds \
+    word values and addresses so w of order log(n + 2) + log(M₀ + 2) bits suffices) live in the \
+    sibling Arborescence.Table, Arborescence.Branching, and \
+    CslibFrontier.Algorithms.WordRAM.Arborescence modules; Edmonds' Theorem 2 (the branching \
+    polytope) and sparse O(m log n) / O(m + n log n) implementations are not formalized."
 register_result "simhash" where
   title := "Charikar's SimHash collision law"
   topic := "algorithms"

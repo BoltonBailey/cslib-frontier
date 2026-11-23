@@ -381,6 +381,7 @@ public import CslibFrontier.Algorithms.WordRAM.AKS.PolyArray
 public import CslibFrontier.Algorithms.WordRAM.AKS.PolyMul
 public import CslibFrontier.Algorithms.WordRAM.AKS.PolyPow
 public import CslibFrontier.Algorithms.WordRAM.AhoCorasick
+public import CslibFrontier.Algorithms.WordRAM.Arborescence
 public import CslibFrontier.Algorithms.WordRAM.BellmanFord
 public import CslibFrontier.Algorithms.WordRAM.BinarySearch
 public import CslibFrontier.Algorithms.WordRAM.BurrowsWheeler
@@ -5338,6 +5339,7 @@ public import CslibFrontier.Computability.WordRAM.Realization.Random
 public import CslibFrontier.Computability.WordRAM.Realization.RandomLoop
 public import CslibFrontier.Computability.WordRAM.Realization.Reindex
 public import CslibFrontier.Computability.WordRAM.Realization.Result
+public import CslibFrontier.Computability.WordRAM.Realization.Signed
 public import CslibFrontier.Computability.WordRAM.Realization.Structure
 public import CslibFrontier.Computability.WordRAM.Realization.While
 public import CslibFrontier.Computability.WordRAM.Realization.WhileAbsorb
