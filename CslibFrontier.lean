@@ -9240,3 +9240,4 @@ public import CslibFrontier.Tactic.ValidProg
 public import CslibFrontier.Tactic.ValidProg.Init
 public import CslibFrontier.Tactic.WramOmega
 public import CslibFrontier.Tactic.WramOmega.Init
+public import CslibFrontier.Tactic.WramOmega.Prove
