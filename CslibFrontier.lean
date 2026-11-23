@@ -7038,6 +7038,7 @@ public import CslibFrontier.Foundations.BooleanAnalysis.SpectralConcentration
 public import CslibFrontier.Foundations.BooleanAnalysis.SpectralNorm
 public import CslibFrontier.Foundations.BooleanAnalysis.SpectralSample
 public import CslibFrontier.Foundations.BooleanAnalysis.StableInfluence
+public import CslibFrontier.Foundations.BooleanAnalysis.StableInfluenceBound
 public import CslibFrontier.Foundations.BooleanAnalysis.Subcube
 public import CslibFrontier.Foundations.BooleanAnalysis.SubsetZeta
 public import CslibFrontier.Foundations.BooleanAnalysis.Symmetrization
