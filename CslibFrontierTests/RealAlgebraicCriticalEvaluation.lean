@@ -80,6 +80,26 @@ example :
     (u := fun k => (k : ℝ)) (fun _ => Nat.cast_nonneg _) tendsto_natCast_atTop_atTop
   exact ⟨y, z, φ, hz, hlim, hcrit⟩
 
+-- The finite coordinate root grid meets the real zero set of the integer polynomial X².
+example :
+    let F : MvPolynomial (Fin 1) ℤ := X 0 ^ 2
+    let hF : F.totalDegree ≤ 3 := (totalDegree_pow (X (R := ℤ) (0 : Fin 1)) 2).trans
+      (by
+        have h := totalDegree_X_le (R := ℤ) (0 : Fin 1)
+        omega)
+    let G := coordinateRootGrid (by decide : 1 ≤ 3) F hF
+    let p := (Polynomial.Bivariate.swap
+      (parametricCoordinatePolynomial (by decide) F hF 0)).leadingCoeff.map (Int.castRingHom ℝ)
+    G.Finite ∧ ∃ x ∈ G, eval x (F.map (Int.castRingHom ℝ)) = 0 ∧ p.IsRoot (x 0) := by
+  intro F hF G p
+  refine ⟨coordinateRootGrid_finite _ F hF, ?_⟩
+  have hFn (x : Fin 1 → ℝ) : 0 ≤ eval x (F.map (Int.castRingHom ℝ)) := by
+    simpa only [F, map_pow, MvPolynomial.map_X, eval_X] using sq_nonneg (x 0)
+  have hzero : eval (fun _ => 0) (F.map (Int.castRingHom ℝ)) = 0 := by simp [F]
+  obtain ⟨z, _, hz⟩ := exists_mem_coordinateRootGrid_of_isClopen (by decide) (by decide) F hF hFn
+    Set.univ isClopen_univ ⟨⟨fun _ => 0, hzero⟩, Set.mem_univ _⟩
+  exact ⟨z.val, hz, z.property, mem_coordinateRootGrid.mp hz 0⟩
+
 -- Zero is a critical point of the deformation of X² at every parameter.
 example :
     let F : MvPolynomial (Fin 1) ℤ := X 0 ^ 2
