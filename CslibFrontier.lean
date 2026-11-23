@@ -890,6 +890,7 @@ public import CslibFrontier.Algorithms.WordRAM.NatGcd
 public import CslibFrontier.Algorithms.WordRAM.NatLog
 public import CslibFrontier.Algorithms.WordRAM.NatNthRoot
 public import CslibFrontier.Algorithms.WordRAM.NatSqrt
+public import CslibFrontier.Algorithms.WordRAM.OptimalBST
 public import CslibFrontier.Algorithms.WordRAM.PPSZ.Amplify
 public import CslibFrontier.Algorithms.WordRAM.PPSZ.Clauses
 public import CslibFrontier.Algorithms.WordRAM.PPSZ.Implied
