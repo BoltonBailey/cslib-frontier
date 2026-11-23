@@ -387,6 +387,7 @@ public import CslibFrontier.Algorithms.WordRAM.BinarySearch
 public import CslibFrontier.Algorithms.WordRAM.BurrowsWheeler
 public import CslibFrontier.Algorithms.WordRAM.CSR
 public import CslibFrontier.Algorithms.WordRAM.CYK
+public import CslibFrontier.Algorithms.WordRAM.ChainCover
 public import CslibFrontier.Algorithms.WordRAM.ClauseCode
 public import CslibFrontier.Algorithms.WordRAM.DPLL.Program
 public import CslibFrontier.Algorithms.WordRAM.DPLL.Scan
@@ -608,6 +609,7 @@ public import CslibFrontier.Algorithms.WordRAM.Freivalds
 public import CslibFrontier.Algorithms.WordRAM.GomoryHu
 public import CslibFrontier.Algorithms.WordRAM.HeldKarp
 public import CslibFrontier.Algorithms.WordRAM.Histogram
+public import CslibFrontier.Algorithms.WordRAM.HopcroftKarp
 public import CslibFrontier.Algorithms.WordRAM.Huffman
 public import CslibFrontier.Algorithms.WordRAM.Hungarian
 public import CslibFrontier.Algorithms.WordRAM.KMP
