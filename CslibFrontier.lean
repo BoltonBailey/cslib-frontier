@@ -6358,6 +6358,8 @@ public import CslibFrontier.Crypto.Protocols.UC.JointState
 public import CslibFrontier.Crypto.Protocols.UC.Linking
 public import CslibFrontier.Crypto.Protocols.UC.Machine
 public import CslibFrontier.Crypto.Protocols.UC.MultiSession
+public import CslibFrontier.Crypto.Protocols.UC.PushExecution
+public import CslibFrontier.Crypto.Protocols.UC.Reactive
 public import CslibFrontier.Crypto.Protocols.UC.WordInterface
 public import CslibFrontier.Crypto.Protocols.UOV.Attacks
 public import CslibFrontier.Crypto.Protocols.UOV.BlockKey
@@ -8324,6 +8326,7 @@ public import CslibFrontier.Languages.Probabilistic.IdealCipher
 public import CslibFrontier.Languages.Probabilistic.IdealCipher.DomainSeparation
 public import CslibFrontier.Languages.Probabilistic.IntBox
 public import CslibFrontier.Languages.Probabilistic.Iteration
+public import CslibFrontier.Languages.Probabilistic.Iteration.Add
 public import CslibFrontier.Languages.Probabilistic.Iteration.Chain
 public import CslibFrontier.Languages.Probabilistic.Lift
 public import CslibFrontier.Languages.Probabilistic.LinearHash
@@ -8366,6 +8369,7 @@ public import CslibFrontier.Languages.Probabilistic.QueryCount
 public import CslibFrontier.Languages.Probabilistic.QueryCount.Congr
 public import CslibFrontier.Languages.Probabilistic.QueryCount.Demand
 public import CslibFrontier.Languages.Probabilistic.QueryCount.Expected
+public import CslibFrontier.Languages.Probabilistic.QueryCount.Iterate
 public import CslibFrontier.Languages.Probabilistic.QueryCount.Scale
 public import CslibFrontier.Languages.Probabilistic.QueryCount.Sum
 public import CslibFrontier.Languages.Probabilistic.QueryCount.Support
