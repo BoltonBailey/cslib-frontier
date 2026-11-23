@@ -9079,6 +9079,7 @@ public import CslibFrontier.Probability.HashFamily.Matrix
 public import CslibFrontier.Probability.HashFamily.MatrixKernel
 public import CslibFrontier.Probability.HashFamily.MultiplyShift
 public import CslibFrontier.Probability.HashFamily.Polynomial
+public import CslibFrontier.Probability.HashFamily.PolynomialBirthday
 public import CslibFrontier.Probability.HashFamily.Transport
 public import CslibFrontier.Probability.HashFamily.Uniform
 public import CslibFrontier.Probability.HashFamily.UniformOffset
