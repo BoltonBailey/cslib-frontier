@@ -8996,6 +8996,8 @@ public import CslibFrontier.Logics.Propositional.PseudoBoolean
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.CuttingPlanes
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.Clique
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.Dimacs
+public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.Lad
+public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.SubgraphIso
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Output
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Print
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Redundance
