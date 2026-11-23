@@ -18,5 +18,6 @@ import CslibFrontierResults.Entries.ODonnellTribes
 import CslibFrontierResults.Entries.ODonnellUncertainty
 import CslibFrontierResults.Entries.RandomOracleKDF
 import CslibFrontierResults.Entries.SergeevBkSequence
+import CslibFrontierResults.Entries.SergeevMonotoneShift
 import CslibFrontierResults.Entries.SergeevUniqueDisjointness
 import CslibFrontierResults.Registry
