@@ -386,6 +386,7 @@ public import CslibFrontier.Algorithms.WordRAM.BellmanFord
 public import CslibFrontier.Algorithms.WordRAM.BinarySearch
 public import CslibFrontier.Algorithms.WordRAM.BurrowsWheeler
 public import CslibFrontier.Algorithms.WordRAM.CSR
+public import CslibFrontier.Algorithms.WordRAM.CYK
 public import CslibFrontier.Algorithms.WordRAM.ClauseCode
 public import CslibFrontier.Algorithms.WordRAM.DPLL.Program
 public import CslibFrontier.Algorithms.WordRAM.DPLL.Scan
