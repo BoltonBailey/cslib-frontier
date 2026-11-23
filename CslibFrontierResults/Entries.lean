@@ -6039,20 +6039,24 @@ register_result "selected-entries-subset-convolution" where
     remains open (#4667)."
 
 register_result "twosat-linear-timem" where
-  title := "Aspvall–Plass–Tarjan linear-time 2-SAT solver and witness construction in TimeM"
+  title := "Aspvall–Plass–Tarjan implication-graph 2-SAT solver and witness construction"
   topic := "algorithms"
   sources := [
-    { paper := AspvallPlassTarjan1979, theorem := unverified, locator := unverified }
+    { paper := AspvallPlassTarjan1979, theorem := "Theorem 1 and \"Two-satisfiability algorithm\"",
+      locator := "1979 journal scan, printed p. 121 steps 1(i)–(ii) and p. 122" }
   ]
   theorems := [
     Cslib.Algorithms.Lean.TwoSAT.solve_eq_some,
     Cslib.Algorithms.Lean.TwoSAT.isSome_solve_iff,
-    Cslib.Algorithms.Lean.TwoSAT.time_solveFinM_le,
+    Cslib.Algorithms.Lean.TwoSAT.solveFin_eq_some,
     Cslib.Algorithms.Lean.TwoSAT.isSome_solveNat_iff
   ]
-  scope := "Linear-time 2-SAT decision and satisfying-assignment construction via Kosaraju SCCs \
-    of the implication graph in TimeM (at most 12 * n + 8 * |φ| + 1 steps on CNF (Fin n)), \
-    together with variable compaction connecting solveNat to Cslib.Complexity.TwoSAT."
+  scope := "Pure 2-SAT decision and satisfying-assignment construction on CNF V and CNF (Fin n), \
+    together with variable compaction connecting solveNat to Cslib.Complexity.TwoSAT. Implements \
+    the paper's implication-graph SCC characterization via Kosaraju's SCC pass (this \
+    formalization's own refinement; the paper uses Tarjan's SCC algorithm and also studies \
+    quantified 2-CNF). Linear-time standard-basis Word-RAM execution is registered separately in \
+    twosat-linear-wordram."
 
 register_result "twosat-polytime" where
   title := "Native multi-tape polynomial-time 2-SAT decision and witness construction"

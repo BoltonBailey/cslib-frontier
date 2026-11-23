@@ -22,4 +22,5 @@ import CslibFrontierResults.Entries.SergeevBkSequence
 import CslibFrontierResults.Entries.SergeevMonotoneShift
 import CslibFrontierResults.Entries.SergeevORComplement
 import CslibFrontierResults.Entries.SergeevUniqueDisjointness
+import CslibFrontierResults.Entries.TwoSATWordRAM
 import CslibFrontierResults.Registry

@@ -1051,6 +1051,7 @@ public import CslibFrontier.Algorithms.WordRAM.ThreeSum.LowerBound
 public import CslibFrontier.Algorithms.WordRAM.ThreeSum.Memory
 public import CslibFrontier.Algorithms.WordRAM.ThreeSum.Weight
 public import CslibFrontier.Algorithms.WordRAM.TrimmedYates
+public import CslibFrontier.Algorithms.WordRAM.TwoSAT
 public import CslibFrontier.Algorithms.WordRAM.VariableElimination
 public import CslibFrontier.Algorithms.WordRAM.ZFunction
 public import CslibFrontier.Computability.Automata.DPDA.Basic
