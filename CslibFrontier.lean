@@ -604,6 +604,7 @@ public import CslibFrontier.Algorithms.WordRAM.ExactTriangle.WitnessScan.Setup
 public import CslibFrontier.Algorithms.WordRAM.ExactTriangle.WriteMatrices
 public import CslibFrontier.Algorithms.WordRAM.Freivalds
 public import CslibFrontier.Algorithms.WordRAM.Histogram
+public import CslibFrontier.Algorithms.WordRAM.Huffman
 public import CslibFrontier.Algorithms.WordRAM.Hungarian
 public import CslibFrontier.Algorithms.WordRAM.KMP
 public import CslibFrontier.Algorithms.WordRAM.Karger.Contract
@@ -891,6 +892,7 @@ public import CslibFrontier.Algorithms.WordRAM.MatrixMultiplication.Strassen.Sta
 public import CslibFrontier.Algorithms.WordRAM.MatrixMultiplication.Strassen.Traversal
 public import CslibFrontier.Algorithms.WordRAM.MatrixMultiplication.Strassen.Zero
 public import CslibFrontier.Algorithms.WordRAM.MaxCut
+public import CslibFrontier.Algorithms.WordRAM.MergeSort
 public import CslibFrontier.Algorithms.WordRAM.NatClog
 public import CslibFrontier.Algorithms.WordRAM.NatGcd
 public import CslibFrontier.Algorithms.WordRAM.NatLog
