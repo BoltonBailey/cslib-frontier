@@ -1322,6 +1322,7 @@ public import CslibFrontier.Computability.Circuit.Boolean.Iteration.AffineContro
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.AffineControllerLupanov
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.AffineControllerSynthesis
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Batch
+public import CslibFrontier.Computability.Circuit.Boolean.Iteration.CheckpointCycle
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.CircuitCounting
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.CounterBatch
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.CounterChart.Basic
@@ -1333,6 +1334,7 @@ public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Decoder
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Depth
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.DepthSearch
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Encoded
+public import CslibFrontier.Computability.Circuit.Boolean.Iteration.EndpointInput
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.EndpointOptimization
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.EndpointPower
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Eventual
@@ -1344,6 +1346,7 @@ public import CslibFrontier.Computability.Circuit.Boolean.Iteration.InPlace
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.InputTime
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Label
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.LabelCircuit
+public import CslibFrontier.Computability.Circuit.Boolean.Iteration.LiveShort
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.LongTime
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.ModulusCounter
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.ModulusCounter.Basic
@@ -1370,6 +1373,7 @@ public import CslibFrontier.Computability.Circuit.Boolean.Iteration.SparseLookup
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.SparseNavigation
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.SparseTime
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.Target
+public import CslibFrontier.Computability.Circuit.Boolean.Iteration.TransientWindow
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.UniversalMap
 public import CslibFrontier.Computability.Circuit.Boolean.Iteration.VisitScheduleCircuits
 public import CslibFrontier.Computability.Circuit.Boolean.Karatsuba
@@ -7018,6 +7022,7 @@ public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.Checkpoint
 public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.Checkpoints
 public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.Commutation
 public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.Cycle
+public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.CycleBlocks
 public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.DistinguishedPoints
 public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.EndpointCheckpoints
 public import CslibFrontier.Foundations.Combinatorics.FunctionalGraph.ForestDuality
