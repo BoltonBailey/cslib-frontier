@@ -7503,6 +7503,7 @@ public import CslibFrontier.Foundations.Data.MvPolynomial.Catalecticant
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoeffNorm1
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoeffSumBounds
 public import CslibFrontier.Foundations.Data.MvPolynomial.CoefficientDegree
+public import CslibFrontier.Foundations.Data.MvPolynomial.ConsecutiveLayers
 public import CslibFrontier.Foundations.Data.MvPolynomial.CriticalSystem
 public import CslibFrontier.Foundations.Data.MvPolynomial.Degrees
 public import CslibFrontier.Foundations.Data.MvPolynomial.Determinant
@@ -7853,6 +7854,9 @@ public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity.Hadamard
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity.Random
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity.TotallyRegular
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity.WalshBand
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity.WalshCounts
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Rigidity.WalshRigidity
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.SchurComplement
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.SkewDeterminant
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.SpectralCut
