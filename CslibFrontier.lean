@@ -178,7 +178,6 @@ public import CslibFrontier.Algorithms.Lean.MaxFlow.VertexSeparator
 public import CslibFrontier.Algorithms.Lean.MaxFlow.WeightedMatching
 public import CslibFrontier.Algorithms.Lean.MaxTwoSAT.GoemansWilliamson
 public import CslibFrontier.Algorithms.Lean.MaxTwoSAT.GoemansWilliamsonMaxTwoSAT
-public import CslibFrontier.Algorithms.Lean.MergeSort.Comparator
 public import CslibFrontier.Algorithms.Lean.OptimalBST.Basic
 public import CslibFrontier.Algorithms.Lean.OptimalBST.Knuth
 public import CslibFrontier.Algorithms.Lean.OptimalBST.Yao
