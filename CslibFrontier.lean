@@ -383,6 +383,7 @@ public import CslibFrontier.Algorithms.WordRAM.AKS.PolyMul
 public import CslibFrontier.Algorithms.WordRAM.AKS.PolyPow
 public import CslibFrontier.Algorithms.WordRAM.AhoCorasick
 public import CslibFrontier.Algorithms.WordRAM.BellmanFord
+public import CslibFrontier.Algorithms.WordRAM.BinarySearch
 public import CslibFrontier.Algorithms.WordRAM.BurrowsWheeler
 public import CslibFrontier.Algorithms.WordRAM.CSR
 public import CslibFrontier.Algorithms.WordRAM.ClauseCode
@@ -918,6 +919,7 @@ public import CslibFrontier.Algorithms.WordRAM.Schoening.Counter
 public import CslibFrontier.Algorithms.WordRAM.Schoening.Scan
 public import CslibFrontier.Algorithms.WordRAM.Schoening.Trial
 public import CslibFrontier.Algorithms.WordRAM.Schoening.TrialCount
+public import CslibFrontier.Algorithms.WordRAM.SuffixArray
 public import CslibFrontier.Algorithms.WordRAM.ThreeSum.Cell
 public import CslibFrontier.Algorithms.WordRAM.ThreeSum.ChanHe.BucketCounts
 public import CslibFrontier.Algorithms.WordRAM.ThreeSum.ChanHe.CollisionTest
