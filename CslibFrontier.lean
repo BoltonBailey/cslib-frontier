@@ -2184,6 +2184,7 @@ public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.D
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.FirstEventSign
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Generator
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.ModularArithmetic
+public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.PolynomialEvaluation
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Primality
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.PrimeCofactor
 public import CslibFrontier.Computability.Complexity.Classes.CountingHierarchy.Products
@@ -3356,6 +3357,10 @@ public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledCoe
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledFeasibility
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ControlledSigns
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalCoefficientEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalCoordinateCandidates
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalCoordinateCoefficientSign
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalCoordinateCoefficients
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalCoordinateEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalFeasibilityWitness
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalJacobianEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalLabelDeterminantEvaluation
@@ -3366,6 +3371,9 @@ public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalPolyn
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.CriticalRootLabelEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.DyadicSignEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.Factorial
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.FormulaGateCoefficientEvaluation
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.FormulaGateCoefficientSign
+public import CslibFrontier.Computability.Complexity.RealAlgebraic.FormulaGateCoordinateEvaluation
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.GridEnumeration
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.IndexedPowerProduct
 public import CslibFrontier.Computability.Complexity.RealAlgebraic.ModularMatrixDeterminant
@@ -6716,6 +6724,7 @@ public import CslibFrontier.Foundations.Algebra.Module.ZLattice.CoefficientFiber
 public import CslibFrontier.Foundations.Algebra.Negacyclic
 public import CslibFrontier.Foundations.Algebra.Order.Star.Pi
 public import CslibFrontier.Foundations.Algebra.Polynomial.Bivariate
+public import CslibFrontier.Foundations.Algebra.Polynomial.BivariateKronecker
 public import CslibFrontier.Foundations.Algebra.Polynomial.BivariateSwap
 public import CslibFrontier.Foundations.Algebra.Polynomial.DyadicSignApproximation
 public import CslibFrontier.Foundations.Algebra.Polynomial.DyadicSignProduct
@@ -8114,6 +8123,7 @@ public import CslibFrontier.Foundations.RingTheory.Derivation.Wronskian
 public import CslibFrontier.Foundations.RingTheory.GaloisRing
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.Basis
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.CharpolyCoeffNorm
+public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.CoordinateCharacteristicPolynomial
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.CriticalIntegerSpecialization
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.CriticalParameterExclusion
 public import CslibFrontier.Foundations.RingTheory.MvPolynomial.PurePower.CriticalValueCoeffNorm
@@ -8812,6 +8822,7 @@ public import CslibFrontier.Logics.Propositional.TseitinCNF
 public import CslibFrontier.Logics.RealArithmetic.Basic
 public import CslibFrontier.Logics.RealArithmetic.Encoding
 public import CslibFrontier.Logics.RealArithmetic.FormulaBooleanEvaluation
+public import CslibFrontier.Logics.RealArithmetic.FormulaGatePolynomial
 public import CslibFrontier.Logics.RealArithmetic.FormulaTokenDecoding
 public import CslibFrontier.Logics.RealArithmetic.FormulaWordValidation
 public import CslibFrontier.Logics.RealArithmetic.ModularEvaluation
