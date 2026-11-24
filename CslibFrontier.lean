@@ -9725,6 +9725,7 @@ public import CslibFrontier.MachineLearning.PACLearning.NatarajanAgnostic
 public import CslibFrontier.MachineLearning.PACLearning.NatarajanDimension
 public import CslibFrontier.MachineLearning.PACLearning.NatarajanUpperBound
 public import CslibFrontier.MachineLearning.PACLearning.Nonuniform
+public import CslibFrontier.MachineLearning.PACLearning.OneInclusionGraph
 public import CslibFrontier.MachineLearning.PACLearning.Packing
 public import CslibFrontier.MachineLearning.PACLearning.Realizable
 public import CslibFrontier.MachineLearning.PACLearning.RealizableSample
