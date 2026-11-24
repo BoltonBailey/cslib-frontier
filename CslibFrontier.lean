@@ -1362,6 +1362,9 @@ public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Uni
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Walk
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Window
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Words
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flat.CubeEndPoints
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flat.EndPoints
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flat.Pairs
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpreter.Budget
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpreter.Eval
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpreter.EvalThm
@@ -7387,6 +7390,7 @@ public import CslibFrontier.DataStructure.WordRAM.Resizable.Randomized.StateTran
 public import CslibFrontier.DataStructure.WordRAM.Resizable.StateTransition
 public import CslibFrontier.DataStructure.WordRAM.StateTransition
 public import CslibFrontier.Foundations.Algebra.BigOperators.Fin
+public import CslibFrontier.Foundations.Algebra.BigOperators.IteMem
 public import CslibFrontier.Foundations.Algebra.BigOperators.Selection
 public import CslibFrontier.Foundations.Algebra.Covering.Basic
 public import CslibFrontier.Foundations.Algebra.Covering.Certificate
