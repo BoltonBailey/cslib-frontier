@@ -2589,6 +2589,7 @@ public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Savitch
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.USTCON
 public import CslibFrontier.Computability.Complexity.Classes.LogarithmicTimeHierarchy
 public import CslibFrontier.Computability.Complexity.Classes.MIP
+public import CslibFrontier.Computability.Complexity.Classes.MIP.Arithmetization
 public import CslibFrontier.Computability.Complexity.Classes.MIP.Defs
 public import CslibFrontier.Computability.Complexity.Classes.MIP.NEXP
 public import CslibFrontier.Computability.Complexity.Classes.MIP.OptimalProver
