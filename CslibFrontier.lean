@@ -1385,6 +1385,7 @@ public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Cuts.Con
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Cuts.Groups
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Cuts.Law
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Cuts.Play
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Cuts.Units
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Act
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Avg
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Flag.Block
@@ -8273,6 +8274,7 @@ public import CslibFrontier.Foundations.Data.List.Extract
 public import CslibFrontier.Foundations.Data.List.Filter
 public import CslibFrontier.Foundations.Data.List.FilterMap
 public import CslibFrontier.Foundations.Data.List.FilterPos
+public import CslibFrontier.Foundations.Data.List.FixedWidth
 public import CslibFrontier.Foundations.Data.List.FlatMapPositions
 public import CslibFrontier.Foundations.Data.List.FlatMapRange
 public import CslibFrontier.Foundations.Data.List.Flatten
@@ -8308,6 +8310,7 @@ public import CslibFrontier.Foundations.Data.List.RadixSort
 public import CslibFrontier.Foundations.Data.List.Range
 public import CslibFrontier.Foundations.Data.List.RowMajor
 public import CslibFrontier.Foundations.Data.List.SelectDistinct
+public import CslibFrontier.Foundations.Data.List.SelfDelimiting
 public import CslibFrontier.Foundations.Data.List.Sort
 public import CslibFrontier.Foundations.Data.List.SortedAssoc
 public import CslibFrontier.Foundations.Data.List.SortedAssoc.Flatten
