@@ -7934,6 +7934,16 @@ public import CslibFrontier.Foundations.Data.Code.ProximityGap.Curve.JohnsonHelp
 public import CslibFrontier.Foundations.Data.Code.ProximityGap.Curve.UniqueAffine
 public import CslibFrontier.Foundations.Data.Code.ProximityGap.Curve.UniqueCurve
 public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.Bounds
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.DegZ
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.DoubleCount
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.FactorPigeonhole
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.Lift
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.Params
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.Recurrence
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.Separable
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.ShiftAndFactor
+public import CslibFrontier.Foundations.Data.Code.ProximityGap.Johnson.Siegel
 public import CslibFrontier.Foundations.Data.Code.ProximityGap.Unique
 public import CslibFrontier.Foundations.Data.Code.PuncturedBallFourier
 public import CslibFrontier.Foundations.Data.Code.RadialDecoding
