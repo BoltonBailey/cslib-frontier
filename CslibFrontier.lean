@@ -9807,6 +9807,7 @@ public import CslibFrontier.Probability.DDGTree.Rejection
 public import CslibFrontier.Probability.Distributional.Distinguishing
 public import CslibFrontier.Probability.Distributional.Search
 public import CslibFrontier.Probability.Divergence
+public import CslibFrontier.Probability.Divergence.Pi
 public import CslibFrontier.Probability.DonskerVaradhan
 public import CslibFrontier.Probability.Entropy
 public import CslibFrontier.Probability.Entropy.BitString
@@ -9904,7 +9905,10 @@ public import CslibFrontier.Probability.MinEntropy.ChainRule
 public import CslibFrontier.Probability.MinEntropy.Flat
 public import CslibFrontier.Probability.MinEntropy.LeftoverHash
 public import CslibFrontier.Probability.Minimax
+public import CslibFrontier.Probability.Minimax.Assouad
 public import CslibFrontier.Probability.Minimax.Dantzig
+public import CslibFrontier.Probability.Minimax.Fano
+public import CslibFrontier.Probability.Minimax.LeCam
 public import CslibFrontier.Probability.Minimax.Value
 public import CslibFrontier.Probability.MoserTardos
 public import CslibFrontier.Probability.MoserTardos.Coupling
