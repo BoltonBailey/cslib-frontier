@@ -6352,6 +6352,7 @@ public import CslibFrontier.Crypto.Computational.Pseudoentropy.WordExtraction
 public import CslibFrontier.Crypto.Computational.Pseudoentropy.WordReduction
 public import CslibFrontier.Crypto.Computational.Pseudoentropy.WordSeedExtraction
 public import CslibFrontier.Crypto.Computational.PseudorandomFunction
+public import CslibFrontier.Crypto.Computational.PseudorandomFunction.Cascade
 public import CslibFrontier.Crypto.Computational.PseudorandomFunction.CircuitLowerBound
 public import CslibFrontier.Crypto.Computational.PseudorandomFunction.Coins
 public import CslibFrontier.Crypto.Computational.PseudorandomFunction.Domain
