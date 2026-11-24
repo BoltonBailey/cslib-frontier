@@ -9821,6 +9821,9 @@ public import CslibFrontier.MachineLearning.LossMinimization.Smooth
 public import CslibFrontier.MachineLearning.LossMinimization.Squared
 public import CslibFrontier.MachineLearning.LossMinimization.Stability
 public import CslibFrontier.MachineLearning.LossMinimization.StochasticGradientDescent
+public import CslibFrontier.MachineLearning.OnlineLearning.Bandits.Basic
+public import CslibFrontier.MachineLearning.OnlineLearning.Bandits.EXP3
+public import CslibFrontier.MachineLearning.OnlineLearning.Bandits.UCB1
 public import CslibFrontier.MachineLearning.OnlineLearning.Blackwell
 public import CslibFrontier.MachineLearning.OnlineLearning.Calibration
 public import CslibFrontier.MachineLearning.OnlineLearning.ConvexOnlineToBatch
