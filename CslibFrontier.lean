@@ -4412,6 +4412,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.BlockComputa
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.BlockComputationTree
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.BlockTrace
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Combinators.Append
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Combinators.BoundedPrefix
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Combinators.Comp
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Combinators.CopyWord
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Combinators.DivConq
@@ -6193,9 +6194,13 @@ public import CslibFrontier.Crypto.Computational.KeyDerivation.RandomOracle.Comp
 public import CslibFrontier.Crypto.Computational.KeyExchange
 public import CslibFrontier.Crypto.Computational.KeyExchange.KeyGuessing
 public import CslibFrontier.Crypto.Computational.Kilian
+public import CslibFrontier.Crypto.Computational.Kilian.Extraction
+public import CslibFrontier.Crypto.Computational.Kilian.Knowledge
 public import CslibFrontier.Crypto.Computational.Kilian.Micali
+public import CslibFrontier.Crypto.Computational.Kilian.MicaliRaw
 public import CslibFrontier.Crypto.Computational.Kilian.MicaliSoundness
 public import CslibFrontier.Crypto.Computational.Kilian.NP
+public import CslibFrontier.Crypto.Computational.Kilian.RawVerifier
 public import CslibFrontier.Crypto.Computational.Kilian.Soundness
 public import CslibFrontier.Crypto.Computational.Kilian.Succinct
 public import CslibFrontier.Crypto.Computational.LPN
@@ -6292,6 +6297,7 @@ public import CslibFrontier.Crypto.Computational.MerkleSignature
 public import CslibFrontier.Crypto.Computational.MerkleSignature.Security
 public import CslibFrontier.Crypto.Computational.MerkleTree
 public import CslibFrontier.Crypto.Computational.MerkleTree.Binding
+public import CslibFrontier.Crypto.Computational.MerkleTree.Extract
 public import CslibFrontier.Crypto.Computational.MerkleTree.Prog
 public import CslibFrontier.Crypto.Computational.MerkleTree.ROMExtract
 public import CslibFrontier.Crypto.Computational.MillerRabin
