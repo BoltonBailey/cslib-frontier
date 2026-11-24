@@ -9068,6 +9068,7 @@ public import CslibFrontier.GameTheory.Market.Core
 public import CslibFrontier.GameTheory.Market.EisenbergGale
 public import CslibFrontier.GameTheory.Market.Welfare
 public import CslibFrontier.GameTheory.Mechanism.Bayesian
+public import CslibFrontier.GameTheory.Mechanism.CombinatorialAuction.GrossSubstitutes
 public import CslibFrontier.GameTheory.Mechanism.CombinatorialAuction.Walrasian
 public import CslibFrontier.GameTheory.Mechanism.CriticalBid
 public import CslibFrontier.GameTheory.Mechanism.DigitalGoods.ProfitExtraction
