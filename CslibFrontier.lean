@@ -1589,6 +1589,8 @@ public import CslibFrontier.Computability.Circuit.Boolean.SemiCircuit.OfCircuit
 public import CslibFrontier.Computability.Circuit.Boolean.SemiCircuit.Reparameterisation
 public import CslibFrontier.Computability.Circuit.Boolean.SemiCircuit.Rewiring
 public import CslibFrontier.Computability.Circuit.Boolean.SemiCircuit.Simplification
+public import CslibFrontier.Computability.Circuit.Boolean.SemiUnbounded
+public import CslibFrontier.Computability.Circuit.Boolean.SemiUnbounded.MinIsolation
 public import CslibFrontier.Computability.Circuit.Boolean.ShallowSymmetric
 public import CslibFrontier.Computability.Circuit.Boolean.ShallowSymmetric.Bounds
 public import CslibFrontier.Computability.Circuit.Boolean.ShallowSymmetric.Construction
@@ -7501,6 +7503,7 @@ public import CslibFrontier.Foundations.Combinatorics.LovaszSteinCover
 public import CslibFrontier.Foundations.Combinatorics.MajorityTree
 public import CslibFrontier.Foundations.Combinatorics.MajorityVote
 public import CslibFrontier.Foundations.Combinatorics.MajorityVote.Weighted
+public import CslibFrontier.Foundations.Combinatorics.MinIsolation.BaseSix
 public import CslibFrontier.Foundations.Combinatorics.Multidigraph.Arborescence
 public import CslibFrontier.Foundations.Combinatorics.Multidigraph.BEST
 public import CslibFrontier.Foundations.Combinatorics.Multidigraph.Basic
