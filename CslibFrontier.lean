@@ -9158,6 +9158,7 @@ public import CslibFrontier.GameTheory.Extensive.PerfectInfo
 public import CslibFrontier.GameTheory.Extensive.PerfectInfoEmbedding
 public import CslibFrontier.GameTheory.Extensive.SequenceForm
 public import CslibFrontier.GameTheory.Extensive.SequenceFormLP
+public import CslibFrontier.GameTheory.Extensive.ZeroSum
 public import CslibFrontier.GameTheory.InterdomainRouting.GaoRexford
 public import CslibFrontier.GameTheory.InterdomainRouting.StablePaths
 public import CslibFrontier.GameTheory.LoadBalancing.BallsIntoBins
