@@ -9052,6 +9052,7 @@ public import CslibFrontier.GameTheory.Mechanism.Online.DynamicVCG
 public import CslibFrontier.GameTheory.Mechanism.Online.ExpiringItems
 public import CslibFrontier.GameTheory.Mechanism.Online.PostedPrice
 public import CslibFrontier.GameTheory.Mechanism.OptimalAuction
+public import CslibFrontier.GameTheory.Mechanism.PostedPrice
 public import CslibFrontier.GameTheory.Mechanism.Randomized
 public import CslibFrontier.GameTheory.Mechanism.Revenue
 public import CslibFrontier.GameTheory.Mechanism.Scheduling.UnrelatedMachines
@@ -10067,6 +10068,7 @@ public import CslibFrontier.Probability.MutualInformation.DataProcessing
 public import CslibFrontier.Probability.OptimalStopping.Basic
 public import CslibFrontier.Probability.OptimalStopping.Prophet
 public import CslibFrontier.Probability.OptimalStopping.ProphetIID
+public import CslibFrontier.Probability.OptimalStopping.ProphetSample
 public import CslibFrontier.Probability.OptimalStopping.Secretary
 public import CslibFrontier.Probability.Option
 public import CslibFrontier.Probability.PMF
