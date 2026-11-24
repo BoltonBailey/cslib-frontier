@@ -9208,6 +9208,8 @@ public import CslibFrontier.GameTheory.Strategic.Universality.StableUniversality
 public import CslibFrontier.GameTheory.UtilityGame.Basic
 public import CslibFrontier.GameTheory.UtilityGame.CompetitiveFacilityLocation
 public import CslibFrontier.Init
+public import CslibFrontier.Languages.CombinatoryLogic.KleeneFirstModel
+public import CslibFrontier.Languages.CombinatoryLogic.PartialCombinatoryAlgebra
 public import CslibFrontier.Languages.Probabilistic.Basic
 public import CslibFrontier.Languages.Probabilistic.BitString
 public import CslibFrontier.Languages.Probabilistic.BoundedUniform
