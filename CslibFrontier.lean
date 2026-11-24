@@ -3167,6 +3167,7 @@ public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSyst
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.CornerFaces
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.CornerGenus
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.CornerInsertion
+public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.CutInterval
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.CycleSpace
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.CycleSpaceConverse
 public import CslibFrontier.Computability.Complexity.Problems.Graph.RotationSystem.Declarations
