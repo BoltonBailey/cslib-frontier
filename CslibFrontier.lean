@@ -8576,6 +8576,7 @@ public import CslibFrontier.Foundations.LinearAlgebra.Matrix.UniformGram
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.UnitaryGroup
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.UpperTriangularQuadratic
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.Vertex
+public import CslibFrontier.Foundations.LinearAlgebra.Matrix.VertexExtremePoints
 public import CslibFrontier.Foundations.LinearAlgebra.Matrix.VertexOrientation
 public import CslibFrontier.Foundations.LinearAlgebra.MultiplicationCharacter
 public import CslibFrontier.Foundations.LinearAlgebra.MultivariateQuadratic
@@ -8900,6 +8901,9 @@ public import CslibFrontier.GameTheory.Cooperative.FacilityLocationCostSharing
 public import CslibFrontier.GameTheory.Cooperative.FacilityLocationLowerBound
 public import CslibFrontier.GameTheory.Cooperative.MoulinCostSharing
 public import CslibFrontier.GameTheory.Cooperative.ShapleyValue
+public import CslibFrontier.GameTheory.Extensive.Basic
+public import CslibFrontier.GameTheory.Extensive.PerfectInfo
+public import CslibFrontier.GameTheory.Extensive.SequenceForm
 public import CslibFrontier.GameTheory.InterdomainRouting.GaoRexford
 public import CslibFrontier.GameTheory.InterdomainRouting.StablePaths
 public import CslibFrontier.GameTheory.Mechanism.Bayesian
