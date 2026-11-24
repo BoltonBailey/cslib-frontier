@@ -8482,6 +8482,7 @@ public import CslibFrontier.GameTheory.Bimatrix.LemkeHowson
 public import CslibFrontier.GameTheory.Bimatrix.PPAD
 public import CslibFrontier.GameTheory.Bimatrix.RationalVertex
 public import CslibFrontier.GameTheory.Bimatrix.ShapleyOrientation
+public import CslibFrontier.GameTheory.Bimatrix.Symmetric
 public import CslibFrontier.GameTheory.Congestion.Affine
 public import CslibFrontier.GameTheory.Congestion.Basic
 public import CslibFrontier.GameTheory.Congestion.CostSharing
@@ -8519,8 +8520,10 @@ public import CslibFrontier.GameTheory.PerfectInformation
 public import CslibFrontier.GameTheory.SocialChoice.Arrow
 public import CslibFrontier.GameTheory.SocialChoice.GibbardSatterthwaite
 public import CslibFrontier.GameTheory.SocialChoice.Ranking
+public import CslibFrontier.GameTheory.Strategic.ApproxNash
 public import CslibFrontier.GameTheory.Strategic.Basic
 public import CslibFrontier.GameTheory.Strategic.Correlated
+public import CslibFrontier.GameTheory.Strategic.Dominance
 public import CslibFrontier.GameTheory.Strategic.Hedge
 public import CslibFrontier.GameTheory.Strategic.Mixed
 public import CslibFrontier.GameTheory.Strategic.Nash
@@ -8531,6 +8534,7 @@ public import CslibFrontier.GameTheory.Strategic.Smooth
 public import CslibFrontier.GameTheory.Strategic.Stability
 public import CslibFrontier.GameTheory.Strategic.StrongNash
 public import CslibFrontier.GameTheory.Strategic.SwapRegretDynamics
+public import CslibFrontier.GameTheory.Strategic.Symmetric
 public import CslibFrontier.GameTheory.Strategic.Universality.Binary
 public import CslibFrontier.GameTheory.Strategic.Universality.DattaBinary
 public import CslibFrontier.GameTheory.Strategic.Universality.DattaHorner
