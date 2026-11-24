@@ -1414,9 +1414,14 @@ public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Sort.Run
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Sort.Words
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.ProgRun
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Run
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunCount
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunGood
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunRename
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunSum
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunValue
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunWord
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Task
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.WordCode
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Alpha
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.CmpU
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SortU
