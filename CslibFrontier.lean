@@ -9073,7 +9073,9 @@ public import CslibFrontier.GameTheory.Cooperative.Nucleolus
 public import CslibFrontier.GameTheory.Cooperative.ShapleyValue
 public import CslibFrontier.GameTheory.Extensive.Basic
 public import CslibFrontier.GameTheory.Extensive.PerfectInfo
+public import CslibFrontier.GameTheory.Extensive.PerfectInfoEmbedding
 public import CslibFrontier.GameTheory.Extensive.SequenceForm
+public import CslibFrontier.GameTheory.Extensive.SequenceFormLP
 public import CslibFrontier.GameTheory.InterdomainRouting.GaoRexford
 public import CslibFrontier.GameTheory.InterdomainRouting.StablePaths
 public import CslibFrontier.GameTheory.Market.Basic
