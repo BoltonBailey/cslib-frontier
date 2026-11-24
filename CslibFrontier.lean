@@ -2423,6 +2423,7 @@ public import CslibFrontier.Computability.Complexity.Classes.Alternation.GuessVe
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.NP
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.Savitch
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.SavitchEndpoints
+public import CslibFrontier.Computability.Complexity.Classes.Alternation.SavitchTime
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.Space
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.SpaceGame
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.TQBF
@@ -4424,7 +4425,10 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Combinators.
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.Bounds
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.Cases
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.Configuration
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.Constructible
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.Decode
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.FiniteCases
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.FunProp
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.FunPropLists
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.BigO.LinearClock
@@ -4663,6 +4667,7 @@ public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.P
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Primitives
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Quantitative
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space
+public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space.CodeEdge
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space.Decode
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space.PebblingWords
 public import CslibFrontier.Computability.Machines.Turing.MultiTape.Complexity.Space.Reachability
