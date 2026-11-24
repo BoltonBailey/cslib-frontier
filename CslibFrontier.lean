@@ -2360,6 +2360,7 @@ public import CslibFrontier.Computability.Complexity.Classes.Alternation.Game
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.GuessVerify
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.NP
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.Savitch
+public import CslibFrontier.Computability.Complexity.Classes.Alternation.SavitchEndpoints
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.Space
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.SpaceGame
 public import CslibFrontier.Computability.Complexity.Classes.Alternation.TQBF
