@@ -7653,6 +7653,7 @@ public import CslibFrontier.Foundations.Analysis.SpecialFunctions.FiberCount
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.GoemansWilliamson
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.GoemansWilliamsonDicut
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.Hyperbolic
+public import CslibFrontier.Foundations.Analysis.SpecialFunctions.LogDivLogLog
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.LogSum
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.LogTwoPow
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.Logb
@@ -9113,6 +9114,15 @@ public import CslibFrontier.GameTheory.Extensive.SequenceForm
 public import CslibFrontier.GameTheory.Extensive.SequenceFormLP
 public import CslibFrontier.GameTheory.InterdomainRouting.GaoRexford
 public import CslibFrontier.GameTheory.InterdomainRouting.StablePaths
+public import CslibFrontier.GameTheory.LoadBalancing.BallsIntoBins
+public import CslibFrontier.GameTheory.LoadBalancing.Basic
+public import CslibFrontier.GameTheory.LoadBalancing.MixedNash
+public import CslibFrontier.GameTheory.LoadBalancing.MixedPoA
+public import CslibFrontier.GameTheory.LoadBalancing.PureNash
+public import CslibFrontier.GameTheory.LoadBalancing.PurePoA
+public import CslibFrontier.GameTheory.LoadBalancing.RelatedMixedLower
+public import CslibFrontier.GameTheory.LoadBalancing.RelatedMixedPoA
+public import CslibFrontier.GameTheory.LoadBalancing.RelatedPureLower
 public import CslibFrontier.GameTheory.Market.Basic
 public import CslibFrontier.GameTheory.Market.Core
 public import CslibFrontier.GameTheory.Market.EisenbergGale
@@ -9155,6 +9165,10 @@ public import CslibFrontier.GameTheory.Mechanism.Vickrey
 public import CslibFrontier.GameTheory.Mechanism.VickreyVCG
 public import CslibFrontier.GameTheory.Mechanism.VirtualValue
 public import CslibFrontier.GameTheory.MixedStrategy
+public import CslibFrontier.GameTheory.NetworkFormation.FairConnection
+public import CslibFrontier.GameTheory.NetworkFormation.LocalConnection
+public import CslibFrontier.GameTheory.NetworkFormation.LocalConnection.Bounds
+public import CslibFrontier.GameTheory.NetworkFormation.Witnesses
 public import CslibFrontier.GameTheory.P2P.Generosity
 public import CslibFrontier.GameTheory.PerfectInformation
 public import CslibFrontier.GameTheory.PredictionMarket.LMSR
@@ -9191,6 +9205,8 @@ public import CslibFrontier.GameTheory.Strategic.Universality.DattaThree
 public import CslibFrontier.GameTheory.Strategic.Universality.Realize
 public import CslibFrontier.GameTheory.Strategic.Universality.SimplexGame
 public import CslibFrontier.GameTheory.Strategic.Universality.StableUniversality
+public import CslibFrontier.GameTheory.UtilityGame.Basic
+public import CslibFrontier.GameTheory.UtilityGame.CompetitiveFacilityLocation
 public import CslibFrontier.Init
 public import CslibFrontier.Languages.Probabilistic.Basic
 public import CslibFrontier.Languages.Probabilistic.BitString

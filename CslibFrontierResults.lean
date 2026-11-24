@@ -19,6 +19,8 @@ import CslibFrontierResults.Entries.HalfBlockPRPCCA
 import CslibFrontierResults.Entries.HashThenPRF
 import CslibFrontierResults.Entries.HastadInapproximability
 import CslibFrontierResults.Entries.IndirectRevelation
+import CslibFrontierResults.Entries.LoadBalancing
+import CslibFrontierResults.Entries.LocalConnection
 import CslibFrontierResults.Entries.LocallyDecodable
 import CslibFrontierResults.Entries.MACVerificationQueries
 import CslibFrontierResults.Entries.MajorityMultiplicativeComplexity
@@ -26,6 +28,7 @@ import CslibFrontierResults.Entries.MarketEquilibria
 import CslibFrontierResults.Entries.MatrixRigidity
 import CslibFrontierResults.Entries.MinimumSpanningTree
 import CslibFrontierResults.Entries.NCLBandwidth
+import CslibFrontierResults.Entries.NetworkFormation
 import CslibFrontierResults.Entries.ODonnellDNFWidth
 import CslibFrontierResults.Entries.ODonnellLargeCoefficient
 import CslibFrontierResults.Entries.ODonnellLowDegreeGranularity
@@ -55,6 +58,7 @@ import CslibFrontierResults.Entries.SergeevUniqueDisjointness
 import CslibFrontierResults.Entries.SinglePeaked
 import CslibFrontierResults.Entries.SturmReduced
 import CslibFrontierResults.Entries.TwoSATWordRAM
+import CslibFrontierResults.Entries.UtilityGame
 import CslibFrontierResults.Entries.VeriPBClique
 import CslibFrontierResults.Entries.VeriPBSubgraphIso
 import CslibFrontierResults.Registry
