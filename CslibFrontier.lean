@@ -1028,6 +1028,7 @@ public import CslibFrontier.Algorithms.WordRAM.PPZ.Forced
 public import CslibFrontier.Algorithms.WordRAM.PPZ.Round
 public import CslibFrontier.Algorithms.WordRAM.PrimeTable
 public import CslibFrontier.Algorithms.WordRAM.PrimeTrial
+public import CslibFrontier.Algorithms.WordRAM.PushRelabel
 public import CslibFrontier.Algorithms.WordRAM.Quickselect
 public import CslibFrontier.Algorithms.WordRAM.Quicksort
 public import CslibFrontier.Algorithms.WordRAM.RadixSort
