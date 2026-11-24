@@ -8906,6 +8906,8 @@ public import CslibFrontier.GameTheory.Extensive.PerfectInfo
 public import CslibFrontier.GameTheory.Extensive.SequenceForm
 public import CslibFrontier.GameTheory.InterdomainRouting.GaoRexford
 public import CslibFrontier.GameTheory.InterdomainRouting.StablePaths
+public import CslibFrontier.GameTheory.Market.Basic
+public import CslibFrontier.GameTheory.Market.EisenbergGale
 public import CslibFrontier.GameTheory.Mechanism.Bayesian
 public import CslibFrontier.GameTheory.Mechanism.CombinatorialAuction.Walrasian
 public import CslibFrontier.GameTheory.Mechanism.CriticalBid

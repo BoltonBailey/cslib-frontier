@@ -17,6 +17,7 @@ import CslibFrontierResults.Entries.HashThenPRF
 import CslibFrontierResults.Entries.IndirectRevelation
 import CslibFrontierResults.Entries.MACVerificationQueries
 import CslibFrontierResults.Entries.MajorityMultiplicativeComplexity
+import CslibFrontierResults.Entries.MarketEquilibria
 import CslibFrontierResults.Entries.MatrixRigidity
 import CslibFrontierResults.Entries.MinimumSpanningTree
 import CslibFrontierResults.Entries.NCLBandwidth
