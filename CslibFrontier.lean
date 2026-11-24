@@ -9034,6 +9034,10 @@ public import CslibFrontier.Logics.Propositional.PlaistedGreenbaumCNF.Numbered
 public import CslibFrontier.Logics.Propositional.PlaistedGreenbaumCNF.Refutation
 public import CslibFrontier.Logics.Propositional.PseudoBoolean
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.CuttingPlanes
+public import CslibFrontier.Logics.Propositional.PseudoBoolean.Elaborate
+public import CslibFrontier.Logics.Propositional.PseudoBoolean.Elaborate.Core
+public import CslibFrontier.Logics.Propositional.PseudoBoolean.Elaborate.Propagate
+public import CslibFrontier.Logics.Propositional.PseudoBoolean.Elaborate.Syntax
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.Clique
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.Dimacs
 public import CslibFrontier.Logics.Propositional.PseudoBoolean.Graph.Lad
