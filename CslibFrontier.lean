@@ -1367,11 +1367,19 @@ public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpre
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpreter.EvalThm
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpreter.Interp
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Interpreter.Machine
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Sort.RunVal
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Sort.Runs
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Sort.Words
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.ProgRun
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Run
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunGood
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunWord
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Task
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Alpha
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.CmpU
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SortU
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SpecU
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SpecU2
 public import CslibFrontier.Computability.Circuit.Arithmetic.SetMultilinear
 public import CslibFrontier.Computability.Circuit.Arithmetic.SetMultilinearGadget
 public import CslibFrontier.Computability.Circuit.Arithmetic.SetMultilinearLowerBound
@@ -8184,6 +8192,7 @@ public import CslibFrontier.Foundations.Data.List.Palindrome
 public import CslibFrontier.Foundations.Data.List.Perm
 public import CslibFrontier.Foundations.Data.List.Primrec
 public import CslibFrontier.Foundations.Data.List.Product
+public import CslibFrontier.Foundations.Data.List.RadixSort
 public import CslibFrontier.Foundations.Data.List.Range
 public import CslibFrontier.Foundations.Data.List.RowMajor
 public import CslibFrontier.Foundations.Data.List.SelectDistinct
