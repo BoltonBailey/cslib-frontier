@@ -2593,6 +2593,7 @@ public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized.NisanSpace
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized.PairedPorts
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized.PolyTime
+public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized.SaksZhou
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Randomized.TimeLayer
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.Savitch
 public import CslibFrontier.Computability.Complexity.Classes.LogSpace.USTCON
@@ -10084,7 +10085,9 @@ public import CslibFrontier.Probability.Resilience.NOBF
 public import CslibFrontier.Probability.Rewinding
 public import CslibFrontier.Probability.Rewinding.Consistency
 public import CslibFrontier.Probability.SaksZhou
+public import CslibFrontier.Probability.SaksZhou.Nisan
 public import CslibFrontier.Probability.SaksZhou.Snap
+public import CslibFrontier.Probability.SaksZhou.Walk
 public import CslibFrontier.Probability.Shearer
 public import CslibFrontier.Probability.SmallBias
 public import CslibFrontier.Probability.SmallBias.AlmostIndependent
