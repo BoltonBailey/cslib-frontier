@@ -8576,6 +8576,8 @@ public import CslibFrontier.GameTheory.Cooperative.Basic
 public import CslibFrontier.GameTheory.Cooperative.Core
 public import CslibFrontier.GameTheory.Cooperative.MoulinCostSharing
 public import CslibFrontier.GameTheory.Cooperative.ShapleyValue
+public import CslibFrontier.GameTheory.InterdomainRouting.GaoRexford
+public import CslibFrontier.GameTheory.InterdomainRouting.StablePaths
 public import CslibFrontier.GameTheory.Mechanism.Bayesian
 public import CslibFrontier.GameTheory.Mechanism.CriticalBid
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Basic
