@@ -1424,9 +1424,15 @@ public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Tas
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.WordCode
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Alpha
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.CmpU
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Exist
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.LenU
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.PM
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Prog
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SortU
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SpecU
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.SpecU2
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Trace
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Vals
 public import CslibFrontier.Computability.Circuit.Arithmetic.SetMultilinear
 public import CslibFrontier.Computability.Circuit.Arithmetic.SetMultilinearGadget
 public import CslibFrontier.Computability.Circuit.Arithmetic.SetMultilinearLowerBound
