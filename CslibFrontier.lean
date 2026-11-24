@@ -1683,6 +1683,8 @@ public import CslibFrontier.Computability.Circuit.Boolean.SuccinctVerifier
 public import CslibFrontier.Computability.Circuit.Boolean.SuccinctVerifier.Encoding
 public import CslibFrontier.Computability.Circuit.Boolean.SymAnd
 public import CslibFrontier.Computability.Circuit.Boolean.SymAnd.ACC0
+public import CslibFrontier.Computability.Circuit.Boolean.SymAnd.ACC0.Compile
+public import CslibFrontier.Computability.Circuit.Boolean.SymAnd.ACC0.SAT
 public import CslibFrontier.Computability.Circuit.Boolean.SymAnd.Collapse
 public import CslibFrontier.Computability.Circuit.Boolean.SymAnd.Evaluate
 public import CslibFrontier.Computability.Circuit.Boolean.SymAnd.Mobius
@@ -7469,6 +7471,7 @@ public import CslibFrontier.Foundations.Analysis.SpecialFunctions.LogSum
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.LogTwoPow
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.Logb
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.MulMonotonePow
+public import CslibFrontier.Foundations.Analysis.SpecialFunctions.NthRoot
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.OneAddRpow
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.PolynomialSwitch
 public import CslibFrontier.Foundations.Analysis.SpecialFunctions.RationalRamp
