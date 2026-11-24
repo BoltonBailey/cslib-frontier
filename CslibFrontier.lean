@@ -8950,6 +8950,7 @@ public import CslibFrontier.GameTheory.Market.EisenbergGale
 public import CslibFrontier.GameTheory.Mechanism.Bayesian
 public import CslibFrontier.GameTheory.Mechanism.CombinatorialAuction.Walrasian
 public import CslibFrontier.GameTheory.Mechanism.CriticalBid
+public import CslibFrontier.GameTheory.Mechanism.DigitalGoods.ProfitExtraction
 public import CslibFrontier.GameTheory.Mechanism.Domains
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Basic
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Cycle
