@@ -8146,6 +8146,7 @@ public import CslibFrontier.Foundations.Data.Fintype.FiberEquiv
 public import CslibFrontier.Foundations.Data.Fintype.Grid
 public import CslibFrontier.Foundations.Data.Fintype.OrderStatistic
 public import CslibFrontier.Foundations.Data.Fintype.RestrictInjective
+public import CslibFrontier.Foundations.Data.Fintype.UpdateInduction
 public import CslibFrontier.Foundations.Data.Hamming
 public import CslibFrontier.Foundations.Data.Hamming.Expansion
 public import CslibFrontier.Foundations.Data.Int.LogBounds
@@ -8982,6 +8983,8 @@ public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Cycle
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Dictatorship
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Interval
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Median
+public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.PhantomMedian
+public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.ThreeLeafTree
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Tree
 public import CslibFrontier.GameTheory.Mechanism.FirstPrice
 public import CslibFrontier.GameTheory.Mechanism.Indirect
@@ -9013,6 +9016,8 @@ public import CslibFrontier.GameTheory.SocialChoice.Arrow
 public import CslibFrontier.GameTheory.SocialChoice.GibbardSatterthwaite
 public import CslibFrontier.GameTheory.SocialChoice.GibbardSatterthwaiteReduction
 public import CslibFrontier.GameTheory.SocialChoice.Ranking
+public import CslibFrontier.GameTheory.SocialChoice.SinglePeaked.Basic
+public import CslibFrontier.GameTheory.SocialChoice.SinglePeaked.Ching
 public import CslibFrontier.GameTheory.Strategic.ApproxNash
 public import CslibFrontier.GameTheory.Strategic.Basic
 public import CslibFrontier.GameTheory.Strategic.Correlated
