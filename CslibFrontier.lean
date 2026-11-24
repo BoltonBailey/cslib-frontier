@@ -8648,6 +8648,10 @@ public import CslibFrontier.GameTheory.Mechanism.Knapsack
 public import CslibFrontier.GameTheory.Mechanism.LinearValuation
 public import CslibFrontier.GameTheory.Mechanism.MultiUnit
 public import CslibFrontier.GameTheory.Mechanism.Myerson
+public import CslibFrontier.GameTheory.Mechanism.Online.Basic
+public import CslibFrontier.GameTheory.Mechanism.Online.DynamicVCG
+public import CslibFrontier.GameTheory.Mechanism.Online.ExpiringItems
+public import CslibFrontier.GameTheory.Mechanism.Online.PostedPrice
 public import CslibFrontier.GameTheory.Mechanism.OptimalAuction
 public import CslibFrontier.GameTheory.Mechanism.Randomized
 public import CslibFrontier.GameTheory.Mechanism.Revenue
