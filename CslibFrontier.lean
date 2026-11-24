@@ -9052,6 +9052,7 @@ public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Basic
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Cycle
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Dictatorship
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Interval
+public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.MaxCost
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.Median
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.PhantomMedian
 public import CslibFrontier.GameTheory.Mechanism.FacilityLocation.ThreeLeafTree
