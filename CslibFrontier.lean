@@ -6592,6 +6592,7 @@ public import CslibFrontier.Crypto.Protocols.FRI.BatchJohnsonSoundness.SmoothJoh
 public import CslibFrontier.Crypto.Protocols.FRI.BatchJohnsonSoundness.SmoothUnique
 public import CslibFrontier.Crypto.Protocols.FRI.BatchProtocol
 public import CslibFrontier.Crypto.Protocols.FRI.BatchSoundness
+public import CslibFrontier.Crypto.Protocols.FRI.DeepALI
 public import CslibFrontier.Crypto.Protocols.FRI.Folding
 public import CslibFrontier.Crypto.Protocols.FRI.JohnsonSoundness
 public import CslibFrontier.Crypto.Protocols.FRI.Protocol
