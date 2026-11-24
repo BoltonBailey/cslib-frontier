@@ -9254,6 +9254,7 @@ public import CslibFrontier.GameTheory.Strategic.Mixed
 public import CslibFrontier.GameTheory.Strategic.Nash
 public import CslibFrontier.GameTheory.Strategic.NoRegret
 public import CslibFrontier.GameTheory.Strategic.Potential
+public import CslibFrontier.GameTheory.Strategic.RegretMatching
 public import CslibFrontier.GameTheory.Strategic.Semialgebraic
 public import CslibFrontier.GameTheory.Strategic.Smooth
 public import CslibFrontier.GameTheory.Strategic.Stability
@@ -9937,15 +9938,21 @@ public import CslibFrontier.MachineLearning.LossMinimization.Smooth
 public import CslibFrontier.MachineLearning.LossMinimization.Squared
 public import CslibFrontier.MachineLearning.LossMinimization.Stability
 public import CslibFrontier.MachineLearning.LossMinimization.StochasticGradientDescent
+public import CslibFrontier.MachineLearning.OnlineLearning.Bandit
 public import CslibFrontier.MachineLearning.OnlineLearning.Bandits.Basic
 public import CslibFrontier.MachineLearning.OnlineLearning.Bandits.EXP3
 public import CslibFrontier.MachineLearning.OnlineLearning.Bandits.UCB1
 public import CslibFrontier.MachineLearning.OnlineLearning.Blackwell
 public import CslibFrontier.MachineLearning.OnlineLearning.Calibration
+public import CslibFrontier.MachineLearning.OnlineLearning.ConstantSum
 public import CslibFrontier.MachineLearning.OnlineLearning.ConvexOnlineToBatch
+public import CslibFrontier.MachineLearning.OnlineLearning.FPL
 public import CslibFrontier.MachineLearning.OnlineLearning.FTRL
+public import CslibFrontier.MachineLearning.OnlineLearning.Greedy
 public import CslibFrontier.MachineLearning.OnlineLearning.Hedge
 public import CslibFrontier.MachineLearning.OnlineLearning.HighProbabilityOnlineToBatch
+public import CslibFrontier.MachineLearning.OnlineLearning.InternalRegret
+public import CslibFrontier.MachineLearning.OnlineLearning.LowerBounds
 public import CslibFrontier.MachineLearning.OnlineLearning.MistakeBound.Agnostic
 public import CslibFrontier.MachineLearning.OnlineLearning.MistakeBound.Basic
 public import CslibFrontier.MachineLearning.OnlineLearning.MistakeBound.Halving
@@ -9961,6 +9968,7 @@ public import CslibFrontier.MachineLearning.OnlineLearning.MistakeBound.Winnow
 public import CslibFrontier.MachineLearning.OnlineLearning.MultiplicativeUpdate
 public import CslibFrontier.MachineLearning.OnlineLearning.MultiplicativeWeights
 public import CslibFrontier.MachineLearning.OnlineLearning.OnlineGradientDescent
+public import CslibFrontier.MachineLearning.OnlineLearning.RegretMatching
 public import CslibFrontier.MachineLearning.OnlineLearning.SwapRegret
 public import CslibFrontier.MachineLearning.OnlineLearning.WeightedMajority
 public import CslibFrontier.MachineLearning.OnlineLearning.ZeroSum
