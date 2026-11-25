@@ -1457,6 +1457,13 @@ public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Run
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.RunWord
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.Task
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Tape.WordCode
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Counts
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Holders
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Laws
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Moves
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Plan
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Relays
+public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.TowerPlan.Rules
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Alpha
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.CmpU
 public import CslibFrontier.Computability.Circuit.Arithmetic.Separation.Uni.Exist
@@ -7912,6 +7919,7 @@ public import CslibFrontier.Foundations.Combinatorics.CentralBinomial
 public import CslibFrontier.Foundations.Combinatorics.CompositionMoment
 public import CslibFrontier.Foundations.Combinatorics.CompositionMomentLinear
 public import CslibFrontier.Foundations.Combinatorics.CornerCutting
+public import CslibFrontier.Foundations.Combinatorics.CoveringTower.Chamber
 public import CslibFrontier.Foundations.Combinatorics.CoveringTower.Defs
 public import CslibFrontier.Foundations.Combinatorics.CoveringTower.Load
 public import CslibFrontier.Foundations.Combinatorics.CoveringTower.Path
